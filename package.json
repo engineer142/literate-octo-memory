@@ -1,0 +1,12 @@
+{
+  "name": "proxy-sync",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "collect": "node scripts/collect.js",
+    "check": "node scripts/check.js"
+  }
+}
