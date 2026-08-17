@@ -18,9 +18,10 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    # Полная проверка ~1000-2000 кандидатов должна укладываться в считаные
-    # минуты (см. фикс UV_THREADPOOL_SIZE ниже) — но оставляем запас.
-    timeout-minutes: 20
+    # Настоящий верхний предел даёт check.js сам (жёсткий таймер, см. код) —
+    # этот timeout-minutes только подстраховка на случай, если что-то
+    # застрянет ДО или ПОСЛЕ самого check.js (collect/push/commit).
+    timeout-minutes: 22
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,12 +42,13 @@ jobs:
           # место сериализует почти всю работу, несмотря на CHECK_CONCURRENCY.
           # Поднимаем тредпул, чтобы DNS-резолвинг реально шёл параллельно.
           UV_THREADPOOL_SIZE: '128'
-          CHECK_CONCURRENCY: '60'
-          CHECK_TIMEOUT_MS: '4000'
-          CHECK_ATTEMPTS: '2'
-          # Жёсткий потолок в 15 минут на саму проверку — оставляет запас
-          # под collect (~1 мин) и commit/push внутри 20-минутного timeout-minutes.
-          CHECK_WALL_CLOCK_BUDGET_MS: '900000'
+          CHECK_CONCURRENCY: '30'
+          CHECK_TIMEOUT_MS: '3000'
+          CHECK_ATTEMPTS: '1'
+          # Жёсткий верхний предел (см. hardTimer в check.js) — скрипт
+          # гарантированно завершится и запишет частичный результат сам,
+          # не дожидаясь убийства процесса извне.
+          CHECK_WALL_CLOCK_BUDGET_MS: '600000'
 
       - name: Push results to Firestore (siteConfig/proxyAuto)
         env:

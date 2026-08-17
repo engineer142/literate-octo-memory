@@ -560,8 +560,7 @@ async function checkOneServer(host, port, secretRaw) {
 
 // ---------- пул конкурентности + main ----------
 
-async function mapWithConcurrency(items, limit, fn, deadlineTs, onSkip) {
-  const results = new Array(items.length);
+async function mapWithConcurrency(items, limit, fn, results, deadlineTs, onSkip) {
   let i = 0;
   async function worker() {
     while (i < items.length) {
@@ -574,12 +573,20 @@ async function mapWithConcurrency(items, limit, fn, deadlineTs, onSkip) {
     }
   }
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
-  return results;
+}
+
+function notCheckedResult(c) {
+  return { ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0, checkedAt: new Date().toISOString() };
 }
 
 async function main() {
   const raw = await readFile('data/candidates.json', 'utf8');
   const candidates = JSON.parse(raw);
+
+  // Предзаполняем "не проверено" — если жёсткий таймер сработает раньше,
+  // чем цикл естественным образом дойдёт до элемента, тут уже будет что
+  // писать, а не null/undefined.
+  const results = candidates.map(notCheckedResult);
 
   const deadlineTs = Date.now() + WALL_CLOCK_BUDGET_MS;
   console.log(
@@ -587,9 +594,32 @@ async function main() {
     `бюджет времени: ${Math.round(WALL_CLOCK_BUDGET_MS / 1000)}с`
   );
 
+  let finished = false;
+
+  async function writeResultsAndExit(reason) {
+    if (finished) return;
+    finished = true;
+    const aliveCount = results.filter((r) => r.alive).length;
+    const notChecked = results.filter((r) => r.method === 'not-checked').length;
+    console.log(`[check] ${reason}: ${aliveCount}/${results.length} живых, не проверено: ${notChecked}`);
+    await writeFile('data/checked.json', JSON.stringify(results, null, 2));
+    console.log('[check] записано в data/checked.json');
+  }
+
+  // ЖЁСТКИЙ стоп верхнего уровня: не полагается на то, что рабочий цикл
+  // сам заметит дедлайн между элементами — просто пишет то, что накопилось
+  // в results на данный момент, и завершает процесс. Это и есть настоящая
+  // гарантия, что скрипт не выйдет за бюджет, даже если сама очередь идёт
+  // медленнее, чем ожидалось.
+  const hardTimer = setTimeout(async () => {
+    console.warn('[check] ЖЁСТКИЙ таймаут бюджета — принудительно завершаю с частичным результатом');
+    await writeResultsAndExit('прервано по таймауту');
+    process.exit(0);
+  }, WALL_CLOCK_BUDGET_MS + 5000); // +5с запаса поверх мягкого дедлайна, чтобы сначала попробовать штатный путь
+  hardTimer.unref?.(); // не мешает процессу завершиться самому, если успел раньше
+
   let done = 0;
-  let skipped = 0;
-  const results = await mapWithConcurrency(
+  await mapWithConcurrency(
     candidates,
     CONCURRENCY,
     async (c) => {
@@ -605,22 +635,13 @@ async function main() {
         checkedAt: new Date().toISOString(),
       };
     },
+    results,
     deadlineTs,
-    (c) => {
-      skipped++;
-      return { ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0, checkedAt: new Date().toISOString() };
-    }
+    notCheckedResult
   );
 
-  if (skipped > 0) {
-    console.warn(`[check] бюджет времени исчерпан — ${skipped}/${candidates.length} кандидатов помечены как not-checked`);
-  }
-
-  const aliveCount = results.filter((r) => r.alive).length;
-  console.log(`[check] готово: ${aliveCount}/${results.length} живых`);
-
-  await writeFile('data/checked.json', JSON.stringify(results, null, 2));
-  console.log('[check] записано в data/checked.json');
+  clearTimeout(hardTimer);
+  await writeResultsAndExit('готово');
 }
 
 main().catch((e) => {
