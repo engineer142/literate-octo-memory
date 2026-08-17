@@ -30,6 +30,11 @@ const SOCKET_TIMEOUT_MS = Number(process.env.CHECK_TIMEOUT_MS || 5000);
 const CONCURRENCY = Number(process.env.CHECK_CONCURRENCY || 40);
 const CHECK_ATTEMPTS = Number(process.env.CHECK_ATTEMPTS || 2);
 const CHECK_RETRY_DELAY_MS = 700;
+// Жёсткий потолок на весь прогон, независимо от того, что именно тормозит
+// (DNS, сеть, сериализация где-то ещё) — если выбор не уложился, остаток
+// кандидатов помечается method:'not-checked' и попадает в результат как
+// "не проверено", а не бесконечно висит и не роняет job по timeout-minutes.
+const WALL_CLOCK_BUDGET_MS = Number(process.env.CHECK_WALL_CLOCK_BUDGET_MS || 12 * 60 * 1000);
 
 // ---------- байтовые утилиты ----------
 
@@ -555,12 +560,16 @@ async function checkOneServer(host, port, secretRaw) {
 
 // ---------- пул конкурентности + main ----------
 
-async function mapWithConcurrency(items, limit, fn) {
+async function mapWithConcurrency(items, limit, fn, deadlineTs, onSkip) {
   const results = new Array(items.length);
   let i = 0;
   async function worker() {
     while (i < items.length) {
       const idx = i++;
+      if (Date.now() >= deadlineTs) {
+        results[idx] = onSkip(items[idx]);
+        continue;
+      }
       results[idx] = await fn(items[idx], idx);
     }
   }
@@ -572,22 +581,40 @@ async function main() {
   const raw = await readFile('data/candidates.json', 'utf8');
   const candidates = JSON.parse(raw);
 
-  console.log(`[check] кандидатов: ${candidates.length}, конкурентность: ${CONCURRENCY}, попыток: ${CHECK_ATTEMPTS}`);
+  const deadlineTs = Date.now() + WALL_CLOCK_BUDGET_MS;
+  console.log(
+    `[check] кандидатов: ${candidates.length}, конкурентность: ${CONCURRENCY}, попыток: ${CHECK_ATTEMPTS}, ` +
+    `бюджет времени: ${Math.round(WALL_CLOCK_BUDGET_MS / 1000)}с`
+  );
 
   let done = 0;
-  const results = await mapWithConcurrency(candidates, CONCURRENCY, async (c) => {
-    const r = await checkOneServer(c.host, c.port, c.secret);
-    done++;
-    if (done % 100 === 0) console.log(`[check] обработано ${done}/${candidates.length}`);
-    return {
-      ...c,
-      alive: r.alive,
-      pingMs: r.pingMs ?? null,
-      method: r.method ?? null,
-      attempts: r.attempts ?? null,
-      checkedAt: new Date().toISOString(),
-    };
-  });
+  let skipped = 0;
+  const results = await mapWithConcurrency(
+    candidates,
+    CONCURRENCY,
+    async (c) => {
+      const r = await checkOneServer(c.host, c.port, c.secret);
+      done++;
+      if (done % 100 === 0) console.log(`[check] обработано ${done}/${candidates.length}`);
+      return {
+        ...c,
+        alive: r.alive,
+        pingMs: r.pingMs ?? null,
+        method: r.method ?? null,
+        attempts: r.attempts ?? null,
+        checkedAt: new Date().toISOString(),
+      };
+    },
+    deadlineTs,
+    (c) => {
+      skipped++;
+      return { ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0, checkedAt: new Date().toISOString() };
+    }
+  );
+
+  if (skipped > 0) {
+    console.warn(`[check] бюджет времени исчерпан — ${skipped}/${candidates.length} кандидатов помечены как not-checked`);
+  }
 
   const aliveCount = results.filter((r) => r.alive).length;
   console.log(`[check] готово: ${aliveCount}/${results.length} живых`);

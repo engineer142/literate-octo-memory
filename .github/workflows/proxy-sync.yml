@@ -2,10 +2,10 @@ name: proxy-sync
 
 on:
   schedule:
-    # Раз в 30 минут (компромисс между скоростью нахождения новых прокси
-    # и расходом минут Actions — см. обсуждение). GitHub не гарантирует
-    # точное время срабатывания, возможны задержки в 5-15 мин при нагрузке.
-    - cron: '*/30 * * * *'
+    # Раз в 40 минут — с запасом над реальным временем прогона (см. фикс
+    # UV_THREADPOOL_SIZE ниже), чтобы новый тик никогда не вставал в
+    # очередь позади ещё не завершившегося предыдущего.
+    - cron: '*/40 * * * *'
   workflow_dispatch: {} # ручной запуск из вкладки Actions, для отладки
 
 permissions:
@@ -18,10 +18,9 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    # Полная проверка ~1000-2000 кандидатов при конкурентности 40 и 2
-    # попытках на мёртвый сервер (~5с таймаут каждая) может занять
-    # 10-15+ минут — оставляем запас.
-    timeout-minutes: 25
+    # Полная проверка ~1000-2000 кандидатов должна укладываться в считаные
+    # минуты (см. фикс UV_THREADPOOL_SIZE ниже) — но оставляем запас.
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,15 +36,22 @@ jobs:
       - name: Check liveness (Obfuscated2 / Fake-TLS ping)
         run: node scripts/check.js
         env:
-          CHECK_CONCURRENCY: '40'
-          CHECK_TIMEOUT_MS: '5000'
+          # КЛЮЧЕВОЙ фикс: по умолчанию Node резолвит DNS через всего 4
+          # потока в libuv-тредпуле — с 1000+ уникальных хостов это узкое
+          # место сериализует почти всю работу, несмотря на CHECK_CONCURRENCY.
+          # Поднимаем тредпул, чтобы DNS-резолвинг реально шёл параллельно.
+          UV_THREADPOOL_SIZE: '128'
+          CHECK_CONCURRENCY: '60'
+          CHECK_TIMEOUT_MS: '4000'
           CHECK_ATTEMPTS: '2'
+          # Жёсткий потолок в 15 минут на саму проверку — оставляет запас
+          # под collect (~1 мин) и commit/push внутри 20-минутного timeout-minutes.
+          CHECK_WALL_CLOCK_BUDGET_MS: '900000'
 
-      # TODO: следующий шаг после того, как check.js станет настоящим:
-      # - name: Push diff to Firestore
-      #   env:
-      #     FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-      #   run: node scripts/push-firestore.js
+      - name: Push results to Firestore (siteConfig/proxyAuto)
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node scripts/push-firestore.js
 
       - name: Commit results
         run: |
