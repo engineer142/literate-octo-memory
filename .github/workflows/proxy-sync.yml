@@ -18,7 +18,10 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Полная проверка ~1000-2000 кандидатов при конкурентности 40 и 2
+    # попытках на мёртвый сервер (~5с таймаут каждая) может занять
+    # 10-15+ минут — оставляем запас.
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,8 +34,12 @@ jobs:
       - name: Collect candidates
         run: node scripts/collect.js
 
-      - name: Check liveness (пока заглушка)
+      - name: Check liveness (Obfuscated2 / Fake-TLS ping)
         run: node scripts/check.js
+        env:
+          CHECK_CONCURRENCY: '40'
+          CHECK_TIMEOUT_MS: '5000'
+          CHECK_ATTEMPTS: '2'
 
       # TODO: следующий шаг после того, как check.js станет настоящим:
       # - name: Push diff to Firestore
