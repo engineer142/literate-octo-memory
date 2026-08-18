@@ -330,7 +330,11 @@ async function checkOneServerTlsOnly(host, port, secret) {
   let timedOut = false;
 
   const timeoutPromise = new Promise((resolve) => {
-    setTimeout(() => { timedOut = true; resolve({ alive: false, pingMs: null }); }, SOCKET_TIMEOUT_MS);
+    setTimeout(() => {
+      timedOut = true;
+      try { socket && socket.destroy(); } catch { /* noop */ }
+      resolve({ alive: false, pingMs: null });
+    }, SOCKET_TIMEOUT_MS);
   });
 
   const checkPromise = (async () => {
@@ -365,7 +369,11 @@ async function checkOneServerProtocol(host, port, secret16) {
   let timedOut = false;
 
   const timeoutPromise = new Promise((resolve) => {
-    setTimeout(() => { timedOut = true; resolve({ alive: false, pingMs: null }); }, SOCKET_TIMEOUT_MS);
+    setTimeout(() => {
+      timedOut = true;
+      try { socket && socket.destroy(); } catch { /* noop */ }
+      resolve({ alive: false, pingMs: null });
+    }, SOCKET_TIMEOUT_MS);
   });
 
   const checkPromise = (async () => {
@@ -437,7 +445,11 @@ async function checkOneServerFakeTlsProtocol(host, port, secretRaw) {
   let fallbackResult = { alive: false, pingMs: null, method: 'tls-only' };
 
   const timeoutPromise = new Promise((resolve) => {
-    setTimeout(() => { timedOut = true; resolve(fallbackResult); }, SOCKET_TIMEOUT_MS);
+    setTimeout(() => {
+      timedOut = true;
+      try { socket && socket.destroy(); } catch { /* noop */ }
+      resolve(fallbackResult);
+    }, SOCKET_TIMEOUT_MS);
   });
 
   const checkPromise = (async () => {
