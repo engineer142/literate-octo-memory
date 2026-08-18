@@ -21,7 +21,7 @@ jobs:
     # Настоящий верхний предел даёт check.js сам (жёсткий таймер, см. код) —
     # этот timeout-minutes только подстраховка на случай, если что-то
     # застрянет ДО или ПОСЛЕ самого check.js (collect/push/commit).
-    timeout-minutes: 22
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,6 +33,10 @@ jobs:
 
       - name: Collect candidates
         run: node scripts/collect.js
+        env:
+          # Нужен для GitHub Code Search (самопополнение списка источников)
+          # и для более щедрого лимита запросов к api.github.com вообще.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check liveness (Obfuscated2 / Fake-TLS ping)
         run: node scripts/check.js
@@ -44,11 +48,15 @@ jobs:
           UV_THREADPOOL_SIZE: '128'
           CHECK_CONCURRENCY: '30'
           CHECK_TIMEOUT_MS: '3000'
-          CHECK_ATTEMPTS: '1'
+          # Вернули 2 попытки — раньше было снижено до 1 из-за проблем со
+          # скоростью, но с фиксом сокетов прогон укладывается в ~1 минуту
+          # даже на 1200+ кандидатов, так что запас по времени есть.
+          CHECK_ATTEMPTS: '2'
           # Жёсткий верхний предел (см. hardTimer в check.js) — скрипт
           # гарантированно завершится и запишет частичный результат сам,
-          # не дожидаясь убийства процесса извне.
-          CHECK_WALL_CLOCK_BUDGET_MS: '600000'
+          # не дожидаясь убийства процесса извне. Подняли с 10 до 12 минут —
+          # потолок кандидатов снят, кандидатов в моменте может стать больше.
+          CHECK_WALL_CLOCK_BUDGET_MS: '720000'
 
       - name: Push results to Firestore (siteConfig/proxyAuto)
         env:
@@ -59,7 +67,7 @@ jobs:
         run: |
           git config user.name "proxy-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/candidates.json data/checked.json
+          git add data/candidates.json data/checked.json data/discovered-sources.json
           if git diff --cached --quiet; then
             echo "Изменений нет, коммит пропущен"
           else

@@ -12,7 +12,7 @@
 //
 // Запуск: node scripts/collect.js
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 
 // ---------- Источники (см. пометку в оригинале про приоритет первых) ----------
 const COLLECT_SOURCES = [
@@ -76,12 +76,36 @@ const COLLECT_US_DOMAINS = [
 const COLLECT_ASIA_DOMAINS = ['.asia', '.jp', '.cn', '.sg', '.hk', '.kr', '.in', '.tw', '.ph', '.my', '.id', '.vn', '.th'];
 const COLLECT_BLOCKED = ['instagram', 'facebook', 'twitter', 'bbc', 'meduza', 'linkedin', 'torproject'];
 
-// В Worker'е было 500 из-за лимита подзапросов. В Actions лимита нет, но
-// разумный потолок всё равно нужен (реальных публичных MTProto-серверов
-// не то чтобы десятки тысяч) — держим как настраиваемый предохранитель.
-const COLLECT_MAX_CANDIDATES = Number(process.env.COLLECT_MAX_CANDIDATES || 2000);
+// В Worker'е было 500 из-за лимита подзапросов. В Actions лимита нет —
+// потолок теперь чисто предохранитель на случай аномалии в источниках,
+// а не реальное ограничение (реальных публичных MTProto-серверов в разы
+// меньше этого числа).
+const COLLECT_MAX_CANDIDATES = Number(process.env.COLLECT_MAX_CANDIDATES || 20000);
 const FETCH_TIMEOUT_MS = 15000;
 const FETCH_CONCURRENCY = 10;
+
+// ---------- Telegram-каналы: публичные t.me/s/<channel> страницы ----------
+// Не требует Bot API токена — t.me/s/ отдаёт статичный HTML с последними
+// постами публично, без авторизации. Каналы, которые регулярно публикуют
+// tg://proxy ссылки.
+const TELEGRAM_PROXY_CHANNELS = [
+  'proxy_mtproto',
+  'MTProtoProxyChannel',
+  'proxyfreetg',
+  'mtprotoproxy_list',
+];
+
+// ---------- Самопополняющийся список: GitHub Code Search ----------
+// Ищет по всему GitHub код, содержащий "tg://proxy?server=" — новые репо
+// с прокси-листами появляются сами по себе, без ручного добавления.
+// Найденные raw-URL сохраняются в data/discovered-sources.json и на
+// следующих прогонах подмешиваются к статичному списку COLLECT_SOURCES.
+const GITHUB_CODE_SEARCH_QUERIES = [
+  '"tg://proxy?server=" extension:txt',
+  '"tg://proxy?server=" extension:json',
+];
+const DISCOVERED_SOURCES_PATH = 'data/discovered-sources.json';
+const MAX_DISCOVERED_SOURCES = 300; // предохранитель, чтобы список не рос бесконечно
 
 function collectIsBlocked(secret, domain) {
   if (!secret || secret.length < 16) return true;
@@ -176,6 +200,101 @@ async function fetchWithTimeout(url) {
   }
 }
 
+// Извлекает tg://proxy / t.me/proxy ссылки прямо из HTML-страницы канала
+// (t.me/s/<channel>) — та же регулярка, что и для обычных текстовых
+// источников, просто применяется к HTML вместо .txt.
+async function fetchTelegramChannelCandidates(channel) {
+  const url = `https://t.me/s/${channel}`;
+  const html = await fetchWithTimeout(url);
+  if (!html) {
+    console.log(`[collect] t.me/s/${channel} — пропущен`);
+    return [];
+  }
+  const candidates = collectParseCandidates(html);
+  console.log(`[collect] t.me/s/${channel} — ${candidates.length} кандидатов`);
+  return candidates;
+}
+
+// ---------- GitHub Code Search: самопополнение списка источников ----------
+async function githubCodeSearch(query) {
+  const url = `https://api.github.com/search/code?q=${encodeURIComponent(query)}&per_page=30`;
+  const headers = {
+    'User-Agent': 'proxy-sync-collector',
+    Accept: 'application/vnd.github+json',
+  };
+  if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+
+  try {
+    const res = await fetch(url, { headers });
+    if (!res.ok) {
+      console.warn(`[collect] GitHub code search "${query}" — HTTP ${res.status}`);
+      return [];
+    }
+    const data = await res.json();
+    return Array.isArray(data.items) ? data.items : [];
+  } catch (e) {
+    console.warn(`[collect] GitHub code search "${query}" — ошибка: ${e.message}`);
+    return [];
+  }
+}
+
+// Превращает результат code search (repo/path/ref) в прямую raw-ссылку.
+function githubItemToRawUrl(item) {
+  if (!item || !item.repository || !item.repository.full_name || !item.path) return null;
+  // code search не отдаёт ветку напрямую — default_branch не всегда есть
+  // в укороченном объекте repository, поэтому используем HEAD, GitHub
+  // сам резолвит его в дефолтную ветку для raw.githubusercontent.com.
+  return `https://raw.githubusercontent.com/${item.repository.full_name}/HEAD/${item.path}`;
+}
+
+async function discoverNewSources(existingSources, previouslyDiscovered) {
+  const known = new Set([...existingSources, ...previouslyDiscovered]);
+  const discovered = new Set(previouslyDiscovered);
+
+  for (const query of GITHUB_CODE_SEARCH_QUERIES) {
+    const items = await githubCodeSearch(query);
+    for (const item of items) {
+      const rawUrl = githubItemToRawUrl(item);
+      if (!rawUrl || known.has(rawUrl)) continue;
+      known.add(rawUrl);
+      discovered.add(rawUrl);
+      if (discovered.size >= MAX_DISCOVERED_SOURCES) break;
+    }
+    if (discovered.size >= MAX_DISCOVERED_SOURCES) break;
+  }
+
+  const added = discovered.size - previouslyDiscovered.length;
+  console.log(`[collect] GitHub code search: новых источников найдено ${added}, всего в копилке ${discovered.size}`);
+  return Array.from(discovered);
+}
+
+async function loadPreviousDiscoveredSources() {
+  try {
+    const raw = await readFile(DISCOVERED_SOURCES_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return []; // файла ещё нет — это нормально на первом прогоне
+  }
+}
+
+// ---------- Персистентность: не терять живые прокси между прогонами ----------
+// Если источник временно не отдал строку с сервером, который на самом деле
+// всё ещё жив, он не должен пропадать из выдачи — подмешиваем живых из
+// прошлого прогона обратно в кандидаты на перепроверку.
+async function loadPreviouslyAliveCandidates() {
+  try {
+    const raw = await readFile('data/checked.json', 'utf8');
+    const data = JSON.parse(raw);
+    if (!Array.isArray(data)) return [];
+    return data
+      .filter((c) => c.alive)
+      .map((c) => ({ host: c.host, port: c.port, secret: c.secret, region: c.region }));
+  } catch {
+    return []; // файла ещё нет — это нормально на первом прогоне
+  }
+}
+
 // Простой пул с ограниченной конкурентностью (аналог runWithConcurrency в worker.js)
 async function mapWithConcurrency(items, limit, fn) {
   const results = new Array(items.length);
@@ -191,18 +310,36 @@ async function mapWithConcurrency(items, limit, fn) {
 }
 
 async function main() {
-  console.log(`[collect] источников: ${COLLECT_SOURCES.length}`);
+  const previouslyDiscovered = await loadPreviousDiscoveredSources();
+  const newDiscovered = await discoverNewSources(COLLECT_SOURCES, previouslyDiscovered);
+  await mkdir('data', { recursive: true });
+  await writeFile(DISCOVERED_SOURCES_PATH, JSON.stringify(newDiscovered, null, 2));
 
-  const texts = await mapWithConcurrency(COLLECT_SOURCES, FETCH_CONCURRENCY, async (url) => {
+  const allSources = [...COLLECT_SOURCES, ...newDiscovered];
+  console.log(`[collect] источников: ${allSources.length} (${COLLECT_SOURCES.length} статичных + ${newDiscovered.length} найденных)`);
+
+  const texts = await mapWithConcurrency(allSources, FETCH_CONCURRENCY, async (url) => {
     const text = await fetchWithTimeout(url);
     console.log(`[collect] ${url} — ${text ? text.length + ' байт' : 'пропущен'}`);
     return text;
   });
 
   const seen = new Map(); // host:port:secret -> candidate
-  for (const text of texts) {
-    if (!text) continue;
-    const candidates = collectParseCandidates(text);
+
+  // Живые из прошлого прогона идут первыми — они не потеряются, даже если
+  // источники их временно не отдали, и всё равно попадут под COLLECT_MAX_CANDIDATES.
+  const previouslyAlive = await loadPreviouslyAliveCandidates();
+  console.log(`[collect] живых из прошлого прогона (на перепроверку): ${previouslyAlive.length}`);
+  for (const c of previouslyAlive) {
+    seen.set(`${c.host}:${c.port}:${c.secret}`, c);
+  }
+
+  const channelResults = await mapWithConcurrency(TELEGRAM_PROXY_CHANNELS, FETCH_CONCURRENCY, (ch) =>
+    fetchTelegramChannelCandidates(ch)
+  );
+  const rawCandidateLists = [...channelResults, ...texts.map((text) => (text ? collectParseCandidates(text) : []))];
+
+  for (const candidates of rawCandidateLists) {
     for (const c of candidates) {
       const key = `${c.host}:${c.port}:${c.secret}`;
       if (seen.has(key)) continue;
@@ -225,7 +362,6 @@ async function main() {
   const result = Array.from(seen.values());
   console.log(`[collect] итого уникальных кандидатов: ${result.length}`);
 
-  await mkdir('data', { recursive: true });
   await writeFile('data/candidates.json', JSON.stringify(result, null, 2));
   console.log('[collect] записано в data/candidates.json');
 }
