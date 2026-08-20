@@ -3456,12 +3456,6 @@
     "region": "eu"
   },
   {
-    "host": "45.137.198.186",
-    "port": 443,
-    "secret": "ee093f927b1551044cf9ae99314bd15fe57777772e62696e672e636f6d",
-    "region": "us"
-  },
-  {
     "host": "yastatic.co.uk",
     "port": 443,
     "secret": "ee4d529b445ca1cfa716b340ef99877570727a796d68702e79617374617469632e6e6574",
@@ -4632,12 +4626,6 @@
     "region": "eu"
   },
   {
-    "host": "80.76.44.13",
-    "port": 443,
-    "secret": "ee75a3d821b91547a3f2e8146386198aee6b726f7075732e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "169.128.116.88",
     "port": 443,
     "secret": "1054edb2d8052b533b1a14c3c861b8ee",
@@ -4794,28 +4782,10 @@
     "region": "eu"
   },
   {
-    "host": "media6.happtg.org",
-    "port": 443,
-    "secret": "ee7391242569590e01416101927d38b565646e732d73686f702e7275",
-    "region": "ru"
-  },
-  {
     "host": "t.volea.ru",
     "port": 443,
     "secret": "ee77e591072d7b2f5008736db11f199a877777772e636c6f7564666c6172652e636f6d",
     "region": "us"
-  },
-  {
-    "host": "proxy.privateproxy.top",
-    "port": 8443,
-    "secret": "dd17aca106bf110b8efac6b77a545a8be5",
-    "region": "eu"
-  },
-  {
-    "host": "pof.khorshidiice.ir",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
   },
   {
     "host": "136.85.1.219",
@@ -4860,22 +4830,10 @@
     "region": "eu"
   },
   {
-    "host": "2.26.229.167",
-    "port": 2083,
-    "secret": "6f4cf62decefea0c907c59666b49fe5f",
-    "region": "eu"
-  },
-  {
     "host": "45.88.42.76",
     "port": 32431,
     "secret": "ee01a888a94071a122b2c25153e940d1f97777772e6d6963726f736f66742e636f6d",
     "region": "us"
-  },
-  {
-    "host": "super.vpnproxy.cc",
-    "port": 88,
-    "secret": "dd7a2debc4d25fe521eee1793636e97c60",
-    "region": "eu"
   },
   {
     "host": "liverpool.goooalir.co.uk",
@@ -4893,12 +4851,6 @@
     "host": "194.60.228.62",
     "port": 8880,
     "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "167.233.53.190",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu"
   },
   {
@@ -5046,12 +4998,6 @@
     "region": "eu"
   },
   {
-    "host": "140.233.167.204",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
     "host": "7808080iiio6k1.ir.meli-n13.info",
     "port": 8443,
     "secret": "104462821249bd7ac519130220c25d09",
@@ -5088,19 +5034,7 @@
     "region": "eu"
   },
   {
-    "host": "freedom.bypasslab.abrdns.com",
-    "port": 443,
-    "secret": "ddb4da653fe1804405f8bf86ee8ed74812",
-    "region": "eu"
-  },
-  {
     "host": "109.107.166.49",
-    "port": 443,
-    "secret": "a4bc6821c58eee9b48038b104950504a",
-    "region": "eu"
-  },
-  {
-    "host": "146.103.109.134",
     "port": 443,
     "secret": "a4bc6821c58eee9b48038b104950504a",
     "region": "eu"
@@ -5121,12 +5055,6 @@
     "host": "ave.khorshidiice.ir",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "138.124.70.86",
-    "port": 443,
-    "secret": "6356ebb33a57b6deda8a1c3cf2aee557",
     "region": "eu"
   },
   {
@@ -5256,12 +5184,6 @@
     "region": "ru"
   },
   {
-    "host": "web.wbwjwkqlq.ir",
-    "port": 443,
-    "secret": "ee79e70102001e7807f0104386124c04797765622e5762776a776b716c712e6972",
-    "region": "eu"
-  },
-  {
     "host": "18.130.111.7",
     "port": 80,
     "secret": "dd104462821249bd7ac519130220c25d09",
@@ -5286,21 +5208,177 @@
     "region": "eu"
   },
   {
-    "host": "www.weblog.co.im",
+    "host": "65.21.190.162",
     "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu"
   },
   {
-    "host": "benz.cras.co.im",
-    "port": 144,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "host": "45.32.87.245",
+    "port": 443,
+    "secret": "dd6981c3ee55921e576431b8faf833a86d",
     "region": "eu"
   },
   {
-    "host": "Cherlimanom.roka-kochik.co.uk.",
-    "port": 5777,
+    "host": "167.233.185.253",
+    "port": 443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "noron.jamejanhani1.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "140.233.167.135",
+    "port": 443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "194.60.228.78",
+    "port": 2096,
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "77.92.151.85",
+    "port": 443,
+    "secret": "e563428c84e814fef4274088a8f0bcbe",
+    "region": "eu"
+  },
+  {
+    "host": "62.238.114.8",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "silver.ciaude.co.uk",
+    "port": 2096,
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "www.172-63.ir.",
+    "port": 8443,
+    "secret": "ee8b8238601de9360f332514afa56ada45626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "symbol.simbol.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "mash.drproxy.pro",
+    "port": 443,
+    "secret": "dda5a7b5711e648c7bd534e4e87de2241b",
+    "region": "eu"
+  },
+  {
+    "host": "beest-sellerst.co.uk",
+    "port": 443,
+    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "65.109.43.120",
+    "port": 443,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "kk00000000000.ir.meli-n13.info",
+    "port": 8443,
+    "secret": "104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "198.44.180.194",
+    "port": 443,
+    "secret": "dd496646929e7dfd66c2dbd95d7e9ddbf7",
+    "region": "eu"
+  },
+  {
+    "host": "proxy-dag.ru",
+    "port": 443,
+    "secret": "ee94fc2b484af6e1e1c87e6576b33c257579612e7275",
+    "region": "ru"
+  },
+  {
+    "host": "37.27.135.205",
+    "port": 443,
+    "secret": "dd0000f00f0f775555fffffff5006e2e69",
+    "region": "eu"
+  },
+  {
+    "host": "167.235.57.225",
+    "port": 443,
+    "secret": "dd00000000000000000000000000000000",
+    "region": "eu"
+  },
+  {
+    "host": "162.55.62.29",
+    "port": 443,
+    "secret": "dd00000000000000000000000000000000",
+    "region": "eu"
+  },
+  {
+    "host": "116.202.184.217",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "89.167.61.18",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "172.65.97.217",
+    "port": 22,
+    "secret": "104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "194.60.228.228",
+    "port": 8880,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "62.238.115.188",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "65.108.49.27",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "borj-pooshak-brj.aseman.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "saadi.masnavi.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "shir.pesar.hedoit.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
@@ -5490,6 +5568,18 @@
     "region": "eu"
   },
   {
+    "host": "vasl-sho.mohearn.co.uk.",
+    "port": 443,
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D",
+    "region": "eu"
+  },
+  {
+    "host": "full-vasl.peachsoft.co.uk.",
+    "port": 443,
+    "secret": "eeddff05e65a69a6a7fd1a28a28a121fff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
     "host": "www.darniod.ooo",
     "port": 80,
     "secret": "7hbZ3hNtxAbJ6L5BQipx2_std3d3LnlhaG9vLmNvbQ==",
@@ -5544,15 +5634,15 @@
     "region": "eu"
   },
   {
-    "host": "vasl-sho.mohearn.co.uk.",
-    "port": 443,
-    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D",
+    "host": "116.202.35.160",
+    "port": 25565,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q",
     "region": "eu"
   },
   {
-    "host": "full-vasl.peachsoft.co.uk.",
-    "port": 443,
-    "secret": "eeddff05e65a69a6a7fd1a28a28a121fff7765622e62616c652e6169",
+    "host": "junior.ir.the-nice-mtproto.info",
+    "port": 88,
+    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
@@ -5568,27 +5658,27 @@
     "region": "eu"
   },
   {
-    "host": "panel.ai-protected.co.uk",
-    "port": 443,
-    "secret": "7hDjRIGHSb16xRkTAiDCXThwYW5lbC5haS1wcm90ZWN0ZWQuY28udWs=",
+    "host": "haji.assassinationpuma.co.uk.",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
-    "host": "116.202.35.160",
-    "port": 25565,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q",
+    "host": "rich.whiteblox.org.",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
-    "host": "junior.ir.the-nice-mtproto.info",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
+    "host": "Hub.whiteblox.org.",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
-    "host": "www.telbet.app",
-    "port": 443,
-    "secret": "ee3073e1ec5c594e267e7636f8f5dc73f12d6d656469612e737465616d706f77657265642e636f6d",
+    "host": "www.royaclinic.co.uk",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
@@ -5682,18 +5772,6 @@
     "region": "eu"
   },
   {
-    "host": "iran-download.mr-moo.co.uk.",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu"
-  },
-  {
-    "host": "last.konstruktion.co.uk.",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu"
-  },
-  {
     "host": "iran.mr-moo.co.uk.",
     "port": 443,
     "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
@@ -5721,6 +5799,30 @@
     "host": "irancell-mci-rightell-adsl.adamhayward.co.uk.",
     "port": 443,
     "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "iran.yhge.co.uk.",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "iran.pcspeedyfix.co.uk.",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "turk.dasy2k1.co.uk.",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "kurd.tryzub-it.co.uk.",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
     "region": "eu"
   },
   {
@@ -5838,15 +5940,33 @@
     "region": "eu"
   },
   {
-    "host": "basic.valmira.co.uk",
-    "port": 22,
+    "host": "inja.nistim.co.uk",
+    "port": 8443,
     "secret": "EERighJJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "vasl-sho.peachsoft.co.uk.",
+    "host": "boro.bache-jun.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "jadid.zhigool.co.uk",
+    "port": 25565,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "bala.hastim.co.uk",
     "port": 443,
-    "secret": "eeddff05e65a69a6a7fd1a28a28a121fff7765622e62616c652e6169",
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "mikhoramet.bache-jun.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
@@ -5862,7 +5982,13 @@
     "region": "eu"
   },
   {
-    "host": "cloud.click-master.co.uk",
+    "host": "www.weblog.co.im",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "naro.guguli.co.uk",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMJdCQ",
     "region": "eu"
@@ -5874,33 +6000,21 @@
     "region": "eu"
   },
   {
-    "host": "bala.hastim.co.uk",
+    "host": "Cherlimanom.roka-kochik.co.uk.",
+    "port": 5777,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "qadim.zhigool.co.uk",
+    "port": 22,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "last.konstruktion.co.uk.",
     "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "jadid.zhigool.co.uk",
-    "port": 25565,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "inja.nistim.co.uk",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "ma.nistim.co.uk",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "beer.crona-extra.co.uk",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
     "region": "eu"
   },
   {
@@ -5910,21 +6024,21 @@
     "region": "eu"
   },
   {
-    "host": "iran.click-master.co.uk",
+    "host": "iran-download.mr-moo.co.uk.",
     "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "www.telbet.app",
+    "port": 443,
+    "secret": "ee3073e1ec5c594e267e7636f8f5dc73f12d6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "masire-gozare.omr.marchelo.info",
+    "port": 35450,
     "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "new.vafadari.co.uk",
-    "port": 2096,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "digi.vafadari.co.uk",
-    "port": 2096,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
@@ -5934,9 +6048,27 @@
     "region": "eu"
   },
   {
+    "host": "beer.crona-extra.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
     "host": "bastani.mikham.co.uk",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "cloud.click-master.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "benz.cras.co.im",
+    "port": 144,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
@@ -5976,12 +6108,6 @@
     "region": "eu"
   },
   {
-    "host": "Hub.whiteblox.org.",
-    "port": 80,
-    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
-    "region": "eu"
-  },
-  {
     "host": "its-bomb.itsnotrocket.co.uk.",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMjdCQ",
@@ -6015,6 +6141,12 @@
     "host": "irancell-mci-rightel-adsl.mr-moo.co.uk.",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "panel.ai-protected.co.uk",
+    "port": 443,
+    "secret": "7hDjRIGHSb16xRkTAiDCXThwYW5lbC5haS1wcm90ZWN0ZWQuY28udWs=",
     "region": "eu"
   },
   {
@@ -6060,21 +6192,99 @@
     "region": "eu"
   },
   {
-    "host": "mio.mozitop.co.uk",
+    "host": "nowin.injast.co.im.",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "puot.mozitop.co.uk",
+    "host": "moon.injast.co.im.",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "ving.mozitop.co.uk",
+    "host": "node.easyproxy.cfd",
+    "port": 443,
+    "secret": "ee6be95a795ee766da019cd30044b837c16e6f64652e6561737970726f78792e636664",
+    "region": "eu"
+  },
+  {
+    "host": "relay.rknsosi.shop",
+    "port": 443,
+    "secret": "ee93e8816b5fd5c054bc95442701329e0072656c61792e726b6e736f73692e73686f70",
+    "region": "eu"
+  },
+  {
+    "host": "Bezan-Ke.Khob-Mizani.manege-desktop-for.co.im.",
+    "port": 4443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "beam.whitelist.cyou",
+    "port": 443,
+    "secret": "ee96671dab2ecd8b178da5371b6081550b6265616d2e77686974656c6973742e63796f75",
+    "region": "eu"
+  },
+  {
+    "host": "premium.speed-benz.co.uk",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "dns.speed-benz.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "uptime.speed-benz.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "proxy.lodkirmm.ru",
+    "port": 8443,
+    "secret": "ee16309abd572d284b309ef26bd7a3f68570726f78792e6c6f646b69726d6d2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "media10.happtg.org",
+    "port": 443,
+    "secret": "eeecd508d816f611bb329487809f8dac88706574726f766963682e7275",
+    "region": "ru"
+  },
+  {
+    "host": "s1.assetflux.org",
+    "port": 443,
+    "secret": "ee73e7d7fe41b49d9091f78c8c92c22de4766b2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "cdn9.cdnwave.org",
+    "port": 443,
+    "secret": "ee2e7c3d85e469cb8f825f4678a716a363706574726f766963682e7275",
+    "region": "ru"
+  },
+  {
+    "host": "65.109.147.39",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu"
+  },
+  {
+    "host": "135.181.74.178",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu"
+  },
+  {
+    "host": "65.108.123.76",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
     "region": "eu"
   },
   {
@@ -6082,30 +6292,6 @@
     "port": 443,
     "secret": "ee5622e11fff3e49bcc85280197a6106b5742e6d656f772d6e6574776f726b2e636f6d",
     "region": "eu"
-  },
-  {
-    "host": "cdn5.cdnwave.org",
-    "port": 443,
-    "secret": "ee2c46ee89b4f2c79c1d8325d13091e580706574726f766963682e7275",
-    "region": "ru"
-  },
-  {
-    "host": "media.happtg.org",
-    "port": 443,
-    "secret": "eed9cf709eb48bb5a37471fba84864bd7e766b2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "s3.assetflux.org",
-    "port": 443,
-    "secret": "ee8fc9c7632b344b1b76639c501ae7cfb5766b2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "br.nowabst.net",
-    "port": 443,
-    "secret": "eefdf6175e50069c01bd22d786534aa2b2766b2e636f6d",
-    "region": "ru"
   },
   {
     "host": "api.nowabst.net",
@@ -6120,69 +6306,33 @@
     "region": "ru"
   },
   {
-    "host": "qadim.zhigool.co.uk",
-    "port": 22,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "host": "lab.nowabst.net",
+    "port": 853,
+    "secret": "eeb63ea09be7a8fe1eca00c0e99e97d832766b2e636f6d",
     "region": "eu"
   },
   {
-    "host": "moon.injast.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "nowin.injast.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "beam.whitelist.cyou",
+    "host": "ad1.arixo.shop",
     "port": 443,
-    "secret": "ee96671dab2ecd8b178da5371b6081550b6265616d2e77686974656c6973742e63796f75",
+    "secret": "eee09f46368021f91b92ad3dea14c7ac896164312e617269786f2e73686f70",
     "region": "eu"
   },
   {
-    "host": "haji.biabala.co.uk",
+    "host": "hub.savelyev.click",
     "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "secret": "ee609a2ad7e277c6eb2dd39767e12777b86875622e736176656c7965762e636c69636b",
     "region": "eu"
   },
   {
-    "host": "mashti.biabala.co.uk",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "host": "cdn2.medhata.org",
+    "port": 2443,
+    "secret": "ee7b9814d423bb50d370214258830fbde063646e322e6d6564686174612e6f7267",
     "region": "eu"
   },
   {
-    "host": "gate.24starsmarket.ru",
-    "port": 443,
-    "secret": "ee87edf50215ee4bf7aa2d409b9cd71fcc676174652e323473746172736d61726b65742e7275",
-    "region": "ru"
-  },
-  {
-    "host": "endless.autumngarden.injast.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "dns.bizonre.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "web.bizonre.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "bing.bizonre.co.im.",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "host": "api2.medhata.org",
+    "port": 2443,
+    "secret": "ee9d072ce3c5b43f6b422bb1e7fe983cc4617069322e6d6564686174612e6f7267",
     "region": "eu"
   },
   {
@@ -6708,6 +6858,12 @@
     "region": "eu"
   },
   {
+    "host": "digi.vafadari.co.uk",
+    "port": 2096,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
     "host": "kala.golgoli1.co.uk",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add7777772e7961686f6f2e636f6d",
@@ -6762,6 +6918,12 @@
     "region": "eu"
   },
   {
+    "host": "new.vafadari.co.uk",
+    "port": 2096,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
     "host": "nimagallery18.ir",
     "port": 25565,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
@@ -6774,147 +6936,21 @@
     "region": "eu"
   },
   {
-    "host": "188.245.144.93",
-    "port": 443,
-    "secret": "eec862057ba49a7ecdf0ad4eb44cd5bb11646f776e6c6f61642e77696e646f77737570646174652e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "static-resources-api.website",
-    "port": 80,
-    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "sv2.just-money.co.uk",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "sv3.hajhossein.observer",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "95.216.123.224",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "95.216.22.207",
-    "port": 443,
-    "secret": "7HQighJPBNMYVRNB6tdkVw",
-    "region": "eu"
-  },
-  {
-    "host": "app.what-ever.co.uk",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu"
-  },
-  {
-    "host": "45.66.11.224",
-    "port": 443,
-    "secret": "dd2efb3fbae16446f3b021b7069b592367",
-    "region": "eu"
-  },
-  {
-    "host": "irancell-mci-rightel-adsl.connectina.co.uk.",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "nachrichten.dripflux.ir.",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "sop.foodpatuy.ir",
-    "port": 443,
-    "secret": "3RBEYoISSb16xRkTAiDCXQk%3D",
-    "region": "eu"
-  },
-  {
-    "host": "91.99.150.26",
-    "port": 443,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu"
-  },
-  {
-    "host": "144.31.221.60",
-    "port": 443,
-    "secret": "ee254d5a268e3496e39ac6ece61d6ef89b766b2e636f6d",
-    "region": "ru"
-  },
-  {
-    "host": "65.108.50.120",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "65.21.190.162",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "valla.chemidonam.co.uk",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "www.wwwjom.ir.",
-    "port": 443,
-    "secret": "ee1701186abd0ea60123192e26434f91a57777772e7961686f6f2e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "ftp.jinxandjack.co.uk",
-    "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
-    "region": "eu"
-  },
-  {
-    "host": "download.lv426.co.uk",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu"
-  },
-  {
-    "host": "webhook.vingardium.co.uk",
-    "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
-    "region": "eu"
-  },
-  {
-    "host": "mtp.xode.top",
-    "port": 443,
-    "secret": "eede18609544eb7fa267cf94735d320ac56d74702e786f64652e746f70",
-    "region": "eu"
-  },
-  {
-    "host": "50.7.41.162",
-    "port": 443,
-    "secret": "ee011808bcccfd224644ca7f231846a7d46d61782e7275",
-    "region": "ru"
-  },
-  {
-    "host": "abo-ali-sina.basalam.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "sorfezh.malfilk-voq.co.uk",
     "port": 443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "khob.nisti.co.uk",
+    "port": 8880,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "kima.rabotaet.online",
+    "port": 443,
+    "secret": "ee12e7e5f961f258b04af168a1cba6318a6b696d612e7261626f746165742e6f6e6c696e65",
     "region": "eu"
   },
   {
@@ -6924,75 +6960,57 @@
     "region": "eu"
   },
   {
-    "host": "download.konstruktion.co.uk.",
+    "host": "bing.bizonre.co.im.",
     "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "193.17.95.44",
-    "port": 8443,
-    "secret": "EERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gAAAEERigv______-AAA__gA==",
-    "region": "eu"
-  },
-  {
-    "host": "478818887672666782277.ir.fulldf.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
-    "region": "eu"
-  },
-  {
-    "host": "nick.ciaude.co.uk",
-    "port": 2096,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "logs.jinxandjack.co.uk",
+    "host": "www.wwwl0.ir.",
     "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
+    "secret": "ee1603048187495dfac59a030220c25d8e7777772e7961686f6f2e636f6d",
     "region": "eu"
   },
   {
-    "host": "webhook.what-ever.co.uk",
+    "host": "basic.valmira.co.uk",
+    "port": 22,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "sioms.co.uk",
+    "port": 25565,
+    "secret": "ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "65.21.205.37",
     "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
     "region": "eu"
   },
   {
-    "host": "1788168686678762767777.ir.fulldf.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
-    "region": "eu"
-  },
-  {
-    "host": "new-for-you.ir.hohoshshs.info.",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "144.124.225.30",
+    "host": "nachrichten.dripflux.ir.",
     "port": 443,
-    "secret": "eeDDNEgYdJvXrFGRMCIMJQ",
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
-    "host": "steave-mac-queen.adadb-1hgujoiah-xy1xutr095-tk.info.",
+    "host": "www.wwwjom.ir.",
     "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "secret": "ee1701186abd0ea60123192e26434f91a57777772e7961686f6f2e636f6d",
     "region": "eu"
   },
   {
-    "host": "45.32.87.245",
+    "host": "belotfelipo.larilarilaylay.ir",
     "port": 443,
-    "secret": "dd6981c3ee55921e576431b8faf833a86d",
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
-    "host": "predator-artist.top",
-    "port": 853,
-    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
+    "host": "webhook.vingardium.co.uk",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
     "region": "eu"
   },
   {
@@ -7002,33 +7020,135 @@
     "region": "eu"
   },
   {
-    "host": "167.233.185.253",
+    "host": "portal.mizbanonline.info",
     "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "noron.jamejanhani1.co.uk",
+    "host": "tcpdash-local.technom.info",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "download.konstruktion.co.uk.",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "1788168686678762767777.ir.fulldf.info",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "region": "eu"
+  },
+  {
+    "host": "57881z36775276777.ir.fulldf.info",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "region": "eu"
+  },
+  {
+    "host": "iran.click-master.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "portal.jinxandjack.co.uk.",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ==",
+    "region": "eu"
+  },
+  {
+    "host": "sv2.just-money.co.uk",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
-    "host": "yeke-jahan.mohearn.co.uk.",
+    "host": "br.nowabst.net",
+    "port": 443,
+    "secret": "eefdf6175e50069c01bd22d786534aa2b2766b2e636f6d",
+    "region": "ru"
+  },
+  {
+    "host": "dns.bizonre.co.im.",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "www.bazbaran-batrane.ir.",
+    "port": 8443,
+    "secret": "7hYDBIGHSV36xZoDAiDCXY5tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "34.51.255.77",
+    "port": 443,
+    "secret": "dd111304d9c2b55a043efd8139aaf51ef5",
+    "region": "eu"
+  },
+  {
+    "host": "ftp.jinxandjack.co.uk",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "veloxnetworks.co.uk.",
+    "port": 443,
+    "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
+    "region": "eu"
+  },
+  {
+    "host": "mio.mozitop.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "download.lv426.co.uk",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "media.happtg.org",
+    "port": 443,
+    "secret": "eed9cf709eb48bb5a37471fba84864bd7e766b2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "webhook.what-ever.co.uk",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
+    "region": "eu"
+  },
+  {
+    "host": "167.233.60.38",
+    "port": 443,
+    "secret": "ddd77db43ee3721f0fcb40a4ff63b5cd27",
+    "region": "eu"
+  },
+  {
+    "host": "static-resources-api.website",
+    "port": 80,
+    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
+    "region": "us"
+  },
+  {
+    "host": "www.mtp-roto.info.",
     "port": 443,
     "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
     "region": "eu"
   },
   {
-    "host": "Telegram.best.ir.heazshddd.info.",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "140.233.167.135",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "host": "irancell-mci-rightel-adsl.connectina.co.uk.",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
     "region": "eu"
   },
   {
@@ -7036,6 +7156,12 @@
     "port": 80,
     "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
     "region": "us"
+  },
+  {
+    "host": "ai.vingardium.co.uk.",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ==",
+    "region": "eu"
   },
   {
     "host": "172.65.151.172",
@@ -7248,12 +7374,6 @@
     "region": "eu"
   },
   {
-    "host": "194.60.228.78",
-    "port": 2096,
-    "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
     "host": "91.107.160.196",
     "port": 443,
     "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
@@ -7269,12 +7389,6 @@
     "host": "109.122.198.203",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "ftp.jinxandjack.co.uk",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
     "region": "eu"
   },
   {
@@ -7308,9 +7422,21 @@
     "region": "ru"
   },
   {
+    "host": "ftp.jinxandjack.co.uk",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
+    "region": "eu"
+  },
+  {
     "host": "87.248.129.221",
     "port": 443,
     "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20",
+    "region": "eu"
+  },
+  {
+    "host": "app.what-ever.co.uk",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
     "region": "eu"
   },
   {
@@ -7332,9 +7458,9 @@
     "region": "ru"
   },
   {
-    "host": "proxy.lodkirmm.ru",
-    "port": 8443,
-    "secret": "ee16309abd572d284b309ef26bd7a3f68570726f78792e6c6f646b69726d6d2e7275",
+    "host": "50.7.41.162",
+    "port": 443,
+    "secret": "ee011808bcccfd224644ca7f231846a7d46d61782e7275",
     "region": "ru"
   },
   {
@@ -7662,9 +7788,9 @@
     "region": "ru"
   },
   {
-    "host": "media10.happtg.org",
+    "host": "cdn5.cdnwave.org",
     "port": 443,
-    "secret": "eeecd508d816f611bb329487809f8dac88706574726f766963682e7275",
+    "secret": "ee2c46ee89b4f2c79c1d8325d13091e580706574726f766963682e7275",
     "region": "ru"
   },
   {
@@ -7672,6 +7798,78 @@
     "port": 443,
     "secret": "ee2c46ee89b4f2c79c1d8325d13091e580706574726f766963682e7275",
     "region": "ru"
+  },
+  {
+    "host": "s3.assetflux.org",
+    "port": 443,
+    "secret": "ee8fc9c7632b344b1b76639c501ae7cfb5766b2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "vasl-sho.peachsoft.co.uk.",
+    "port": 443,
+    "secret": "eeddff05e65a69a6a7fd1a28a28a121fff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "ma.nistim.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "puot.mozitop.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "ving.mozitop.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "haji.biabala.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "mashti.biabala.co.uk",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "gate.24starsmarket.ru",
+    "port": 443,
+    "secret": "ee87edf50215ee4bf7aa2d409b9cd71fcc676174652e323473746172736d61726b65742e7275",
+    "region": "ru"
+  },
+  {
+    "host": "endless.autumngarden.injast.co.im.",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "web.bizonre.co.im.",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "sop.foodpatuy.ir",
+    "port": 443,
+    "secret": "3RBEYoISSb16xRkTAiDCXQk%3D",
+    "region": "eu"
+  },
+  {
+    "host": "valla.chemidonam.co.uk",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
   },
   {
     "host": "sub.iran-tehran.co.uk",
@@ -7686,9 +7884,21 @@
     "region": "eu"
   },
   {
+    "host": "abo-ali-sina.basalam.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "logs.jinxandjack.co.uk",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
+    "region": "eu"
+  },
+  {
     "host": "webhook.vingardium.co.uk",
     "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ%3D%3D",
     "region": "eu"
   },
   {
@@ -7746,45 +7956,15 @@
     "region": "eu"
   },
   {
-    "host": "77.92.151.85",
-    "port": 443,
-    "secret": "e563428c84e814fef4274088a8f0bcbe",
-    "region": "eu"
-  },
-  {
     "host": "ProxyTunnel.strangled.net",
     "port": 443,
     "secret": "ee4772827e920fc13e1fd29c7ccda1a459",
     "region": "eu"
   },
   {
-    "host": "62.238.114.8",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "silver.ciaude.co.uk",
-    "port": 2096,
-    "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "api2.medhata.org",
-    "port": 2443,
-    "secret": "ee9d072ce3c5b43f6b422bb1e7fe983cc4617069322e6d6564686174612e6f7267",
-    "region": "eu"
-  },
-  {
     "host": "asperin.info.206-197-43.ir.",
     "port": 8443,
     "secret": "ee1044048187495dfac59a030220c25cb3626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "www.172-63.ir.",
-    "port": 8443,
-    "secret": "ee8b8238601de9360f332514afa56ada45626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
@@ -7836,12 +8016,6 @@
     "region": "eu"
   },
   {
-    "host": "symbol.simbol.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "lowpressure.simbol.info",
     "port": 443,
     "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
@@ -7863,12 +8037,6 @@
     "host": "78.128-273-66.ir.",
     "port": 8443,
     "secret": "ee104462821249bd7ac519130220c25d09626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "www.royaclinic.co.uk",
-    "port": 80,
-    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
@@ -7911,12 +8079,6 @@
     "host": "Berke.Wikimoon.sale",
     "port": 443,
     "secret": "7jK5IN_7UWQwKOL2uHjU6sFkbXl3ZWIuY2xvdWRmcm9udC5uZXQ",
-    "region": "eu"
-  },
-  {
-    "host": "ad1.arixo.shop",
-    "port": 443,
-    "secret": "eee09f46368021f91b92ad3dea14c7ac896164312e617269786f2e73686f70",
     "region": "eu"
   },
   {
@@ -7980,24 +8142,6 @@
     "region": "eu"
   },
   {
-    "host": "65.108.123.76",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu"
-  },
-  {
-    "host": "cdn2.medhata.org",
-    "port": 2443,
-    "secret": "ee7b9814d423bb50d370214258830fbde063646e322e6d6564686174612e6f7267",
-    "region": "eu"
-  },
-  {
-    "host": "node.easyproxy.cfd",
-    "port": 443,
-    "secret": "ee6be95a795ee766da019cd30044b837c16e6f64652e6561737970726f78792e636664",
-    "region": "eu"
-  },
-  {
     "host": "77.72.80.130",
     "port": 25565,
     "secret": "dd79e344818749bd7ac519130220c25d09",
@@ -8046,21 +8190,9 @@
     "region": "eu"
   },
   {
-    "host": "hub.savelyev.click",
-    "port": 443,
-    "secret": "ee609a2ad7e277c6eb2dd39767e12777b86875622e736176656c7965762e636c69636b",
-    "region": "eu"
-  },
-  {
     "host": "8d4f7d.hopwire.io",
     "port": 443,
     "secret": "ee8b118ed33b275628fba750798779726d3864346637642e686f70776972652e696f",
-    "region": "eu"
-  },
-  {
-    "host": "premium.speed-benz.co.uk",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
@@ -8076,21 +8208,9 @@
     "region": "eu"
   },
   {
-    "host": "65.109.147.39",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu"
-  },
-  {
     "host": "runserver.co.uk",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "relay.rknsosi.shop",
-    "port": 443,
-    "secret": "ee93e8816b5fd5c054bc95442701329e0072656c61792e726b6e736f73692e73686f70",
     "region": "eu"
   },
   {
@@ -8106,12 +8226,6 @@
     "region": "eu"
   },
   {
-    "host": "sioms.co.uk",
-    "port": 25565,
-    "secret": "ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "r1.newr1.co.uk",
     "port": 85,
     "secret": "FgMBAgABAAH8AxOG4kw63Q",
@@ -8124,27 +8238,9 @@
     "region": "eu"
   },
   {
-    "host": "www.bazbaran-batrane.ir.",
-    "port": 8443,
-    "secret": "7hYDBIGHSV36xZoDAiDCXY5tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu"
-  },
-  {
-    "host": "lab.nowabst.net",
-    "port": 853,
-    "secret": "eeb63ea09be7a8fe1eca00c0e99e97d832766b2e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "77.72.80.115",
     "port": 25565,
     "secret": "dd79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "135.181.74.178",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
     "region": "eu"
   },
   {
@@ -8202,15 +8298,15 @@
     "region": "eu"
   },
   {
-    "host": "cdn9.cdnwave.org",
-    "port": 443,
-    "secret": "ee2e7c3d85e469cb8f825f4678a716a363706574726f766963682e7275",
-    "region": "ru"
-  },
-  {
     "host": "185.84.157.150",
     "port": 444,
     "secret": "1603010200010001fc031386e24c3add",
+    "region": "eu"
+  },
+  {
+    "host": "yeke-jahan.mohearn.co.uk.",
+    "port": 443,
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
     "region": "eu"
   },
   {
@@ -8218,12 +8314,6 @@
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
-  },
-  {
-    "host": "s1.assetflux.org",
-    "port": 443,
-    "secret": "ee73e7d7fe41b49d9091f78c8c92c22de4766b2e7275",
-    "region": "ru"
   },
   {
     "host": "endless.mountainriver.modern-tools.co.uk.",
@@ -8241,12 +8331,6 @@
     "host": "www.royaclinic.co.uk",
     "port": 80,
     "secret": "3RbZ3hNtxAbJ6L5BQipx2_s",
-    "region": "eu"
-  },
-  {
-    "host": "kima.rabotaet.online",
-    "port": 443,
-    "secret": "ee12e7e5f961f258b04af168a1cba6318a6b696d612e7261626f746165742e6f6e6c696e65",
     "region": "eu"
   },
   {
@@ -8271,12 +8355,6 @@
     "host": "avavavavav.mohearn.co.uk.",
     "port": 443,
     "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
-    "region": "eu"
-  },
-  {
-    "host": "Bezan-Ke.Khob-Mizani.manege-desktop-for.co.im.",
-    "port": 4443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
     "region": "eu"
   },
   {
@@ -8340,12 +8418,6 @@
     "region": "eu"
   },
   {
-    "host": "uptime.speed-benz.co.uk",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
     "host": "77.72.80.83",
     "port": 9443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
@@ -8367,18 +8439,6 @@
     "host": "82bf77.edgelink.org",
     "port": 443,
     "secret": "ee718aeb2009c4b1f64d5c389bbb0e61563832626637372e656467656c696e6b2e6f7267",
-    "region": "eu"
-  },
-  {
-    "host": "dns.speed-benz.co.uk",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "mash.drproxy.pro",
-    "port": 443,
-    "secret": "dda5a7b5711e648c7bd534e4e87de2241b",
     "region": "eu"
   },
   {
@@ -8586,12 +8646,6 @@
     "region": "eu"
   },
   {
-    "host": "naro.guguli.co.uk",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
     "host": "data.fast-proxy.ink",
     "port": 443,
     "secret": "eef6d54c631f71a854601ed95ca53e02b0646174612e666173742d70726f78792e696e6b",
@@ -8752,6 +8806,12 @@
     "port": 443,
     "secret": "eea29dda982c54198f00ea8d440fa6f8ce6875622e6e656f2d76706e2e696e6b",
     "region": "eu"
+  },
+  {
+    "host": "media6.happtg.org",
+    "port": 443,
+    "secret": "ee7391242569590e01416101927d38b565646e732d73686f702e7275",
+    "region": "ru"
   },
   {
     "host": "media7.happtg.org",
@@ -9048,12 +9108,6 @@
     "region": "eu"
   },
   {
-    "host": "beest-sellerst.co.uk",
-    "port": 443,
-    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "dns.bizonre.co.im",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
@@ -9264,12 +9318,6 @@
     "region": "eu"
   },
   {
-    "host": "turk.dasy2k1.co.uk.",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
-    "region": "eu"
-  },
-  {
     "host": "ops2ops.co.uk.",
     "port": 443,
     "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
@@ -9285,12 +9333,6 @@
     "host": "94.184.32.113.ir-vlue3.ir",
     "port": 2020,
     "secret": "AAAAAAAAAAAAAAAAAAAAAA==",
-    "region": "eu"
-  },
-  {
-    "host": "kurd.tryzub-it.co.uk.",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
     "region": "eu"
   },
   {
@@ -9348,291 +9390,273 @@
     "region": "eu"
   },
   {
-    "host": "feed.proxyvpn.ink",
-    "port": 443,
-    "secret": "ddf9cbb3978cf95814666a7760fec37f90",
+    "host": "xmashhgujdi.kamandamool.ir",
+    "port": 48173,
+    "secret": "EECLOUDASIzRJlmd4iaQgCM4eFlnUldQOFpvTHVwZmNp",
     "region": "eu"
   },
   {
-    "host": "141.98.6.192",
+    "host": "Net.meli.la.bunkhouses.ir",
     "port": 443,
-    "secret": "ee2c7dab3c75adbe7da5d466f44ee2bc4a78702e6170706c652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "come.workingproxy.xyz",
-    "port": 443,
-    "secret": "dd7957f0892ff649d9649ae30df67f9b6e",
+    "secret": "EECLOUDASIzRJlmd4iaQg",
     "region": "eu"
   },
   {
-    "host": "77.42.79.76",
-    "port": 4455,
+    "host": "178.105.12.9",
+    "port": 1080,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu"
   },
   {
-    "host": "mci-ir.info",
+    "host": "45.77.106.46",
     "port": 443,
-    "secret": "10dadd1e7c27a20098abb5bf53ca26a8",
+    "secret": "20b2685bdfd8d328612dd1eb55891e8a",
     "region": "eu"
   },
   {
-    "host": "66a33889.etherealvpn.uk",
+    "host": "91.99.238.130",
+    "port": 8080,
+    "secret": "7gAA8A8Pd1VV____9QBuLmktLXd3LmZvLS0=",
+    "region": "eu"
+  },
+  {
+    "host": "14.102.10.120",
+    "port": 85,
+    "secret": "7gD_AA___wD_9VVf______VmLmtvLS0=",
+    "region": "eu"
+  },
+  {
+    "host": "90.156.213.122",
     "port": 443,
-    "secret": "eed083bcb9b8a3592fa7d6e8060b95992d39643530393933642e657468657265616c76706e2e756b",
+    "secret": "dd6b3fb02424dbac55fef2da67c8c949",
     "region": "eu"
   },
   {
-    "host": "free-nl-ru.kimt.space",
-    "port": 443,
-    "secret": "ee3efced182e68e689a17d58c71ff6fafe667265652d6e6c2e6b696d742e7370616365",
-    "region": "eu"
-  },
-  {
-    "host": "188.245.222.209",
-    "port": 1010,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu"
-  },
-  {
-    "host": "coffee.sattarbox.co.uk",
-    "port": 25565,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "65.109.43.120",
-    "port": 443,
-    "secret": "dd79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "93.113.230.237",
-    "port": 443,
-    "secret": "dd71f113e3cec722d3e1701bbab480f3d4",
-    "region": "eu"
-  },
-  {
-    "host": "rup.digi-srkshop.sbs",
-    "port": 59780,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu"
-  },
-  {
-    "host": "176.65.135.105",
-    "port": 2053,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "iran.opt-meli.info.",
+    "host": "62.60.247.164",
     "port": 8443,
+    "secret": "ee6e94cd48f5739a89d96bff1dc47b50",
+    "region": "eu"
+  },
+  {
+    "host": "91.239.192.252",
+    "port": 9443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "65.109.245.23",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "46.224.105.71",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "93.77.176.9",
+    "host": "95.216.178.101",
     "port": 443,
-    "secret": "ee6a0333c1db3f8eaba5c76731a44203b6617669746f2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "138.124.101.254",
-    "port": 32003,
-    "secret": "ee99f0f6706b481c96d9e4a227d17316ed7777772e676f6f676c652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "178.105.50.21",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "secret": "1603010200010001fc031386e24c3add",
     "region": "eu"
   },
   {
-    "host": "144.124.244.133",
+    "host": "vase-danlod.peachsoft.co.uk.",
     "port": 443,
-    "secret": "9f1c4a7b2d3e5f6012a9c8b7d6e4f3a1",
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D",
     "region": "eu"
   },
   {
-    "host": "194.213.118.22",
-    "port": 1010,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "185.223.93.114",
-    "port": 80,
-    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "49.13.33.176",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "87.248.149.148",
+    "host": "91.99.93.242",
     "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "179.61.226.49",
-    "port": 733,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "host": "drink-water.dezmart.ir",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "tiota.fanlpmw.info",
+    "host": "vase-danlod.peachsoft.co.uk.",
+    "port": 443,
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
+    "region": "eu"
+  },
+  {
+    "host": "payment.snewsolutions.co.uk",
+    "port": 9741,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "91.84.114.153",
+    "port": 231,
+    "secret": "79ee65acf6c575bd6f8b3c1ddc7107a3",
+    "region": "eu"
+  },
+  {
+    "host": "sepas.bmcdr.info",
     "port": 443,
     "secret": "1603010200010001fc030386e24c3add",
     "region": "eu"
   },
   {
-    "host": "Newt.zban-df.info",
-    "port": 8888,
-    "secret": "1320PuNyHw_LQKT_Y7XNJw",
+    "host": "185.224.3.209",
+    "port": 80,
+    "secret": "7vxW-3PJcqIwnEeHvBNkwiB3d3cuY2xvdWRmbGFyZS5jb20",
     "region": "eu"
   },
   {
-    "host": "amorecoin.duckdns.org",
+    "host": "77.42.79.76",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d044",
+    "region": "eu"
+  },
+  {
+    "host": "www.roto-best.info",
+    "port": 2083,
+    "secret": "ee1603010200010001fc030386e24c3add68656c702e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "85.198.21.172",
     "port": 443,
-    "secret": "7mYW_5fPLJzJxcvUupkA3pN3d3cuZ29vZ2xlLmNvbQ",
-    "region": "eu"
-  },
-  {
-    "host": "38.79.154.34",
-    "port": 8443,
-    "secret": "eec6c19e0a086fa613a486bc960d7a59b0636c6f7564666c6172652e636f6d",
+    "secret": "ee2394bc3257f5aa0e7ff9a40a3cdfaa777777772e636c6f7564666c6172652e636f6d",
     "region": "us"
   },
   {
-    "host": "alo.clare-flare-ow.store.",
-    "port": 25565,
-    "secret": "ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d",
+    "host": "193.3.190.51",
+    "port": 85,
+    "secret": "7gAA8A8Pd1VV____9QBuLmljaGF0Z3B0LmNvbQ",
     "region": "eu"
   },
   {
-    "host": "94.183.217.213",
+    "host": "178.105.161.83",
     "port": 443,
-    "secret": "ee5104099389fbd2c3306b252d14f145ea7777772e676f6f676c652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "138.124.72.27",
-    "port": 443,
-    "secret": "6356ebb33a57b6deda8a1c3cf2aee557",
-    "region": "eu"
-  },
-  {
-    "host": "Mmdof.fulldf.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
-    "region": "eu"
-  },
-  {
-    "host": "65.21.113.80",
-    "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu"
   },
   {
-    "host": "79.175.157.254",
-    "port": 49872,
-    "secret": "FSEcAMhR6Mc19Y-b6LbUx",
+    "host": "2.2.2.2.okbye.ir",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFy",
     "region": "eu"
   },
   {
-    "host": "vip.mtfastest.info",
-    "port": 7980,
-    "secret": "dd00000000000000000000000000000000",
-    "region": "eu"
-  },
-  {
-    "host": "85.133.194.18",
-    "port": 8443,
+    "host": "87.248.132.88",
+    "port": 200,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "31.220.73.75",
+    "host": "master2.ir-vlue3.ir",
+    "port": 8880,
+    "secret": "ee8b5dc967fdbf6dcbf7e8f8bebcc6b6fe626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "95.216.230.231",
+    "port": 255,
+    "secret": "FgMBAgABAAH8AwOG4kw63Q==",
+    "region": "eu"
+  },
+  {
+    "host": "62.60.179.8",
+    "port": 9880,
+    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "victory.ou-miaiad.info.",
+    "port": 88,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu"
+  },
+  {
+    "host": "main.geodns.info",
+    "port": 4455,
+    "secret": "7nnjRIGHSb16xRkTAiDCXQk=",
+    "region": "eu"
+  },
+  {
+    "host": "79.175.149.108",
     "port": 443,
-    "secret": "ee15561483d7091829be01a81a8b550ea4636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "91.98.229.218",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "secret": "ddd261390ce12c03e69163552f90372383",
     "region": "eu"
   },
   {
-    "host": "login.veltura.digital",
+    "host": "141.95.102.106",
+    "port": 7080,
+    "secret": "7mUoOHWoobKp1d-l_m0ARPd3ZWIuc3RyZW0uaW8=",
+    "region": "eu"
+  },
+  {
+    "host": "80.240.29.220",
     "port": 443,
-    "secret": "ee4f5545c56e0ee3271606a2985459773e6c6f67696e2e76656c747572612e6469676974616c",
+    "secret": "516f51126109daec2ce1bb765541c921",
     "region": "eu"
   },
   {
-    "host": "78.47.218.224",
-    "port": 8443,
-    "secret": "3X4EnKGi0l0GLSwjPFR6DZ43OC40Ny4y",
-    "region": "eu"
-  },
-  {
-    "host": "2.26.83.251",
+    "host": "sr1.loveproxy.xyz",
     "port": 443,
-    "secret": "e9c33c54fd4a49a61b058135201950a7",
-    "region": "eu"
+    "secret": "eef334baa1cb1e7ca5cf1a48e461b5dbfa62726f777365722e79616e6465782e636f6d",
+    "region": "ru"
   },
   {
-    "host": "85.133.194.14",
+    "host": "cafe.sattarbox.co.uk",
     "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "post.my-miner.info.",
-    "port": 8443,
-    "secret": "7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v",
-    "region": "eu"
-  },
-  {
-    "host": "ftp.jinxandjack.co.uk.",
-    "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ==",
-    "region": "eu"
-  },
-  {
-    "host": "108.181.123.189",
+    "host": "237377.meli.zban-mas.info",
     "port": 8888,
     "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "45.92.93.159",
-    "port": 3443,
-    "secret": "767cf6f14f461cdd166b54eddb53e1b0",
+    "host": "93.88.205.35",
+    "port": 85,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "Eye.ChMTP.Info",
-    "port": 88,
-    "secret": "dd00000000000000000000000000000000",
+    "host": "85.133.194.120",
+    "port": 8443,
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "85.133.194.120",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "45.77.114.37",
+    "port": 443,
+    "secret": "dd39a8cfcb287adc177c8a453a2f1373aa",
+    "region": "eu"
+  },
+  {
+    "host": "95.217.28.96",
+    "port": 443,
+    "secret": "1603010200010001fc031386e24c3add",
+    "region": "eu"
+  },
+  {
+    "host": "2.1.1.calculationgarfieldmtproto.uk",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "163.5.31.240",
+    "port": 155,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "159.194.221.26",
+    "port": 443,
+    "secret": "ee208f23ace1558102572914066d21107f7777772e79616e6465782e7275",
+    "region": "ru"
+  },
+  {
+    "host": "iran.zibayi.shop.",
+    "port": 888,
+    "secret": "ee0c30628212cbbd7ac519130205525d1569612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
@@ -9642,28 +9666,136 @@
     "region": "eu"
   },
   {
-    "host": "oh.ajab-soorati-dare.info",
-    "port": 42341,
-    "secret": "7nnnAQIAAQAH8AMDhuJMOt0",
+    "host": "www.careemian.info",
+    "port": 2083,
+    "secret": "7hYDAQIAAQAB/AMDhuJMOt1oZWxwLnN0ZWFtcG93ZXJlZC5jb20",
     "region": "eu"
   },
   {
-    "host": "89.22.236.159",
+    "host": "49.13.209.101",
+    "port": 8080,
+    "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "region": "eu"
+  },
+  {
+    "host": "82.152.162.18",
+    "port": 10004,
+    "secret": "ee548593a9c0688f4f7d9d57377897d964636c6f7564666c6172652e636f6d",
+    "region": "us"
+  },
+  {
+    "host": "91.92.33.42",
+    "port": 10010,
+    "secret": "a776b2138267bee7902cb7840c71a7ad",
+    "region": "eu"
+  },
+  {
+    "host": "0182.meli.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "172.65.147.243",
+    "port": 25565,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "34.141.143.95",
     "port": 443,
-    "secret": "eef838b6a55fa5e8393c63def771cf1014766b2e636f6d",
+    "secret": "dd3fca63b4b1816dc78d7d5d66ad6ea177",
+    "region": "eu"
+  },
+  {
+    "host": "82.38.65.52",
+    "port": 443,
+    "secret": "eeddb9e20cc7ef26e5b804f00300d0690b6974756e65732e6170706c652e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "85.133.194.15",
+    "port": 8443,
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "143.20.143.26",
+    "port": 733,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "wait.fiziotr.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "45.77.198.52",
+    "port": 443,
+    "secret": "9435471adc644562a77c6a37cd0eb9a6",
+    "region": "eu"
+  },
+  {
+    "host": "95.179.155.88",
+    "port": 443,
+    "secret": "f1ed42cfb21fbe9cd5eb2c622b4d75ff",
+    "region": "eu"
+  },
+  {
+    "host": "176.65.135.105",
+    "port": 2053,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "45.93.168.19",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "195.254.165.200",
+    "port": 13,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "77.42.82.3",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "144.31.221.60",
+    "port": 443,
+    "secret": "ee254d5a268e3496e39ac6ece61d6ef89b766b2e636f6d",
     "region": "ru"
   },
   {
-    "host": "176.108.242.30",
-    "port": 443,
-    "secret": "dd7c5d4e1f2a3b9c8d7e6f5a4b3c2d1e0f",
+    "host": "162.55.172.66",
+    "port": 155,
+    "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
     "region": "eu"
   },
   {
-    "host": "173.212.245.154",
+    "host": "138.201.133.111",
     "port": 443,
-    "secret": "ee887896e32705c777dbc6741c11069fde636c6f7564666c6172652e636f6d",
-    "region": "us"
+    "secret": "dd638becf0fe989caa21b10797ad4d1c38",
+    "region": "eu"
+  },
+  {
+    "host": "216.238.72.159",
+    "port": 443,
+    "secret": "dd33a1ffe00ba04c7cd948333800cef8b5",
+    "region": "eu"
+  },
+  {
+    "host": "144.31.215.178",
+    "port": 7443,
+    "secret": "da5418d123ae6ec61a8ba57d0ae7f9ec",
+    "region": "eu"
   },
   {
     "host": "34.51.192.156",
@@ -9672,51 +9804,267 @@
     "region": "eu"
   },
   {
-    "host": "secure.gorbushkin.click",
+    "host": "sex.arixo.shop",
     "port": 443,
-    "secret": "ee085e93f8b1609516932d35ace0fe35da7365637572652e676f72627573686b696e2e636c69636b",
+    "secret": "eec11798ab008831b474066c9e1ebf5c59617669746f2e7275",
     "region": "eu"
   },
   {
-    "host": "178.105.232.49",
-    "port": 8443,
-    "secret": "E____xADzDAFqlAH7nAJ3A",
+    "host": "46.62.197.12",
+    "port": 155,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
-    "host": "paired.duckdns.org",
-    "port": 443,
-    "secret": "ee7765622e796f74612e72755b744f13",
-    "region": "ru"
-  },
-  {
-    "host": "xplor.isobelhas.ir",
-    "port": 9741,
-    "secret": "EECLOUDASIzRJlmd4iaQgCM4eFlnUldQOFpvTHVwZmNpaVI2ZkJFNDJMSXJxUW1yT2s4YzRCaVRaLi11cGRhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-    "region": "eu"
-  },
-  {
-    "host": "158.160.232.183",
-    "port": 443,
-    "secret": "eefab80a27431eaf7ddafa501cc79b4531617669746f2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "download-up.soren-mashin.ir",
-    "port": 9741,
+    "host": "371164.meli.meli.zban-mas.info",
+    "port": 8888,
     "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "cafe.sattarbox.co.uk",
+    "host": "l399.ir.fulle7.info",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "62.60.178.206",
+    "host": "185.3.200.199",
+    "port": 2053,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu"
+  },
+  {
+    "host": "212.34.141.96",
     "port": 443,
-    "secret": "7hYDAQIAAQAH8AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29tbWVkaWEuc3RlYW1wb3dlcmVkLmNvbQ",
+    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
+    "region": "eu"
+  },
+  {
+    "host": "web-ai.gung-ho.co.uk.",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___8=",
+    "region": "eu"
+  },
+  {
+    "host": "cdn-ir.mtnedge.ir.",
+    "port": 443,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "65.108.126.206",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu"
+  },
+  {
+    "host": "85.133.194.97",
+    "port": 6443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "103.161.34.63",
+    "port": 443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "proxy65.arixo.shop",
+    "port": 443,
+    "secret": "ee3ceb82a3b4254e6e6ae1971021f3c209617669746f2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "pes2021-update2025.magalaiash.info",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "sub2.ir-vlue3.ir",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add7268706F7579616E2E69722D766C7565332E6972",
+    "region": "eu"
+  },
+  {
+    "host": "14.102.10.137",
+    "port": 85,
+    "secret": "7gD_AA___wD_9VVf______VmLmtvLS0=",
+    "region": "eu"
+  },
+  {
+    "host": "195.254.165.166",
+    "port": 9443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "bombproxy.pro",
+    "port": 80,
+    "secret": "dddd123456789012345678901234567890",
+    "region": "eu"
+  },
+  {
+    "host": "91.99.210.170",
+    "port": 823,
+    "secret": "d77db43ee3721f0fcb40a4ff63b5cd27",
+    "region": "eu"
+  },
+  {
+    "host": "2.tiko-i.ir",
+    "port": 443,
+    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
+    "region": "eu"
+  },
+  {
+    "host": "65.21.124.103",
+    "port": 25565,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q",
+    "region": "eu"
+  },
+  {
+    "host": "89.117.57.105",
+    "port": 443,
+    "secret": "ee39893f907f1ee3a3cbee2fb90129f0d4636c6f7564666c6172652e636f6d",
+    "region": "us"
+  },
+  {
+    "host": "194.233.95.205",
+    "port": 443,
+    "secret": "eed0ed90376601d3a5e8a71cfd42d50944676f6f676c65617069732e636f6d",
+    "region": "us"
+  },
+  {
+    "host": "13.63.160.17",
+    "port": 80,
+    "secret": "dd104462821249bd7ac51130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "bazar5.iransport.observer",
+    "port": 8443,
+    "secret": "ee1603010200010001fc030386e24c3add67662e6972616e73706f72742e6f62736572766572",
+    "region": "eu"
+  },
+  {
+    "host": "hetzner.com.muffinnoliershatelcomingsoon.co.uk.",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff6865747a6e65722e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "151.244.85.66",
+    "port": 85,
+    "secret": "ee0000f00f0f775555fffffff5006e2e696D656469612E737465616D706F77657265642E636F6D",
+    "region": "eu"
+  },
+  {
+    "host": "65.109.255.170",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "192.144.15.229",
+    "port": 443,
+    "secret": "ee095b4c07061fa18ae9374091be8a8c4e79616e6465782e7275",
+    "region": "ru"
+  },
+  {
+    "host": "85.133.194.10",
+    "port": 65535,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "140.233.187.37",
+    "port": 443,
+    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "85.133.238.3",
+    "port": 8880,
+    "secret": "ee8b5dc967fdbf6dcbf7e8f8bebcc6b6fe626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "94.130.191.164",
+    "port": 8443,
+    "secret": "13ffffff1003cc3005aa5007ee7009dc",
+    "region": "eu"
+  },
+  {
+    "host": "46.224.169.103",
+    "port": 8080,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "87.248.132.35",
+    "port": 170,
+    "secret": "EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFq",
+    "region": "eu"
+  },
+  {
+    "host": "172.233.46.162",
+    "port": 443,
+    "secret": "ee5a5c01915bf728648c5b2677e98aa9aa7777772e636c6f7564666c6172652e636f6d",
+    "region": "us"
+  },
+  {
+    "host": "82.40.49.99",
+    "port": 443,
+    "secret": "ee94506e2d9fd384a8df9249305ccd0a3962726f777365722e79616e6465782e636f6d",
+    "region": "ru"
+  },
+  {
+    "host": "ns.proxyz.site",
+    "port": 443,
+    "secret": "ee45e7845ee5a032aa5ccf1915270d18016e732e70726f78797a2e73697465",
+    "region": "eu"
+  },
+  {
+    "host": "mine.airplan1.ir",
+    "port": 25565,
+    "secret": "FgMBAgABAAH8AxytgOG4kw63Q",
+    "region": "eu"
+  },
+  {
+    "host": "157.180.120.251",
+    "port": 23,
+    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
+    "region": "eu"
+  },
+  {
+    "host": "r14.proxytg.space",
+    "port": 8443,
+    "secret": "ee20085b424592e30b46373c98b0b0a1737231342e70726f787974672e7370616365",
+    "region": "eu"
+  },
+  {
+    "host": "158.160.4.95",
+    "port": 8443,
+    "secret": "1bae7cb825675c47bb90db37e117611b",
+    "region": "eu"
+  },
+  {
+    "host": "bulgaria.plovdiv.ir",
+    "port": 23,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "138.124.71.179",
+    "port": 443,
+    "secret": "6356ebb33a57b6deda8a1c3cf2aee557",
+    "region": "eu"
+  },
+  {
+    "host": "117.55.203.69",
+    "port": 443,
+    "secret": "3RBEYoISSb16xRkTAiDCXQk=",
     "region": "eu"
   },
   {
@@ -9726,477 +10074,285 @@
     "region": "ru"
   },
   {
-    "host": "tg-proxy.xyz",
+    "host": "ssh.gamelande.info.",
+    "port": 88,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
+    "region": "eu"
+  },
+  {
+    "host": "93.77.188.219",
     "port": 443,
-    "secret": "ee3332394b46a676b9d61d9a52517babd1676f6f676c652e636f6d",
+    "secret": "ee6a0333c1db3f8eaba5c76731a44203b6617669746f2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "140.233.167.218",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "87.248.132.31",
+    "port": 200,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "web.websecc.info.",
+    "port": 42341,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
+    "region": "eu"
+  },
+  {
+    "host": "31.220.75.103",
+    "port": 443,
+    "secret": "eef6b468d23668d5267209439974122f51636c6f7564666c6172652e636f6d",
     "region": "us"
   },
   {
-    "host": "65.108.44.92",
+    "host": "167.233.131.194",
+    "port": 443,
+    "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
+    "region": "eu"
+  },
+  {
+    "host": "212.34.155.60",
+    "port": 4030,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "ultra.iran.1.ir.bsdatqodh.info.",
+    "port": 88,
+    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "38.34.179.92",
+    "port": 8451,
+    "secret": "ee000000000000000000000000000000",
+    "region": "eu"
+  },
+  {
+    "host": "94.249.225.4",
+    "port": 88,
+    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "91.84.112.109",
+    "port": 443,
+    "secret": "eeXifpB2GBv9shh2kvi5l",
+    "region": "eu"
+  },
+  {
+    "host": "makeup.duhpro.makeup",
+    "port": 8443,
+    "secret": "dd79e7010200010007f0030386e24c3add",
+    "region": "eu"
+  },
+  {
+    "host": "mtp.kyonix.giize.com",
+    "port": 443,
+    "secret": "eea24ae024cabbe6a256a6537db04174b76d74702e6b796f6e69782e6769697a652e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "176.108.242.30",
+    "port": 443,
+    "secret": "dd7c5d4e1f2a3b9c8d7e6f5a4b3c2d1e0f",
+    "region": "eu"
+  },
+  {
+    "host": "116.203.6.81",
+    "port": 443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "87.248.134.33",
+    "port": 7443,
+    "secret": "10446282fffffffffff80000fff80000",
+    "region": "eu"
+  },
+  {
+    "host": "95.216.66.254",
+    "port": 443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "0336355673737777377.meli.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu"
+  },
+  {
+    "host": "87.248.149.13",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "91.239.192.41",
     "port": 443,
     "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
     "region": "eu"
   },
   {
-    "host": "ethereal13.arixo.shop",
+    "host": "9891.Ir.ir.ir.ir.ir.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t__",
+    "region": "eu"
+  },
+  {
+    "host": "openhostings.co.uk.",
     "port": 443,
-    "secret": "ee3970007a12a5933f40277d905ecff282657468657265616c31332e617269786f2e73686f70",
+    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
-    "host": "jet.proxym.world",
+    "host": "b-----baran-----b-ir.get1mobileponster.ir.",
+    "port": 9741,
+    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "web.my-miner.info.",
+    "port": 61016,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
+    "region": "eu"
+  },
+  {
+    "host": "46.224.148.217",
     "port": 443,
-    "secret": "ee894a8e1c70d3ec137af76968609e04666a65742e70726f78796d2e776f726c64",
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "92.114.24.11",
-    "port": 158,
-    "secret": "dd79e9fd64839572ec448e4caded38969a",
+    "host": "159.223.243.87",
+    "port": 2428,
+    "secret": "a415af649efddaf29e6b23f2c3db5f14",
     "region": "eu"
   },
   {
-    "host": "028786816z36676866752876777.ir.fulldf.info",
+    "host": "89.251.10.32",
+    "port": 6443,
+    "secret": "ee151151151151151151151151151151156d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "37.49.224.204",
     "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "secret": "eeb5e95ec1e6e2a27f9ca26fa2afe8abfa737465616D706F77657265642E636F6D",
     "region": "eu"
   },
   {
-    "host": "3.mtprotonewniceasiashatel.co.uk",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "azadi.minetor.co.uk",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu"
-  },
-  {
-    "host": "146.103.106.90",
+    "host": "140.233.167.247",
     "port": 443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "connect.arixo.shop",
+    "host": "mt1.angald.ru",
     "port": 443,
-    "secret": "eeed5518514cf40187d905c5b7c9e4d595617669746f2e7275",
+    "secret": "eeb4fe77bb5189f98dd2670fd97f93f85e6d61696c2e616e67616c642e7275",
     "region": "ru"
   },
   {
-    "host": "91.206.28.5",
-    "port": 1010,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "host": "49.12.209.41",
+    "port": 15,
+    "secret": "7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v",
     "region": "eu"
   },
   {
-    "host": "portal.balalaika.click",
-    "port": 443,
-    "secret": "eeb1e9573672dbba7fe8d14da9a2249be8706f7274616c2e62616c616c61696b612e636c69636b",
+    "host": "195.254.165.143",
+    "port": 4455,
+    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f62",
     "region": "eu"
   },
   {
-    "host": "31.220.72.192",
+    "host": "87.248.129.248",
+    "port": 16,
+    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "81.90.25.247",
     "port": 443,
-    "secret": "ee7efc984a2466c817293e34c37d871459636c6f7564666c6172652e636f6d",
+    "secret": "ee6d6963726f736f66742e636f6dd95c",
     "region": "us"
   },
   {
-    "host": "89.117.61.219",
-    "port": 443,
-    "secret": "ee3ce87453813480e671469fe99091473c636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "hetzner.sammarkham.co.uk.",
-    "port": 443,
-    "secret": "7pR7ojB4pNUZd8pcEBczQBloZXR6bmVyLmNvbQ==",
+    "host": "195.15.254.214",
+    "port": 2055,
+    "secret": "eedc8f3bb36dec29bf7c79a2d47d623bb273746f72652e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
-    "host": "77.72.18.66",
+    "host": "mahanmizban.genuismind.info",
     "port": 443,
-    "secret": "ee643ce9490ec2a7f6c4cfa686afad39556d736e2e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "77.42.122.193",
-    "port": 8080,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
     "region": "eu"
   },
   {
-    "host": "gn9jzbcq.helper.website",
+    "host": "ger1.agera-connect.lol",
     "port": 443,
-    "secret": "ee684d33d8ddb3b065954c94a291ea5f3e6875796775712e68656c7065723230736d732e7275",
-    "region": "ru"
-  },
-  {
-    "host": "65.109.248.97",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "secret": "ee1378018235f440ce3cc21d689db275bc676572312e61676572612d636f6e6e6563742e6c6f6c",
     "region": "eu"
   },
   {
-    "host": "new.old-balance.co.uk",
-    "port": 25565,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "mirror.balalaika.click",
+    "host": "live.gorbushkin.click",
     "port": 443,
-    "secret": "ee204fd0f2f4584c289c6aa284e46ed6406d6972726f722e62616c616c61696b612e636c69636b",
-    "region": "eu"
-  },
-  {
-    "host": "de.indigogift.fun",
-    "port": 443,
-    "secret": "ee9481926e289b1ce3aab7e246792521047777772e636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "total.beyondeson-co.cfd",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu"
-  },
-  {
-    "host": "88.198.194.198",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "204.76.203.52",
-    "port": 443,
-    "secret": "15115115115115115115115115115115",
-    "region": "eu"
-  },
-  {
-    "host": "tg.nosokvpn.com",
-    "port": 443,
-    "secret": "118fb8496cb1abb9cd6e0fbe1000ad92",
+    "secret": "eec85666282a2a3091eb56c31302da3c9f6c6976652e676f72627573686b696e2e636c69636b",
     "region": "eu"
   },
   {
     "host": "login.klyuch1k.org",
     "port": 443,
-    "secret": "eee81764f80830981a15981cf5deae33476c6f67696e2e6b6c79756368316b2e6f7267",
+    "secret": "ee7fe48cfdec0ea3ef252cabc2fadda0206c6f67696e2e6b6c79756368316b2e6f7267",
     "region": "eu"
   },
   {
-    "host": "178.105.237.175",
-    "port": 7443,
-    "secret": "ee1603010200010001fc030386e24c3add646e2e79656b74616e65742e636f6d646c2e676f6f676c652e636f6d666172616B61762E636F6D160301020001000100000000000000000000000000000000",
-    "region": "eu"
-  },
-  {
-    "host": "157.180.94.178",
-    "port": 8888,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q",
-    "region": "eu"
-  },
-  {
-    "host": "5.75.172.150",
+    "host": "65.109.186.35",
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu"
   },
   {
-    "host": "65.21.245.121",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "65.21.124.81",
-    "port": 25565,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q",
-    "region": "eu"
-  },
-  {
-    "host": "142.54.189.106",
-    "port": 443,
-    "secret": "7gnbgVptgqMf2nb4ciMMaddwa2didWlsZC5vcmc",
-    "region": "eu"
-  },
-  {
-    "host": "140.233.187.135",
-    "port": 343,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu"
-  },
-  {
-    "host": "77.239.124.173",
-    "port": 443,
-    "secret": "EE1603010200010007f0030386e24c3add646f776e6c6f61642e77696e646f77737570646174652e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "policeman.extravpn.io",
-    "port": 443,
-    "secret": "eef60cd867e0740285327f977516d7d88b706f6c6963656d616e2e657874726176706e2e696f",
-    "region": "eu"
-  },
-  {
-    "host": "91.217.166.14",
-    "port": 40,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1jZG4ueWVrdGFuZXQuY29tMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA=",
-    "region": "eu"
-  },
-  {
-    "host": "kk00000000000.ir.meli-n13.info",
-    "port": 8443,
-    "secret": "104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "up.talk-c.ir",
-    "port": 443,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu"
-  },
-  {
-    "host": "proxy-ru.wearvpn.online",
-    "port": 443,
-    "secret": "ee095b4c07061fa18ae9374091be8a8c4e79616e6465782e7275",
-    "region": "ru"
-  },
-  {
-    "host": "fi-1.quomis.pw",
-    "port": 443,
-    "secret": "ee6b13503e2e0bbb66b5dad03ba89088b56d61782e7275",
-    "region": "ru"
-  },
-  {
-    "host": "vavan.online",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "local.opt-meli.info",
-    "port": 443,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu"
-  },
-  {
-    "host": "melifot.help.207-693-55-23.ir.",
-    "port": 8443,
-    "secret": "7hYDBIGHSV36xZoDAiDCXY5iaXNjb3R0aS55ZWt0YW5ldC5jb20=",
-    "region": "eu"
-  },
-  {
-    "host": "amsterdam.geodns.info",
-    "port": 443,
-    "secret": "ee79e344818749bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "107.189.23.191",
-    "port": 8003,
-    "secret": "ee31c8df1d860a135569a6f9f183679c5f7a7a756c612e6972",
-    "region": "ru"
-  },
-  {
-    "host": "api.gorbushkin.click",
-    "port": 443,
-    "secret": "ee3eb6897f29da96f4e6afb784cd3d749e6170692e676f72627573686b696e2e636c69636b",
-    "region": "eu"
-  },
-  {
-    "host": "46.225.26.227",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "195.254.165.73",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "195.254.165.233",
-    "port": 65535,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu"
-  },
-  {
-    "host": "euufo1o5.helper.website",
-    "port": 443,
-    "secret": "eebb62e9f3ae0f40aa25a70c150f6d68d3636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "secure.medhata.org",
-    "port": 443,
-    "secret": "ee7304893354c81b4c1ed4fc4716f838007365637572652e6d6564686174612e6f7267",
-    "region": "eu"
-  },
-  {
-    "host": "dl.prx.today",
-    "port": 443,
-    "secret": "ee9b9483de201ca0a074d391d3c4b63152646c2e7072782e746f646179",
-    "region": "eu"
-  },
-  {
-    "host": "87.248.129.211",
-    "port": 443,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "194.213.118.84",
-    "port": 1010,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "secure.gorbushkin.click",
-    "port": 443,
-    "secret": "ee02b0fe7d8336b262ae74889c88fc4f1c7365637572652e676f72627573686b696e2e636c69636b",
-    "region": "eu"
-  },
-  {
-    "host": "65.109.30.137",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "mt.jebance.ru",
-    "port": 8443,
-    "secret": "dd28df1727029aed45d15f3a44d31e7e20",
-    "region": "eu"
-  },
-  {
-    "host": "65.109.146.207",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu"
-  },
-  {
-    "host": "87.248.129.178",
-    "port": 2096,
-    "secret": "ee1603010200010001fc030386e24c3add7777772e7961686f6f2e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "soft.telegramharvester.ru",
-    "port": 443,
-    "secret": "ee05ca1fb5eadbac1e7e8c725695b48f0079612e7275",
-    "region": "eu"
-  },
-  {
-    "host": "194.213.118.71",
-    "port": 155,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "tg1063d841.koshkaproxy.shop",
-    "port": 443,
-    "secret": "ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70",
-    "region": "eu"
-  },
-  {
-    "host": "87.248.129.16",
-    "port": 8443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "1.telbet.lol",
-    "port": 25565,
-    "secret": "dd79e7010200010007f0030386e24c3add",
-    "region": "eu"
-  },
-  {
-    "host": "proxy19.arixo.shop",
-    "port": 443,
-    "secret": "ee6563f5614f0abb0d62d219083ab9f658617669746f2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "mesh.nowabst.net",
-    "port": 853,
-    "secret": "ee563d60b964695b7bee8b6525b4be45636164732e78352e7275",
-    "region": "ru"
-  },
-  {
-    "host": "5.78.217.202",
-    "port": 42341,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "api.my-miner.info.",
-    "port": 8443,
-    "secret": "7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v",
-    "region": "eu"
-  },
-  {
-    "host": "Sndnsbs.ir",
-    "port": 15,
-    "secret": "ee104462821249bd7ac519130220c25d09646565707365656b2e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "213.165.45.132",
-    "port": 8443,
-    "secret": "ee1ebae2a2f0ddead52ce0da1fc3c91d77626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "rah.time-meli.info",
-    "port": 155,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "195.254.165.169",
-    "port": 2053,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu"
-  },
-  {
-    "host": "tproxy.neuropath.ru",
-    "port": 10443,
-    "secret": "e7b7ae25defab0e07be5d30fadbfc105",
-    "region": "eu"
-  },
-  {
-    "host": "168.222.254.49",
-    "port": 443,
-    "secret": "4a53898470c53c8426164f614167df06",
-    "region": "eu"
-  },
-  {
-    "host": "194.213.118.76",
-    "port": 1010,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "proxy-v2-3.sapog-host.ru",
-    "port": 443,
-    "secret": "ee0b0535863e1462dabb9c9e00c5861d14726164696f7265636f72642e7275",
-    "region": "eu"
-  },
-  {
-    "host": "b.ws-gardash.ir",
-    "port": 8433,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "94.249.225.6",
+    "host": "138.201.192.170",
     "port": 88,
     "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "prx.today",
+    "port": 443,
+    "secret": "b3f0c7f6af7dc2dc2e9c80d0d80e8162",
+    "region": "eu"
+  },
+  {
+    "host": "5.75.155.1",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "imtproxy-ir.info.",
+    "port": 8443,
+    "secret": "ee1603048187495dfac59a030220c25d8e626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "blue.protocolsix.info",
+    "port": 22,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "37.27.241.113",
+    "port": 8080,
+    "secret": "ProxyQavi____ProxymelgACM4eFlnUldQOFpvTHVwZmNpaVI2ZkJFNDJMSXJxUW1yT2s4YzRCaVRaLi11cGRhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "region": "eu"
   },
   {
@@ -10206,20 +10362,98 @@
     "region": "eu"
   },
   {
-    "host": "91.107.190.20",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "51.250.17.20",
+    "host": "proxy12.arixo.shop",
     "port": 443,
-    "secret": "0b40e95e35e50d449ea341aaeb375109",
+    "secret": "ee353b7f68b074df081359b71a08bac417617669746f2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "91.239.192.153",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
-    "host": "194.213.118.83",
+    "host": "95.217.25.41",
+    "port": 35432,
+    "secret": "ee104462821249bd7ac519130220c25d096d61782e7275",
+    "region": "ru"
+  },
+  {
+    "host": "edge.rknwatch.digital",
+    "port": 443,
+    "secret": "ee9e8767a28148936ae7e50eb9b0689a49656467652e726b6e77617463682e6469676974616c",
+    "region": "eu"
+  },
+  {
+    "host": "95.216.42.228",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "3.mtprotonewniceasiashatel.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "storm.gorbushkin.click",
+    "port": 443,
+    "secret": "eeaa87b45b1b713023db2c57c90ac9e1d173746f726d2e676f72627573686b696e2e636c69636b",
+    "region": "eu"
+  },
+  {
+    "host": "proxy-sosavpn.duckdns.org",
+    "port": 8443,
+    "secret": "f5a94ceadd1bbedd919fbd9f1c9347dd",
+    "region": "eu"
+  },
+  {
+    "host": "178.105.240.97",
+    "port": 61016,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0%3D",
+    "region": "eu"
+  },
+  {
+    "host": "65.109.180.0",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "2.pro.lunoconnect.com",
+    "port": 443,
+    "secret": "ee9e61388de8911b3d39196f12bb31011d322e70726f2e6c756e6f636f6e6e6563742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "5.78.59.193",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "194.213.118.21",
     "port": 1010,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "sub.luxuryman.sbs.",
+    "port": 443,
+    "secret": "dd4073ea8f6b614307ce471057deec5f30",
+    "region": "eu"
+  },
+  {
+    "host": "web.mtp-roto.info.",
+    "port": 443,
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D",
+    "region": "eu"
+  },
+  {
+    "host": "free.feel-fly.info",
+    "port": 25565,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
@@ -10230,9 +10464,27 @@
     "region": "eu"
   },
   {
-    "host": "r18.proxytg.space",
-    "port": 8443,
-    "secret": "eeeaf4cdef4ff30b4e3308e93f8a881ddd7231382e70726f787974672e7370616365",
+    "host": "12.chunkycorp.shop",
+    "port": 443,
+    "secret": "ee6a0333c1db3f8eaba5c76731a44203b6617669746f2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "salaaam.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "95.216.66.254",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "r1.newr1.co.uk",
+    "port": 85,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q%3D%3D",
     "region": "eu"
   },
   {
@@ -10270,6 +10522,18 @@
     "port": 2053,
     "secret": "ee104462821249bd7ac519130220c25d09617669746f2e7275",
     "region": "ru"
+  },
+  {
+    "host": "haji.assassinationpuma.co.uk.",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s=",
+    "region": "eu"
+  },
+  {
+    "host": "www.royaclinic.co.uk",
+    "port": 80,
+    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s=",
+    "region": "eu"
   },
   {
     "host": "168.100.11.108",
@@ -10494,6 +10758,12 @@
     "region": "eu"
   },
   {
+    "host": "2.26.229.167",
+    "port": 2083,
+    "secret": "6f4cf62decefea0c907c59666b49fe5f",
+    "region": "eu"
+  },
+  {
     "host": "2.27.42.18",
     "port": 443,
     "secret": "eea04d93701c5912f1e58cf67161dd45f6706c617932676f2e636c6f7564",
@@ -10620,12 +10890,6 @@
     "region": "eu"
   },
   {
-    "host": "198.44.180.194",
-    "port": 443,
-    "secret": "dd496646929e7dfd66c2dbd95d7e9ddbf7",
-    "region": "eu"
-  },
-  {
     "host": "5xxlfa.mnbtm.li",
     "port": 8080,
     "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ",
@@ -10722,6 +10986,12 @@
     "region": "eu"
   },
   {
+    "host": "freedom.bypasslab.abrdns.com",
+    "port": 443,
+    "secret": "ddb4da653fe1804405f8bf86ee8ed74812",
+    "region": "eu"
+  },
+  {
     "host": "ir.trust.me.mnbtm.li",
     "port": 8880,
     "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ",
@@ -10779,6 +11049,12 @@
     "host": "proxy.kochvpn.pw",
     "port": 443,
     "secret": "eecb4abb36d31414c49d1eea88205b4eb570726f78792e6b6f636876706e2e7077",
+    "region": "eu"
+  },
+  {
+    "host": "proxy.privateproxy.top",
+    "port": 8443,
+    "secret": "dd17aca106bf110b8efac6b77a545a8be5",
     "region": "eu"
   },
   {
@@ -10932,6 +11208,66 @@
     "region": "eu"
   },
   {
+    "host": "ad1.arixo.shopPort:",
+    "port": 443,
+    "secret": "eee09f46368021f91b92ad3dea14c7ac896164312e617269786f2e73686f70",
+    "region": "eu"
+  },
+  {
+    "host": "irancell-mci-rightell-adsl.mr-moo.co.uk.Port:",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
+    "region": "eu"
+  },
+  {
+    "host": "SaLam.BaCheha.comPort:",
+    "port": 443,
+    "secret": "ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70",
+    "region": "eu"
+  },
+  {
+    "host": "free3.gram.blog",
+    "port": 443,
+    "secret": "ee57639673cce7f03e351b8a5a857eea6c62726f777365722e79616e6465782e7275",
+    "region": "ru"
+  },
+  {
+    "host": "proxy.lodkirmm.ruPort:",
+    "port": 8443,
+    "secret": "ee16309abd572d284b309ef26bd7a3f68570726f78792e6c6f646b69726d6d2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "lazeyka-20.getvelora.space",
+    "port": 443,
+    "secret": "ee7bf1e117f28f10c11aa986c876fa51fa6f7a6f6e2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "176.124.207.237",
+    "port": 443,
+    "secret": "fad015155defc3a8bd8ebc16b5d2b300",
+    "region": "eu"
+  },
+  {
+    "host": "UnknownPort:",
+    "port": 443,
+    "secret": "eefddb26d5047ce1787ece232a57832391617669746f2e7275",
+    "region": "ru"
+  },
+  {
+    "host": "UnknownPort:",
+    "port": 443,
+    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
+    "region": "eu"
+  },
+  {
+    "host": "UnknownPort:",
+    "port": 4455,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
     "host": "UnknownPort:",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
@@ -10944,33 +11280,15 @@
     "region": "ru"
   },
   {
-    "host": "UnknownPort:",
-    "port": 853,
-    "secret": "ee55aabc9752a9d9d379e02943cf811795766b2e636f6d",
-    "region": "ru"
-  },
-  {
-    "host": "uplink.techlibrary.ink",
-    "port": 4501,
-    "secret": "ee17e6d4e0d143817328e4341210e9bb3a636c6f7564666c6172652e636f6d",
-    "region": "us"
-  },
-  {
-    "host": "hl.routefastnet.online",
+    "host": "hub.savelyev.clickPort:",
     "port": 443,
-    "secret": "eea9a5f5674069d982088b5ad27dca4584686c2e726f757465666173746e65742e6f6e6c696e65",
+    "secret": "ee609a2ad7e277c6eb2dd39767e12777b86875622e736176656c7965762e636c69636b",
     "region": "eu"
   },
   {
     "host": "UnknownPort:",
     "port": 443,
-    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
-    "region": "eu"
-  },
-  {
-    "host": "UnknownPort:",
-    "port": 443,
-    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
+    "secret": "ee6be95a795ee766da019cd30044b837c16e6f64652e6561737970726f78792e636664",
     "region": "eu"
   },
   {
@@ -10980,27 +11298,39 @@
     "region": "eu"
   },
   {
-    "host": "free3.gram.blog",
-    "port": 443,
-    "secret": "ee57639673cce7f03e351b8a5a857eea6c62726f777365722e79616e6465782e7275",
-    "region": "ru"
-  },
-  {
-    "host": "lazeyka-20.getvelora.space",
-    "port": 443,
-    "secret": "ee7bf1e117f28f10c11aa986c876fa51fa6f7a6f6e2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "SaLam.BaCheha.comPort:",
-    "port": 443,
-    "secret": "ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70",
+    "host": "should.be.wake.up.ir.yfdhjderkig.info.Port:",
+    "port": 88,
+    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
+  },
+  {
+    "host": "uplink.techlibrary.ink",
+    "port": 4501,
+    "secret": "ee17e6d4e0d143817328e4341210e9bb3a636c6f7564666c6172652e636f6d",
+    "region": "us"
   },
   {
     "host": "UnknownPort:",
     "port": 443,
-    "secret": "eefddb26d5047ce1787ece232a57832391617669746f2e7275",
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
+    "region": "eu"
+  },
+  {
+    "host": "hl.routefastnet.online",
+    "port": 443,
+    "secret": "eea9a5f5674069d982088b5ad27dca4584686c2e726f757465666173746e65742e6f6e6c696e65",
+    "region": "eu"
+  },
+  {
+    "host": "Bezan-Ke.Khob-Mizani.manege-desktop-for.co.im.Port:",
+    "port": 4443,
+    "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "UnknownPort:",
+    "port": 853,
+    "secret": "ee55aabc9752a9d9d379e02943cf811795766b2e636f6d",
     "region": "ru"
   },
   {
@@ -11016,63 +11346,9 @@
     "region": "eu"
   },
   {
-    "host": "irancell-mci-rightell-adsl.mr-moo.co.uk.Port:",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu"
-  },
-  {
-    "host": "UnknownPort:",
-    "port": 443,
-    "secret": "ee6be95a795ee766da019cd30044b837c16e6f64652e6561737970726f78792e636664",
-    "region": "eu"
-  },
-  {
-    "host": "UnknownPort:",
-    "port": 4455,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "hub.savelyev.clickPort:",
-    "port": 443,
-    "secret": "ee609a2ad7e277c6eb2dd39767e12777b86875622e736176656c7965762e636c69636b",
-    "region": "eu"
-  },
-  {
-    "host": "should.be.wake.up.ir.yfdhjderkig.info.Port:",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "proxy.lodkirmm.ruPort:",
-    "port": 8443,
-    "secret": "ee16309abd572d284b309ef26bd7a3f68570726f78792e6c6f646b69726d6d2e7275",
-    "region": "ru"
-  },
-  {
-    "host": "ad1.arixo.shopPort:",
-    "port": 443,
-    "secret": "eee09f46368021f91b92ad3dea14c7ac896164312e617269786f2e73686f70",
-    "region": "eu"
-  },
-  {
     "host": "t.meow-network.comPort:",
     "port": 443,
     "secret": "ee5622e11fff3e49bcc85280197a6106b5742e6d656f772d6e6574776f726b2e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "176.124.207.237",
-    "port": 443,
-    "secret": "fad015155defc3a8bd8ebc16b5d2b300",
-    "region": "eu"
-  },
-  {
-    "host": "Bezan-Ke.Khob-Mizani.manege-desktop-for.co.im.Port:",
-    "port": 4443,
-    "secret": "EERighJJvXrFGRMCIMjdCQ",
     "region": "eu"
   },
   {
@@ -11160,6 +11436,12 @@
     "region": "eu"
   },
   {
+    "host": "146.103.109.134",
+    "port": 443,
+    "secret": "a4bc6821c58eee9b48038b104950504a",
+    "region": "eu"
+  },
+  {
     "host": "51.250.89.205",
     "port": 443,
     "secret": "ee248c43b7aee97c6fe887311452a323026164732e78352e7275",
@@ -11214,12 +11496,6 @@
     "region": "eu"
   },
   {
-    "host": "90.156.213.122",
-    "port": 443,
-    "secret": "dd6b3fb02424dbac55fef2da67c8c949",
-    "region": "eu"
-  },
-  {
     "host": "90.156.213.38",
     "port": 443,
     "secret": "dd6b3fb02424dbac55fef2da67c8c949",
@@ -11254,12 +11530,6 @@
     "port": 115,
     "secret": "8777aa0e2da6e71fa6b29971f44ce824",
     "region": "eu"
-  },
-  {
-    "host": "proxy-dag.ru",
-    "port": 443,
-    "secret": "ee94fc2b484af6e1e1c87e6576b33c257579612e7275",
-    "region": "ru"
   },
   {
     "host": "tg.pepewtf.top",
@@ -11566,6 +11836,12 @@
     "port": 2053,
     "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
     "region": "eu"
+  },
+  {
+    "host": "77.72.18.66",
+    "port": 443,
+    "secret": "ee643ce9490ec2a7f6c4cfa686afad39556d736e2e636f6d",
+    "region": "us"
   },
   {
     "host": "www.download-fast.co.uk",
@@ -12069,12 +12345,6 @@
     "host": "cdn.yektanet.com.ircompany.info",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu"
-  },
-  {
-    "host": "37.27.135.205",
-    "port": 443,
-    "secret": "dd0000f00f0f775555fffffff5006e2e69",
     "region": "eu"
   },
   {
@@ -12732,12 +13002,6 @@
     "region": "us"
   },
   {
-    "host": "makeup.duhpro.makeup",
-    "port": 8443,
-    "secret": "dd79e7010200010007f0030386e24c3add",
-    "region": "eu"
-  },
-  {
     "host": "85.133.194.202",
     "port": 8443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
@@ -12942,12 +13206,6 @@
     "region": "eu"
   },
   {
-    "host": "167.235.57.225",
-    "port": 443,
-    "secret": "dd00000000000000000000000000000000",
-    "region": "eu"
-  },
-  {
     "host": "65.109.178.131",
     "port": 300,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -12976,12 +13234,6 @@
     "port": 443,
     "secret": "ee643ce9490ec2a7f6c4cfa686afad39556d736e2e636f6d",
     "region": "us"
-  },
-  {
-    "host": "162.55.62.29",
-    "port": 443,
-    "secret": "dd00000000000000000000000000000000",
-    "region": "eu"
   },
   {
     "host": "65.109.242.128",
@@ -13242,9 +13494,9 @@
     "region": "eu"
   },
   {
-    "host": "91.239.192.41",
+    "host": "web.wbwjwkqlq.ir",
     "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
+    "secret": "ee79e70102001e7807f0104386124c04797765622e5762776a776b716c712e6972",
     "region": "eu"
   },
   {
@@ -13257,12 +13509,6 @@
     "host": "135.181.34.171",
     "port": 443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu"
-  },
-  {
-    "host": "85.133.194.120",
-    "port": 8443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
@@ -13884,6 +14130,12 @@
     "region": "eu"
   },
   {
+    "host": "188.245.144.93",
+    "port": 443,
+    "secret": "eec862057ba49a7ecdf0ad4eb44cd5bb11646f776e6c6f61642e77696e646f77737570646174652e636f6d",
+    "region": "eu"
+  },
+  {
     "host": "77.246.103.217",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add666172616b61762e636f6d666172616b61762e636f6d666172616b61762e636f6d666172616b61762e636f6dee1603010200010001fc030386e24c3addee16",
@@ -14319,6 +14571,12 @@
     "host": "74.1.1.46",
     "port": 65535,
     "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu"
+  },
+  {
+    "host": "85.133.194.14",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu"
   },
   {
@@ -14919,12 +15177,6 @@
     "host": "78.47.212.148",
     "port": 23,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu"
-  },
-  {
-    "host": "185.3.200.199",
-    "port": 2053,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
     "region": "eu"
   },
   {
@@ -15588,6 +15840,12 @@
     "region": "eu"
   },
   {
+    "host": "85.133.194.18",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu"
+  },
+  {
     "host": "185.215.247.10",
     "port": 4455,
     "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
@@ -15639,6 +15897,12 @@
     "host": "tg1.ookcdn.ru",
     "port": 443,
     "secret": "dd15d31b3c1dbdccb53817736ea2cfbb5d",
+    "region": "eu"
+  },
+  {
+    "host": "pof.khorshidiice.ir",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
     "region": "eu"
   },
   {
@@ -15729,6 +15993,12 @@
     "host": "shabane-cheetah-test.ir.abcutaqeixnw.info",
     "port": 443,
     "secret": "1603010200010001fc030386e24c3add",
+    "region": "eu"
+  },
+  {
+    "host": "138.124.70.86",
+    "port": 443,
+    "secret": "6356ebb33a57b6deda8a1c3cf2aee557",
     "region": "eu"
   },
   {
@@ -16152,6 +16422,12 @@
     "region": "eu"
   },
   {
+    "host": "super.vpnproxy.cc",
+    "port": 88,
+    "secret": "dd7a2debc4d25fe521eee1793636e97c60",
+    "region": "eu"
+  },
+  {
     "host": "188.137.250.103",
     "port": 443,
     "secret": "dd55e6dc2a653a5b98684624035dea96ce",
@@ -16215,18 +16491,6 @@
     "host": "tg-mt.dendenx.cloud",
     "port": 443,
     "secret": "ee437b3f7f34c3feb667946e2fdfc7b7896765312e64656e64656e782e636c6f7564",
-    "region": "eu"
-  },
-  {
-    "host": "rich.whiteblox.org.",
-    "port": 80,
-    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
-    "region": "eu"
-  },
-  {
-    "host": "haji.assassinationpuma.co.uk.",
-    "port": 80,
-    "secret": "3RbZ3hNtxAbJ6L5BQipx2_s%3D",
     "region": "eu"
   },
   {
@@ -18450,18 +18714,6 @@
     "region": "eu"
   },
   {
-    "host": "116.202.184.217",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "89.167.61.18",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
     "host": "143.14.59.22",
     "port": 8443,
     "secret": "dd8cf9b2154410feecdb7d728406ba1504",
@@ -18480,21 +18732,9 @@
     "region": "eu"
   },
   {
-    "host": "172.65.97.217",
-    "port": 22,
-    "secret": "104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
     "host": "178.62.210.85",
     "port": 443,
     "secret": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "region": "eu"
-  },
-  {
-    "host": "194.60.228.228",
-    "port": 8880,
-    "secret": "dd79e344818749bd7ac519130220c25d09",
     "region": "eu"
   },
   {
@@ -18504,33 +18744,21 @@
     "region": "eu"
   },
   {
-    "host": "turk.dasy2k1.co.uk",
+    "host": "iran.pcspeedyfix.co.uk",
     "port": 8443,
     "secret": "EERighJJvXrFGRMCIMjdCQ",
+    "region": "eu"
+  },
+  {
+    "host": "iran.yhge.co.uk",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
     "region": "eu"
   },
   {
     "host": "116.202.189.147",
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "62.238.115.188",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "65.108.49.27",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu"
-  },
-  {
-    "host": "borj-pooshak-brj.aseman.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   },
   {
@@ -18558,21 +18786,9 @@
     "region": "eu"
   },
   {
-    "host": "saadi.masnavi.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu"
-  },
-  {
     "host": "sal.mahanam.info",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu"
-  },
-  {
-    "host": "shir.pesar.hedoit.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu"
   }
 ]
