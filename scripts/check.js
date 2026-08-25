@@ -16,13 +16,28 @@
 //
 // вход:  data/candidates.json — [{ host, port, secret, region }, ...]
 // выход: data/checked.json    — то же самое + { alive, pingMs, method,
-//                                                checkedAt, attempts }
+//                                                checkedAt, attempts,
+//                                                reachable, tcpPingMs,
+//                                                ip, geoCountry }
+//        data/by-region/<ru|eu|us|asia>.json — только alive:true, отсортировано
+//                                                по pingMs (см. writeByRegionResults)
+//
+// Проверка теперь в два шага:
+//   1. tcpPing()      — просто открыть TCP-порт ("пинг"/доступность). Не
+//                        открылся — сразу method:'unreachable', дальше не
+//                        проверяем (экономит время на явно мёртвых хостах).
+//   2. checkOneServer — как раньше, Obfuscated2/Fake-TLS хендшейк, только
+//                        для хостов, прошедших шаг 1.
+// После проверки — GeoIP-стадия (scripts/lib/geoip.js): по IP доступных
+// хостов определяется РЕАЛЬНЫЙ регион (страна по ip-api.com), а не догадка
+// по домену маскировки в секрете, и им перебивается region из candidates.json.
 //
 // Запуск: node scripts/check.js
 
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { connect as netConnect } from 'node:net';
 import { createHash, createHmac, createCipheriv, randomBytes as cryptoRandomBytes } from 'node:crypto';
+import { resolveHosts, geolocateIps } from './lib/geoip.js';
 
 const SOCKET_TIMEOUT_MS = Number(process.env.CHECK_TIMEOUT_MS || 5000);
 // Node/GitHub Actions без лимита "50 подзапросов за вызов" — конкурентность
@@ -30,6 +45,16 @@ const SOCKET_TIMEOUT_MS = Number(process.env.CHECK_TIMEOUT_MS || 5000);
 const CONCURRENCY = Number(process.env.CHECK_CONCURRENCY || 40);
 const CHECK_ATTEMPTS = Number(process.env.CHECK_ATTEMPTS || 2);
 const CHECK_RETRY_DELAY_MS = 700;
+// Отдельный, более короткий таймаут для стадии "доступен / недоступен"
+// (просто TCP connect, без отправки прокси-хендшейка) — это и есть "пинг":
+// быстро отсеиваем хосты, которые вообще не открывают порт, не тратя на них
+// два полных цикла Obfuscated2/Fake-TLS хендшейка.
+const PING_TIMEOUT_MS = Number(process.env.CHECK_PING_TIMEOUT_MS || 3000);
+// Включает/выключает GeoIP-стадию (реальный регион по IP вместо догадки
+// по домену маскировки). Можно выключить в CI переменной, если ip-api.com
+// временно недоступен/зарейтлимичен — тогда используется region из
+// candidates.json (эвристика collect.js) как раньше.
+const GEOIP_ENABLED = process.env.CHECK_GEOIP !== 'off';
 // Жёсткий потолок на весь прогон, независимо от того, что именно тормозит
 // (DNS, сеть, сериализация где-то ещё) — если выбор не уложился, остаток
 // кандидатов помечается method:'not-checked' и попадает в результат как
@@ -291,6 +316,25 @@ function openSocket(host, port, timeoutMs) {
     socket.once('connect', () => { clearTimeout(timer); resolve(socket); });
     socket.once('error', (e) => { clearTimeout(timer); reject(e); });
   });
+}
+
+// ---------- Стадия "пинг": просто открыть TCP-порт, без прокси-протокола ----------
+// Это и есть фильтр "работает / не работает" по доступности хоста:
+// реального ICMP-пинга без root/raw-сокетов из Node не сделать, поэтому
+// метрика — время TCP-хендшейка до открытого порта. Если порт даже не
+// открывается — дальше проверять прокси-протокол смысла нет.
+async function tcpPing(host, port, timeoutMs) {
+  const start = Date.now();
+  let socket = null;
+  try {
+    socket = await openSocket(host, port, timeoutMs);
+    const tcpPingMs = Date.now() - start;
+    return { reachable: true, tcpPingMs };
+  } catch {
+    return { reachable: false, tcpPingMs: null };
+  } finally {
+    try { socket && socket.destroy(); } catch { /* noop */ }
+  }
 }
 
 // Обёртка над потоковым net.Socket с интерфейсом .read(), похожим на
@@ -560,14 +604,27 @@ function sleep(ms) {
 }
 
 async function checkOneServer(host, port, secretRaw) {
+  // Шаг 1: доступен ли вообще ip:port ("пинг"). Если нет — сразу
+  // "не работает", без двух попыток полного хендшейка.
+  const ping = await tcpPing(host, port, PING_TIMEOUT_MS);
+  if (!ping.reachable) {
+    return {
+      alive: false, pingMs: null, method: 'unreachable', attempts: 0,
+      reachable: false, tcpPingMs: null,
+    };
+  }
+
+  // Шаг 2: порт открыт — проверяем, работает ли на нём именно прокси.
   let lastResult = null;
   for (let attempt = 1; attempt <= CHECK_ATTEMPTS; attempt++) {
     const result = await checkOneServerAttempt(host, port, secretRaw);
     lastResult = result;
-    if (result.alive) return { ...result, attempts: attempt };
+    if (result.alive) {
+      return { ...result, attempts: attempt, reachable: true, tcpPingMs: ping.tcpPingMs };
+    }
     if (attempt < CHECK_ATTEMPTS) await sleep(CHECK_RETRY_DELAY_MS);
   }
-  return { ...lastResult, attempts: CHECK_ATTEMPTS };
+  return { ...lastResult, attempts: CHECK_ATTEMPTS, reachable: true, tcpPingMs: ping.tcpPingMs };
 }
 
 // ---------- пул конкурентности + main ----------
@@ -588,7 +645,93 @@ async function mapWithConcurrency(items, limit, fn, results, deadlineTs, onSkip)
 }
 
 function notCheckedResult(c) {
-  return { ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0, checkedAt: new Date().toISOString() };
+  return {
+    ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0,
+    reachable: null, tcpPingMs: null, checkedAt: new Date().toISOString(),
+  };
+}
+
+// ---------- GeoIP-стадия: реальный регион по IP вместо догадки по домену ----------
+// Прогоняется ПОСЛЕ проверки живости и только по хостам, у которых порт
+// оказался доступен (reachable) — незачем тратить лимит ip-api.com на
+// заведомо мёртвые хосты. region из candidates.json (эвристика по домену
+// маскировки в collect.js) остаётся как fallback, если geoIP выключен,
+// упал по сети или не смог определить страну для конкретного ip.
+async function attachGeoRegions(results) {
+  if (!GEOIP_ENABLED) return results;
+
+  const reachableHosts = results.filter((r) => r.reachable).map((r) => r.host);
+  if (reachableHosts.length === 0) return results;
+
+  console.log(`[check] geoip: резолвим ${new Set(reachableHosts).size} уникальных хостов…`);
+  const dnsCache = await resolveHosts(reachableHosts);
+
+  const ips = Array.from(dnsCache.values()).filter(Boolean);
+  const geoMap = await geolocateIps(ips);
+
+  let upgraded = 0;
+  for (const r of results) {
+    if (!r.reachable) continue;
+    const ip = dnsCache.get(r.host) || null;
+    r.ip = ip;
+    const geo = ip ? geoMap.get(ip) : null;
+    if (geo && geo.region) {
+      r.geoCountry = geo.countryCode;
+      r.geoCity = geo.city;
+      r.lat = geo.lat;
+      r.lon = geo.lon;
+      r.region = geo.region; // перебиваем эвристику из collect.js реальным регионом
+      upgraded++;
+    } else {
+      // не смогли определить — оставляем region как есть (эвристика), а
+      // координатные поля явно обнуляем, чтобы не путать "нет данных" с 0/0
+      r.geoCountry = null;
+      r.geoCity = null;
+      r.lat = null;
+      r.lon = null;
+    }
+  }
+  console.log(`[check] geoip: регион уточнён по IP у ${upgraded}/${reachableHosts.length} доступных хостов`);
+  return results;
+}
+
+// ---------- отдельный "готовый результат": рабочие прокси, сгруппированные по региону ----------
+// Это и есть "выдать уже готовый результат отдельно" — помимо полного
+// data/checked.json (все кандидаты, живые и мёртвые, с диагностикой),
+// пишем ужатые файлы data/by-region/<region>.json — только те, что
+// реально работают (alive), отсортированные по pingMs, без служебных
+// полей вроде attempts/method.
+async function writeByRegionResults(results) {
+  const alive = results.filter((r) => r.alive);
+  const byRegion = { ru: [], eu: [], us: [], asia: [] };
+
+  for (const r of alive) {
+    const region = byRegion[r.region] ? r.region : 'eu';
+    byRegion[region].push({
+      host: r.host,
+      port: r.port,
+      secret: r.secret,
+      ip: r.ip || null,
+      geoCountry: r.geoCountry || null,
+      geoCity: r.geoCity || null,
+      lat: r.lat ?? null,
+      lon: r.lon ?? null,
+      pingMs: r.pingMs,
+      tcpPingMs: r.tcpPingMs,
+      checkedAt: r.checkedAt,
+    });
+  }
+
+  await mkdir('data/by-region', { recursive: true });
+  for (const region of Object.keys(byRegion)) {
+    byRegion[region].sort((a, b) => (a.pingMs ?? Infinity) - (b.pingMs ?? Infinity));
+    await writeFile(`data/by-region/${region}.json`, JSON.stringify(byRegion[region], null, 2));
+  }
+
+  console.log(
+    '[check] готовый результат по регионам: ' +
+    Object.keys(byRegion).map((r) => `${r}=${byRegion[r].length}`).join(', ')
+  );
 }
 
 async function main() {
@@ -625,7 +768,11 @@ async function main() {
   // медленнее, чем ожидалось.
   const hardTimer = setTimeout(async () => {
     console.warn('[check] ЖЁСТКИЙ таймаут бюджета — принудительно завершаю с частичным результатом');
+    // На жёстком таймауте GeoIP-стадию (лишний сетевой раунд-трип) уже не
+    // делаем — пишем то, что успели проверить, как есть, region остаётся
+    // эвристикой из collect.js для непроставленных записей.
     await writeResultsAndExit('прервано по таймауту');
+    await writeByRegionResults(results);
     process.exit(0);
   }, WALL_CLOCK_BUDGET_MS + 5000); // +5с запаса поверх мягкого дедлайна, чтобы сначала попробовать штатный путь
   hardTimer.unref?.(); // не мешает процессу завершиться самому, если успел раньше
@@ -644,6 +791,8 @@ async function main() {
         pingMs: r.pingMs ?? null,
         method: r.method ?? null,
         attempts: r.attempts ?? null,
+        reachable: r.reachable ?? false,
+        tcpPingMs: r.tcpPingMs ?? null,
         checkedAt: new Date().toISOString(),
       };
     },
@@ -653,7 +802,9 @@ async function main() {
   );
 
   clearTimeout(hardTimer);
+  await attachGeoRegions(results);
   await writeResultsAndExit('готово');
+  await writeByRegionResults(results);
 }
 
 main().catch((e) => {

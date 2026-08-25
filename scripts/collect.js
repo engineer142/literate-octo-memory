@@ -10,9 +10,27 @@
 //   [{ host, port, secret, region }, ...]
 // Файл — вход для scripts/check.js (проверка живости).
 //
+// region для НОВЫХ кандидатов изначально ставится эвристикой по домену
+// (collectDetectRegion) — как и раньше, — но перед записью в
+// candidates.json сверяется с уже накопленным GeoIP-кэшем
+// (data/geoip-cache.json, наполняется check.js): если IP этого хоста уже
+// когда-то гео-лоцировался (тот же сервер под другим портом/секретом,
+// или просто уже проверялся раньше), регион берётся оттуда — БЕЗ единого
+// нового сетевого запроса к ip-api.com/ipwho.is, только чтение файла +
+// DNS-резолв (дешёво). Кандидаты, чьих IP ещё нет в кэше, получат точный
+// регион позже — на стадии check.js, когда для них в принципе будет
+// делаться "живой" запрос к geoIP. Так GitHub Actions job не тратит
+// лимит geoIP-провайдеров на кандидатов, которые почти наверняка мертвы
+// (типичный collect: тысячи новых, живых — единицы процентов).
+// Выключается переменной COLLECT_GEOIP=off (тогда остаётся чистая
+// эвристика по домену, как было до этого апдейта).
+//
 // Запуск: node scripts/collect.js
 
 import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { resolveHosts, peekCachedGeo } from './lib/geoip.js';
+
+const COLLECT_GEOIP_ENABLED = process.env.COLLECT_GEOIP !== 'off';
 
 // ---------- Источники (см. пометку в оригинале про приоритет первых) ----------
 const COLLECT_SOURCES = [
@@ -339,6 +357,8 @@ async function main() {
   );
   const rawCandidateLists = [...channelResults, ...texts.map((text) => (text ? collectParseCandidates(text) : []))];
 
+  const newKeys = []; // ключи, добавленные в ЭТОМ прогоне — только их сверяем с geoIP-кэшем ниже
+
   for (const candidates of rawCandidateLists) {
     for (const c of candidates) {
       const key = `${c.host}:${c.port}:${c.secret}`;
@@ -353,10 +373,31 @@ async function main() {
         secret: c.secret,
         region: collectDetectRegion(domain),
       });
+      newKeys.push(key);
 
       if (seen.size >= COLLECT_MAX_CANDIDATES) break;
     }
     if (seen.size >= COLLECT_MAX_CANDIDATES) break;
+  }
+
+  if (COLLECT_GEOIP_ENABLED && newKeys.length > 0) {
+    const newHosts = newKeys.map((k) => seen.get(k).host);
+    console.log(`[collect] geoip: сверяю ${new Set(newHosts).size} новых хостов с уже накопленным кэшем…`);
+    const dnsCache = await resolveHosts(newHosts);
+    const ips = Array.from(dnsCache.values()).filter(Boolean);
+    const geoMap = await peekCachedGeo(ips);
+
+    let upgraded = 0;
+    for (const key of newKeys) {
+      const entry = seen.get(key);
+      const ip = dnsCache.get(entry.host);
+      const geo = ip ? geoMap.get(ip) : null;
+      if (geo && geo.region) {
+        entry.region = geo.region; // перебиваем эвристику уже известным реальным регионом
+        upgraded++;
+      }
+    }
+    console.log(`[collect] geoip: регион подставлен из кэша у ${upgraded}/${newKeys.length} новых кандидатов (остальные получат его на стадии check.js)`);
   }
 
   const result = Array.from(seen.values());

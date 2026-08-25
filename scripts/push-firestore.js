@@ -123,6 +123,14 @@ function toAutoServer(c) {
     host: c.host,
     port: c.port,
     pingMs: c.pingMs != null ? c.pingMs : null,
+    // tcpPingMs/geoCountry/lat/lon появились вместе с GeoIP-стадией в
+    // check.js — старые записи (до апдейта) их не имеют, поэтому все
+    // опциональны.
+    tcpPingMs: c.tcpPingMs != null ? c.tcpPingMs : null,
+    geoCountry: c.geoCountry || null,
+    geoCity: c.geoCity || null,
+    lat: typeof c.lat === 'number' ? c.lat : null,
+    lon: typeof c.lon === 'number' ? c.lon : null,
     foundAt: new Date().toISOString(),
   };
 }
