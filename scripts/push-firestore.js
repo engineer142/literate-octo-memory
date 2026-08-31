@@ -149,6 +149,7 @@ async function main() {
     throw new Error('FIREBASE_SERVICE_ACCOUNT не парсится как JSON — секрет должен содержать весь ключевой файл целиком');
   }
   const projectId = serviceAccount.project_id;
+  console.log('[push-firestore] project_id из секрета:', projectId);
   if (!projectId) throw new Error('В FIREBASE_SERVICE_ACCOUNT нет project_id');
 
   const raw = await readFile('data/checked.json', 'utf8');
