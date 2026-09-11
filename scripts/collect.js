@@ -141,6 +141,19 @@ const MAX_DISCOVERED_SOURCES = 300; // предохранитель, чтобы 
 const DISCOVERED_CHANNELS_PATH = 'data/discovered-channels.json';
 const MAX_DISCOVERED_CHANNELS = 60; // каналов кандидатов немного, держим лимит скромнее GitHub-источников
 const MAX_NEW_CHANNEL_CHECKS_PER_RUN = 15; // не устраивать лавину новых t.me/s/ запросов за один прогон
+// ДОБАВЛЕНО: раньше канал, однажды попавший в discovered.channels,
+// проверялся КАЖДЫЙ прогон НАВСЕГДА, даже если давно перестал постить
+// прокси (0 кандидатов много прогонов подряд подряд) — впустую тратили
+// запрос на мёртвый/уснувший канал каждые 40 минут. Теперь считаем
+// emptyStreak (сколько прогонов подряд канал отдал 0 кандидатов) и, если
+// он превышает порог — "усыпляем" канал: убираем из активного списка
+// (но НЕ в rejected — rejected окончательный и не пересматривается; тут
+// же канал просто перестаёт быть "известным", и если он всплывёт в
+// чьём-то упоминании позже и снова начнёт постить прокси — его найдут и
+// проверят заново как нового кандидата, см. discoverNewChannels).
+// MAX_DISCOVERED_CHANNELS_EMPTY_STREAK=6 при цикле в 40 минут — это
+// примерно 4 часа полного молчания подряд, прежде чем канал уснёт.
+const MAX_CHANNEL_EMPTY_STREAK = Number(process.env.MAX_CHANNEL_EMPTY_STREAK || 6);
 // Официальные правила Telegram: username 5-32 символов, начинается с буквы.
 const CHANNEL_MENTION_RE = /@([A-Za-z][A-Za-z0-9_]{4,31})/g;
 // Явный мусор: рекламные/донат/бот-аккаунты, которые часто мелькают в
@@ -340,8 +353,16 @@ async function loadDiscoveredChannelsState() {
   try {
     const raw = await readFile(DISCOVERED_CHANNELS_PATH, 'utf8');
     const data = JSON.parse(raw);
+    // Обратная совместимость: раньше channels был плоским списком строк
+    // (["telmtproto", ...]) — теперь это объекты {handle, emptyStreak},
+    // чтобы отслеживать, сколько прогонов подряд канал молчит. Старые
+    // записи-строки просто оборачиваем с emptyStreak:0.
+    const rawChannels = Array.isArray(data.channels) ? data.channels : [];
+    const channels = rawChannels.map((c) =>
+      typeof c === 'string' ? { handle: c, emptyStreak: 0 } : { handle: c.handle, emptyStreak: c.emptyStreak || 0 }
+    );
     return {
-      channels: Array.isArray(data.channels) ? data.channels : [],
+      channels,
       rejected: Array.isArray(data.rejected) ? data.rejected : [],
     };
   } catch {
@@ -359,6 +380,32 @@ function extractChannelMentions(text) {
   return out;
 }
 
+// ДОБАВЛЕНО: "усыпляет" ранее найденные каналы, которые давно перестали
+// постить прокси, вместо того чтобы проверять их каждый прогон навсегда.
+// candidateCountByHandle — Map<handle(lowercase), число кандидатов ИЗ
+// ЭТОГО прогона> для каналов, которые реально проверялись в main().
+function pruneDormantChannels(channels, candidateCountByHandle) {
+  const kept = [];
+  for (const c of channels) {
+    const count = candidateCountByHandle.get(c.handle) ?? null;
+    if (count === null) {
+      // почему-то не проверялся в этом прогоне (не должно происходить в
+      // норме) — оставляем как есть, не трогаем счётчик вслепую.
+      kept.push(c);
+      continue;
+    }
+    const emptyStreak = count > 0 ? 0 : c.emptyStreak + 1;
+    if (emptyStreak >= MAX_CHANNEL_EMPTY_STREAK) {
+      console.log(
+        `[collect] 💤 @${c.handle} молчит ${emptyStreak} прогонов подряд — усыплён (убран из активного списка).`
+      );
+      continue; // не добавляем обратно — канал "забыт", но не в rejected
+    }
+    kept.push({ handle: c.handle, emptyStreak });
+  }
+  return kept;
+}
+
 // Ищет НОВЫЕ прокси-каналы среди упоминаний "@handle" в уже скачанных
 // текстах (HTML известных каналов + содержимое GitHub-источников), сама
 // проверяет каждого нового кандидата запросом t.me/s/<handle> — считаем
@@ -366,11 +413,12 @@ function extractChannelMentions(text) {
 // разбираемый прокси. Непроверенные/непрокси-каналы запоминаются в
 // rejected, чтобы не долбить их заново каждый прогон впустую.
 async function discoverNewChannels(existingChannels, state, mentionTexts) {
-  const knownChannels = new Set(
-    [...existingChannels, ...state.channels].map((c) => c.toLowerCase())
-  );
+  const knownChannels = new Set([
+    ...existingChannels.map((c) => c.toLowerCase()),
+    ...state.channels.map((c) => c.handle.toLowerCase()),
+  ]);
   const rejected = new Set(state.rejected.map((c) => c.toLowerCase()));
-  const discovered = new Set(state.channels);
+  const discovered = [...state.channels];
 
   const mentions = new Set();
   for (const text of mentionTexts) {
@@ -393,9 +441,9 @@ async function discoverNewChannels(existingChannels, state, mentionTexts) {
     checked++;
     const { candidates: found } = await fetchTelegramChannelCandidates(handle);
     if (found.length > 0) {
-      discovered.add(handle);
+      discovered.push({ handle, emptyStreak: 0 });
       console.log(`[collect] ✅ новый прокси-канал: @${handle} (${found.length} кандидатов)`);
-      if (discovered.size >= MAX_DISCOVERED_CHANNELS) {
+      if (discovered.length >= MAX_DISCOVERED_CHANNELS) {
         console.log(`[collect] лимит MAX_DISCOVERED_CHANNELS (${MAX_DISCOVERED_CHANNELS}) достигнут.`);
         break;
       }
@@ -419,7 +467,7 @@ async function loadPreviouslyAliveCandidates() {
     if (!Array.isArray(data)) return [];
     return data
       .filter((c) => c.alive)
-      .map((c) => ({ host: c.host, port: c.port, secret: c.secret, region: c.region }));
+      .map((c) => ({ host: c.host, port: c.port, secret: c.secret, region: c.region, source: c.source || null }));
   } catch {
     return []; // файла ещё нет — это нормально на первом прогоне
   }
@@ -465,13 +513,26 @@ async function main() {
   }
 
   const channelState = await loadDiscoveredChannelsState();
-  const allChannels = [...TELEGRAM_PROXY_CHANNELS, ...channelState.channels];
-  console.log(`[collect] каналов: ${allChannels.length} (${TELEGRAM_PROXY_CHANNELS.length} статичных + ${channelState.channels.length} найденных ранее)`);
+  const discoveredHandles = channelState.channels.map((c) => c.handle);
+  const allChannels = [...TELEGRAM_PROXY_CHANNELS, ...discoveredHandles];
+  console.log(`[collect] каналов: ${allChannels.length} (${TELEGRAM_PROXY_CHANNELS.length} статичных + ${discoveredHandles.length} найденных ранее)`);
 
   const channelResults = await mapWithConcurrency(allChannels, FETCH_CONCURRENCY, (ch) =>
     fetchTelegramChannelCandidates(ch)
   );
-  const rawCandidateLists = [...channelResults.map((r) => r.candidates), ...texts.map((text) => (text ? collectParseCandidates(text) : []))];
+  const rawCandidateLists = [
+    ...channelResults.map((r) => ({ source: `tg:@${r.channel}`, candidates: r.candidates })),
+    ...allSources.map((url, i) => ({ source: url, candidates: texts[i] ? collectParseCandidates(texts[i]) : [] })),
+  ];
+
+  // "Усыпляем" ранее найденные каналы, которые давно ничего не постят —
+  // используем результаты фетча ИЗ ЭТОГО ЖЕ прогона (без лишних запросов).
+  // Статичные каналы (TELEGRAM_PROXY_CHANNELS) сюда не попадают — они
+  // заданы вручную и не усыпляются автоматически.
+  const candidateCountByHandle = new Map(
+    channelResults.map((r) => [r.channel.toLowerCase(), r.candidates.length])
+  );
+  channelState.channels = pruneDormantChannels(channelState.channels, candidateCountByHandle);
 
   // Самопополнение списка каналов: ищем "@handle" упоминания в текстах,
   // которые уже и так были скачаны на этом прогоне (HTML известных
@@ -486,7 +547,7 @@ async function main() {
 
   const newKeys = []; // ключи, добавленные в ЭТОМ прогоне — только их сверяем с geoIP-кэшем ниже
 
-  for (const candidates of rawCandidateLists) {
+  for (const { source, candidates } of rawCandidateLists) {
     for (const c of candidates) {
       const key = `${c.host}:${c.port}:${c.secret}`;
       if (seen.has(key)) continue;
@@ -499,6 +560,11 @@ async function main() {
         port: c.port,
         secret: c.secret,
         region: collectDetectRegion(domain),
+        // ДОБАВЛЕНО: откуда взят этот кандидат (URL источника или
+        // "tg:@channel") — нужно, чтобы потом оценивать НАДЁЖНОСТЬ
+        // источника (какая доля кандидатов оттуда реально оказывается
+        // живой), а не только километраж/пинг конкретного сервера.
+        source,
       });
       newKeys.push(key);
 

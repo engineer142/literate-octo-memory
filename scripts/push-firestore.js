@@ -143,6 +143,10 @@ function toAutoServer(c) {
     geoCity: c.geoCity || null,
     lat: typeof c.lat === 'number' ? c.lat : null,
     lon: typeof c.lon === 'number' ? c.lon : null,
+    // ДОБАВЛЕНО: история для ранжирования в "рядом со мной" не только по
+    // километражу — см. server.js/findNearestServers.
+    aliveStreak: c.aliveStreak ?? 0,
+    sourceReliability: c.sourceReliability ?? null, // null = источник ещё новый, данных мало
     foundAt: new Date().toISOString(),
   };
 }

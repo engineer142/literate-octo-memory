@@ -69,6 +69,15 @@ const PING_TIMEOUT_MS = Number(process.env.CHECK_PING_TIMEOUT_MS || 3000);
 // временно недоступен/зарейтлимичен — тогда используется region из
 // candidates.json (эвристика collect.js) как раньше.
 const GEOIP_ENABLED = process.env.CHECK_GEOIP !== 'off';
+// ДОБАВЛЕНО: надёжность ИСТОЧНИКА (не конкретного сервера) — какая доля
+// кандидатов от каждого источника (URL списка или "tg:@channel", см.
+// поле source в collect.js) реально оказывается живой. Держим как
+// сглаженное скользящее среднее (EWMA) поверх истории прошлых прогонов
+// (data/source-stats.json), а не только по этому прогону — один неудачный
+// прогон не должен резко обнулить репутацию обычно надёжного источника.
+const SOURCE_STATS_PATH = 'data/source-stats.json';
+const SOURCE_STATS_EWMA_ALPHA = 0.3; // вес нового прогона в скользящем среднем
+const SOURCE_STATS_MIN_SAMPLES = 3; // меньше — доверять пока нечему, отдаём null (нейтрально)
 // Жёсткий потолок на весь прогон, независимо от того, что именно тормозит
 // (DNS, сеть, сериализация где-то ещё) — если выбор не уложился, остаток
 // кандидатов помечается method:'not-checked' и попадает в результат как
@@ -675,7 +684,58 @@ async function checkOneServer(host, port, secretRaw) {
   return { ...lastResult, alive: false, attempts: CHECK_ATTEMPTS, reachable: true, tcpPingMs: ping.tcpPingMs };
 }
 
-// ---------- пул конкурентности + main ----------
+// ---------- надёжность источника (по истории, EWMA) ----------
+
+async function loadSourceStats() {
+  try {
+    const raw = await readFile(SOURCE_STATS_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return data && typeof data === 'object' ? data : {};
+  } catch {
+    return {}; // файла ещё нет — это нормально на первом прогоне
+  }
+}
+
+// Считает по результатам ЭТОГО прогона долю живых на источник, смешивает
+// со сглаженной историей (EWMA) и возвращает { updatedStats, reliabilityByKey }.
+// reliabilityByKey — Map<source, number 0..1 | null> для проставления
+// каждому серверу его sourceReliability. null — источник слишком новый,
+// достоверной статистики по нему ещё нет (меньше SOURCE_STATS_MIN_SAMPLES
+// проверенных кандидатов за всё время).
+function computeSourceReliability(results, prevStats) {
+  const bySource = new Map(); // source -> { total, alive }
+  for (const r of results) {
+    if (!r.source || r.method === 'not-checked') continue; // непроверенное не участвует в статистике
+    const entry = bySource.get(r.source) || { total: 0, alive: 0 };
+    entry.total++;
+    if (r.alive) entry.alive++;
+    bySource.set(r.source, entry);
+  }
+
+  const updatedStats = { ...prevStats };
+  const reliabilityByKey = new Map();
+
+  for (const [source, { total, alive }] of bySource) {
+    const thisRunRate = total > 0 ? alive / total : null;
+    const prev = prevStats[source];
+    const prevSamples = prev ? prev.samples : 0;
+    const totalSamples = prevSamples + total;
+
+    let rate;
+    if (!prev) {
+      rate = thisRunRate; // холодный старт — берём как есть
+    } else {
+      rate = prev.rate * (1 - SOURCE_STATS_EWMA_ALPHA) + thisRunRate * SOURCE_STATS_EWMA_ALPHA;
+    }
+
+    updatedStats[source] = { rate, samples: totalSamples, lastRunAt: new Date().toISOString() };
+    reliabilityByKey.set(source, totalSamples >= SOURCE_STATS_MIN_SAMPLES ? rate : null);
+  }
+
+  return { updatedStats, reliabilityByKey };
+}
+
+
 
 async function mapWithConcurrency(items, limit, fn, results, deadlineTs, onSkip) {
   let i = 0;
@@ -766,6 +826,9 @@ async function writeByRegionResults(results) {
       lon: r.lon ?? null,
       pingMs: r.pingMs,
       tcpPingMs: r.tcpPingMs,
+      aliveStreak: r.aliveStreak ?? null,
+      source: r.source || null,
+      sourceReliability: r.sourceReliability ?? null,
       checkedAt: r.checkedAt,
     });
   }
@@ -792,6 +855,7 @@ async function main() {
   // отличает один прокси от другого). Если файла ещё нет (самый первый
   // прогон) — просто считаем, что истории нет, streak начнётся с нуля.
   let prevStreakByKey = new Map();
+  let prevSourceStats = {};
   try {
     const prevRaw = await readFile('data/checked.json', 'utf8');
     const prev = JSON.parse(prevRaw);
@@ -802,6 +866,7 @@ async function main() {
   } catch {
     // предыдущего файла нет — это нормально на первом прогоне
   }
+  prevSourceStats = await loadSourceStats();
 
   // Предзаполняем "не проверено" — если жёсткий таймер сработает раньше,
   // чем цикл естественным образом дойдёт до элемента, тут уже будет что
@@ -871,6 +936,17 @@ async function main() {
 
   clearTimeout(hardTimer);
   await attachGeoRegions(results);
+
+  // Надёжность источника — считаем ПОСЛЕ основной проверки (нужны финальные
+  // alive/method по всем результатам), сразу проставляем каждому серверу
+  // и сохраняем обновлённую историю на следующий прогон.
+  const { updatedStats, reliabilityByKey } = computeSourceReliability(results, prevSourceStats);
+  for (const r of results) {
+    r.sourceReliability = r.source ? (reliabilityByKey.get(r.source) ?? null) : null;
+  }
+  await writeFile(SOURCE_STATS_PATH, JSON.stringify(updatedStats, null, 2));
+  console.log(`[check] надёжность источников обновлена: ${Object.keys(updatedStats).length} источников в истории`);
+
   await writeResultsAndExit('готово');
   await writeByRegionResults(results);
 }
