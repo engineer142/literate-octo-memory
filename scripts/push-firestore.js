@@ -27,6 +27,18 @@ import { readFile } from 'node:fs/promises';
 import { createSign } from 'node:crypto';
 
 const COLLECT_REGIONS = ['ru', 'eu', 'us', 'asia'];
+// ДОБАВЛЕНО: раньше сюда попадали ВСЕ прошедшие проверку сервера без
+// ограничения — регион мог легко разрастись до 800+ записей, при этом
+// боты и сайт всё равно показывают человеку максимум 5-20 штук за раз
+// (см. NEARBY_MAX_LIMIT/NEARBY_LIVE_CHECK_POOL в server.js). Раздутый
+// пул только замедляет живую проверку "рядом со мной" на VPS (там же
+// приходится перепроверять пачками) и не даёт никакой пользы. Теперь —
+// берём только лучшие MAX_SERVERS_PER_REGION по пингу на регион, и
+// только те, что были живы MIN_ALIVE_STREAK прогонов подряд (см.
+// aliveStreak в check.js) — то есть не "повезло один раз ответить", а
+// стабильно работает уже некоторое время.
+const MAX_SERVERS_PER_REGION = Number(process.env.MAX_SERVERS_PER_REGION || 40);
+const MIN_ALIVE_STREAK = Number(process.env.MIN_ALIVE_STREAK || 2);
 
 // ---------- декодирование домена маскировки из "ee"-секрета (для name) ----------
 // Тот же алгоритм, что и collectDecodeDomain в collect.js — продублировано
@@ -155,15 +167,32 @@ async function main() {
   const raw = await readFile('data/checked.json', 'utf8');
   const checked = JSON.parse(raw);
   const alive = checked.filter((c) => c.alive);
+  // Требуем стабильность — сервер должен быть жив MIN_ALIVE_STREAK
+  // прогонов подряд, а не один раз случайно ответить (см. aliveStreak в
+  // check.js). Для очень старых записей checked.json без этого поля
+  // (aliveStreak === undefined) считаем streak как 1 — не отбрасываем их
+  // молча, просто не даём преимущества "стабильности", которого мы для
+  // них не знаем.
+  const stable = alive.filter((c) => (c.aliveStreak ?? 1) >= MIN_ALIVE_STREAK);
+  console.log(
+    `[push-firestore] живых: ${alive.length}/${checked.length}, из них со streak>=${MIN_ALIVE_STREAK}: ${stable.length}`
+  );
 
   const doc = { servers_ru: [], servers_eu: [], servers_us: [], servers_asia: [] };
-  for (const c of alive) {
+  for (const c of stable) {
     const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
-    doc[`servers_${region}`].push(toAutoServer(c));
+    doc[`servers_${region}`].push(c);
+  }
+  // Лучшие по пингу — вперёд, и обрезаем до MAX_SERVERS_PER_REGION на
+  // регион. Раньше сюда шли ВСЕ подряд, без сортировки и лимита.
+  for (const region of COLLECT_REGIONS) {
+    const key = `servers_${region}`;
+    doc[key].sort((a, b) => (a.pingMs ?? Infinity) - (b.pingMs ?? Infinity));
+    doc[key] = doc[key].slice(0, MAX_SERVERS_PER_REGION).map(toAutoServer);
   }
 
   console.log(
-    `[push-firestore] живых: ${alive.length}/${checked.length} — ` +
+    `[push-firestore] в выдачу (после сортировки и лимита ${MAX_SERVERS_PER_REGION}/регион): ` +
     COLLECT_REGIONS.map((r) => `${r}=${doc[`servers_${r}`].length}`).join(', ')
   );
 
