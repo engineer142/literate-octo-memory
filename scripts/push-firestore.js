@@ -23,10 +23,28 @@
 //
 // Запуск: node scripts/push-firestore.js
 
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { createSign } from 'node:crypto';
 
 const COLLECT_REGIONS = ['ru', 'eu', 'us', 'asia'];
+// ДОБАВЛЕНО: защита от "плохого прогона". Раньше PATCH без updateMask
+// каждый раз ПОЛНОСТЬЮ заменял siteConfig/proxyAuto тем, что нашли ЗА
+// ЭТОТ прогон — если сам процесс проверки временно ломается (упал
+// GeoIP/ip-api.com, сетевая авария раннера GitHub Actions, где-то баг),
+// даже старые реально рабочие сервера при перепроверке ошибочно
+// показывают себя мёртвыми — и это тут же перетирает вчерашнюю рабочую
+// базу почти пустой. От carry-forward (старые сервера каждый раз
+// перепроверяются наравне с новыми, см. loadPreviouslyAliveCandidates в
+// collect.js) это НЕ спасает — они проверяются ТЕМ ЖЕ сломанным
+// механизмом. Поэтому сравниваем итог со скользящим средним за последние
+// успешные публикации: если аномально низкий (обычно сервера "все резко
+// вымерли" не бывает, а вот процесс проверки сломаться может) — просто
+// НЕ публикуем этот прогон, старые данные остаются висеть для
+// пользователей до следующего нормального прогона.
+const PUBLISH_BASELINE_PATH = 'data/publish-baseline.json';
+const PUBLISH_BASELINE_EWMA_ALPHA = 0.3;
+const PUBLISH_MIN_RATIO = Number(process.env.PUBLISH_MIN_RATIO || 0.4); // не публиковать, если меньше 40% от обычного
+const PUBLISH_MIN_BASELINE_SAMPLES = 2; // первые пару прогонов ещё не с чем сравнивать — публикуем как есть
 // ДОБАВЛЕНО: раньше сюда попадали ВСЕ прошедшие проверку сервера без
 // ограничения — регион мог легко разрастись до 800+ записей, при этом
 // боты и сайт всё равно показывают человеку максимум 5-20 штук за раз
@@ -151,6 +169,49 @@ function toAutoServer(c) {
   };
 }
 
+// ---------- защита от "плохого прогона" (скользящий базовый уровень) ----------
+
+async function loadPublishBaseline() {
+  try {
+    const raw = await readFile(PUBLISH_BASELINE_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return {
+      avg: typeof data.avg === 'number' ? data.avg : null,
+      samples: typeof data.samples === 'number' ? data.samples : 0,
+    };
+  } catch {
+    return { avg: null, samples: 0 }; // файла ещё нет — это нормально на первом прогоне
+  }
+}
+
+// Возвращает { shouldPublish, reason } — публиковать этот прогон или нет,
+// и почему. totalStable — сколько стабильных серверов получилось СЕЙЧАС,
+// суммарно по всем регионам (после фильтра по streak, до обрезки лимитом).
+function checkAgainstBaseline(totalStable, baseline) {
+  if (baseline.samples < PUBLISH_MIN_BASELINE_SAMPLES || baseline.avg == null) {
+    return { shouldPublish: true, reason: 'база ещё копится, сравнивать не с чем — публикуем как есть' };
+  }
+  const ratio = baseline.avg > 0 ? totalStable / baseline.avg : 1;
+  if (ratio < PUBLISH_MIN_RATIO) {
+    return {
+      shouldPublish: false,
+      reason: `итог (${totalStable}) — это только ${Math.round(ratio * 100)}% от обычного среднего (${Math.round(baseline.avg)}), ` +
+        `похоже на сбой самой проверки, а не на массовую смерть серверов`,
+    };
+  }
+  return { shouldPublish: true, reason: `в пределах нормы (${Math.round(ratio * 100)}% от среднего ${Math.round(baseline.avg)})` };
+}
+
+async function updatePublishBaseline(totalStable, baseline) {
+  const avg = baseline.avg == null
+    ? totalStable
+    : baseline.avg * (1 - PUBLISH_BASELINE_EWMA_ALPHA) + totalStable * PUBLISH_BASELINE_EWMA_ALPHA;
+  const updated = { avg, samples: baseline.samples + 1, lastPublishedAt: new Date().toISOString() };
+  await writeFile(PUBLISH_BASELINE_PATH, JSON.stringify(updated, null, 2));
+  return updated;
+}
+
+
 async function main() {
   const rawSecret = process.env.FIREBASE_SERVICE_ACCOUNT;
   if (!rawSecret) {
@@ -181,6 +242,17 @@ async function main() {
   console.log(
     `[push-firestore] живых: ${alive.length}/${checked.length}, из них со streak>=${MIN_ALIVE_STREAK}: ${stable.length}`
   );
+
+  const baseline = await loadPublishBaseline();
+  const { shouldPublish, reason } = checkAgainstBaseline(stable.length, baseline);
+  console.log(`[push-firestore] проверка на аномалию: ${reason}`);
+  if (!shouldPublish) {
+    console.warn(
+      `[push-firestore] ⚠️ ПУБЛИКАЦИЯ ОТМЕНЕНА — похоже на сбой самой проверки, а не на реальную смерть серверов. ` +
+      `Старые данные в Firestore остаются как есть, база сравнения не обновляется этим прогоном.`
+    );
+    return;
+  }
 
   const doc = { servers_ru: [], servers_eu: [], servers_us: [], servers_asia: [] };
   for (const c of stable) {
@@ -216,6 +288,11 @@ async function main() {
   }
 
   console.log('[push-firestore] siteConfig/proxyAuto обновлён.');
+
+  const updatedBaseline = await updatePublishBaseline(stable.length, baseline);
+  console.log(
+    `[push-firestore] база сравнения обновлена: среднее ~${Math.round(updatedBaseline.avg)}, прогонов в истории: ${updatedBaseline.samples}`
+  );
 }
 
 main().catch((e) => {
