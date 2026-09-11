@@ -111,6 +111,7 @@ const TELEGRAM_PROXY_CHANNELS = [
   'MTProtoProxyChannel',
   'proxyfreetg',
   'mtprotoproxy_list',
+  'proxymt24',
 ];
 
 // ---------- Самопополняющийся список: GitHub Code Search ----------
@@ -124,6 +125,30 @@ const GITHUB_CODE_SEARCH_QUERIES = [
 ];
 const DISCOVERED_SOURCES_PATH = 'data/discovered-sources.json';
 const MAX_DISCOVERED_SOURCES = 300; // предохранитель, чтобы список не рос бесконечно
+
+// ---------- Самопополнение: НОВЫЕ Telegram-каналы ----------
+// Та же идея, что и с GitHub Code Search выше, но источник упоминаний —
+// сами уже известные каналы/источники: такие каналы почти всегда
+// упоминают "дружественные"/рекламные/сетевые каналы (see "@..." в
+// подписи поста, "More: @...", "Ads: @...", "Related channels" и т.п.).
+// Вместо того чтобы искать по всему Telegram (публичного API для этого
+// без бот-токена/MTProto-клиента нет), мы просто вылавливаем ВСЕ "@handle"
+// упоминания из уже скачанного текста (HTML каналов + содержимое
+// GitHub-источников), для новых — реально проверяем t.me/s/<handle> на
+// наличие хотя бы одного разбираемого прокси-кандидата, и только тогда
+// добавляем в копилку. Отклонённые (не прокси-каналы) запоминаются
+// отдельно, чтобы не проверять их заново каждый прогон.
+const DISCOVERED_CHANNELS_PATH = 'data/discovered-channels.json';
+const MAX_DISCOVERED_CHANNELS = 60; // каналов кандидатов немного, держим лимит скромнее GitHub-источников
+const MAX_NEW_CHANNEL_CHECKS_PER_RUN = 15; // не устраивать лавину новых t.me/s/ запросов за один прогон
+// Официальные правила Telegram: username 5-32 символов, начинается с буквы.
+const CHANNEL_MENTION_RE = /@([A-Za-z][A-Za-z0-9_]{4,31})/g;
+// Явный мусор: рекламные/донат/бот-аккаунты, которые часто мелькают в
+// подписях таких постов, но точно не являются каналами-источниками прокси.
+const CHANNEL_MENTION_BLOCKLIST = new Set([
+  'telegram', 'durov', 'contactmtproxybot', 'mtproxybot', 'proxymadata',
+]);
+
 
 function collectIsBlocked(secret, domain) {
   if (!secret || secret.length < 16) return true;
@@ -182,6 +207,19 @@ function collectParseCandidates(text) {
   const re3 = /([A-Za-z0-9.-]+):(\d+):([A-Fa-f0-9]{16,})/g;
   while ((m = re3.exec(text))) add(m[1], m[2], m[3]);
 
+  // ДОБАВЛЕНО: некоторые каналы (напр. proxymt24 и похожие) публикуют
+  // не ссылку, а обычный подписанный текст вида
+  // "Server: xxx.example.com Port: 443 Secret: ee1603...", часто в 3
+  // отдельных строках. \s* между полями съедает и переводы строк.
+  // "Server: Unknown" пропускаем — это значит, что настоящий адрес не
+  // раскрыт в тексте (только внутри кнопки-ссылки), а ссылку и так уже
+  // ловят re1/re2 выше, если она реально есть в HTML.
+  const re4 = /Server:\s*([A-Za-z0-9][A-Za-z0-9.-]*)\s*Port:\s*(\d+)\s*Secret:\s*([A-Fa-f0-9]{16,})/gi;
+  while ((m = re4.exec(text))) {
+    if (m[1].toLowerCase() === 'unknown') continue;
+    add(m[1], m[2], m[3]);
+  }
+
   const trimmed = text.trim();
   if (trimmed[0] === '[' || trimmed[0] === '{') {
     try {
@@ -220,17 +258,19 @@ async function fetchWithTimeout(url) {
 
 // Извлекает tg://proxy / t.me/proxy ссылки прямо из HTML-страницы канала
 // (t.me/s/<channel>) — та же регулярка, что и для обычных текстовых
-// источников, просто применяется к HTML вместо .txt.
+// источников, просто применяется к HTML вместо .txt. Возвращает ещё и
+// сырой html — он нужен discoverNewChannels() ниже, чтобы находить
+// упоминания ДРУГИХ каналов в подписях постов этого канала.
 async function fetchTelegramChannelCandidates(channel) {
   const url = `https://t.me/s/${channel}`;
   const html = await fetchWithTimeout(url);
   if (!html) {
     console.log(`[collect] t.me/s/${channel} — пропущен`);
-    return [];
+    return { channel, candidates: [], html: '' };
   }
   const candidates = collectParseCandidates(html);
   console.log(`[collect] t.me/s/${channel} — ${candidates.length} кандидатов`);
-  return candidates;
+  return { channel, candidates, html };
 }
 
 // ---------- GitHub Code Search: самопополнение списка источников ----------
@@ -296,6 +336,78 @@ async function loadPreviousDiscoveredSources() {
   }
 }
 
+async function loadDiscoveredChannelsState() {
+  try {
+    const raw = await readFile(DISCOVERED_CHANNELS_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return {
+      channels: Array.isArray(data.channels) ? data.channels : [],
+      rejected: Array.isArray(data.rejected) ? data.rejected : [],
+    };
+  } catch {
+    return { channels: [], rejected: [] }; // файла ещё нет — это нормально на первом прогоне
+  }
+}
+
+// Вытаскивает уникальные "@handle" упоминания из произвольного текста
+// (HTML канала или содержимое источника), приводит к нижнему регистру.
+function extractChannelMentions(text) {
+  const out = new Set();
+  let m;
+  CHANNEL_MENTION_RE.lastIndex = 0;
+  while ((m = CHANNEL_MENTION_RE.exec(text))) out.add(m[1].toLowerCase());
+  return out;
+}
+
+// Ищет НОВЫЕ прокси-каналы среди упоминаний "@handle" в уже скачанных
+// текстах (HTML известных каналов + содержимое GitHub-источников), сама
+// проверяет каждого нового кандидата запросом t.me/s/<handle> — считаем
+// каналом-источником, только если он реально отдаёт хотя бы один
+// разбираемый прокси. Непроверенные/непрокси-каналы запоминаются в
+// rejected, чтобы не долбить их заново каждый прогон впустую.
+async function discoverNewChannels(existingChannels, state, mentionTexts) {
+  const knownChannels = new Set(
+    [...existingChannels, ...state.channels].map((c) => c.toLowerCase())
+  );
+  const rejected = new Set(state.rejected.map((c) => c.toLowerCase()));
+  const discovered = new Set(state.channels);
+
+  const mentions = new Set();
+  for (const text of mentionTexts) {
+    if (!text) continue;
+    for (const handle of extractChannelMentions(text)) mentions.add(handle);
+  }
+
+  const candidates = Array.from(mentions).filter(
+    (h) => !knownChannels.has(h) && !rejected.has(h) && !CHANNEL_MENTION_BLOCKLIST.has(h)
+  );
+
+  console.log(`[collect] найдено уникальных упоминаний каналов: ${mentions.size}, из них новых кандидатов на проверку: ${candidates.length}`);
+
+  let checked = 0;
+  for (const handle of candidates) {
+    if (checked >= MAX_NEW_CHANNEL_CHECKS_PER_RUN) {
+      console.log(`[collect] лимит проверок новых каналов за прогон (${MAX_NEW_CHANNEL_CHECKS_PER_RUN}) достигнут, остальные — в следующий раз.`);
+      break;
+    }
+    checked++;
+    const { candidates: found } = await fetchTelegramChannelCandidates(handle);
+    if (found.length > 0) {
+      discovered.add(handle);
+      console.log(`[collect] ✅ новый прокси-канал: @${handle} (${found.length} кандидатов)`);
+      if (discovered.size >= MAX_DISCOVERED_CHANNELS) {
+        console.log(`[collect] лимит MAX_DISCOVERED_CHANNELS (${MAX_DISCOVERED_CHANNELS}) достигнут.`);
+        break;
+      }
+    } else {
+      rejected.add(handle);
+      console.log(`[collect] ❌ @${handle} — прокси не найдены, помечен как непрокси-канал.`);
+    }
+  }
+
+  return { channels: Array.from(discovered), rejected: Array.from(rejected) };
+}
+
 // ---------- Персистентность: не терять живые прокси между прогонами ----------
 // Если источник временно не отдал строку с сервером, который на самом деле
 // всё ещё жив, он не должен пропадать из выдачи — подмешиваем живых из
@@ -352,10 +464,25 @@ async function main() {
     seen.set(`${c.host}:${c.port}:${c.secret}`, c);
   }
 
-  const channelResults = await mapWithConcurrency(TELEGRAM_PROXY_CHANNELS, FETCH_CONCURRENCY, (ch) =>
+  const channelState = await loadDiscoveredChannelsState();
+  const allChannels = [...TELEGRAM_PROXY_CHANNELS, ...channelState.channels];
+  console.log(`[collect] каналов: ${allChannels.length} (${TELEGRAM_PROXY_CHANNELS.length} статичных + ${channelState.channels.length} найденных ранее)`);
+
+  const channelResults = await mapWithConcurrency(allChannels, FETCH_CONCURRENCY, (ch) =>
     fetchTelegramChannelCandidates(ch)
   );
-  const rawCandidateLists = [...channelResults, ...texts.map((text) => (text ? collectParseCandidates(text) : []))];
+  const rawCandidateLists = [...channelResults.map((r) => r.candidates), ...texts.map((text) => (text ? collectParseCandidates(text) : []))];
+
+  // Самопополнение списка каналов: ищем "@handle" упоминания в текстах,
+  // которые уже и так были скачаны на этом прогоне (HTML известных
+  // каналов + содержимое обычных источников) — без единого лишнего
+  // запроса, кроме проверки самих новых кандидатов.
+  const newChannelState = await discoverNewChannels(
+    TELEGRAM_PROXY_CHANNELS,
+    channelState,
+    [...channelResults.map((r) => r.html), ...texts]
+  );
+  await writeFile(DISCOVERED_CHANNELS_PATH, JSON.stringify(newChannelState, null, 2));
 
   const newKeys = []; // ключи, добавленные в ЭТОМ прогоне — только их сверяем с geoIP-кэшем ниже
 
