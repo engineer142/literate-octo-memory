@@ -45,6 +45,20 @@ const SOCKET_TIMEOUT_MS = Number(process.env.CHECK_TIMEOUT_MS || 5000);
 const CONCURRENCY = Number(process.env.CHECK_CONCURRENCY || 40);
 const CHECK_ATTEMPTS = Number(process.env.CHECK_ATTEMPTS || 2);
 const CHECK_RETRY_DELAY_MS = 700;
+// ДОБАВЛЕНО: раньше сервер засчитывался живым сразу после ПЕРВОЙ же
+// успешной попытки — одного случайного удачного ответа было достаточно
+// (сервер мог быть перегружен/нестабилен и отвечать через раз, но при
+// этом всё равно каждый прогон попадал в выдачу). Теперь по умолчанию
+// требуется, чтобы совпало нужное число попыток ПОДРЯД (по умолчанию —
+// все CHECK_ATTEMPTS, т.е. 2 из 2) — это и есть "дольше, но точно
+// рабочий": на каждый сервер тратится чуть больше времени (полный цикл
+// попыток, а не выход по первому успеху), зато случайно моргнувший
+// сервер больше не проходит. CHECK_REQUIRE_ATTEMPTS=1 возвращает старое
+// поведение (алив по первой же успешной попытке), если понадобится.
+const CHECK_REQUIRE_ATTEMPTS = Math.min(
+  CHECK_ATTEMPTS,
+  Math.max(1, Number(process.env.CHECK_REQUIRE_ATTEMPTS || CHECK_ATTEMPTS))
+);
 // Отдельный, более короткий таймаут для стадии "доступен / недоступен"
 // (просто TCP connect, без отправки прокси-хендшейка) — это и есть "пинг":
 // быстро отсеиваем хосты, которые вообще не открывают порт, не тратя на них
@@ -459,11 +473,21 @@ async function checkOneServerProtocol(host, port, secret16) {
             const pingMs = Date.now() - start;
             const bodyOffset = lenByte < 127 ? 1 : 4;
             const constructorOffset = bodyOffset + 8 + 8 + 4;
+            // ИСПРАВЛЕНО: раньше здесь был доп. fallback
+            // "|| plain.length > bodyOffset + 20" — то есть даже если
+            // конструктор ответа НЕ совпадал с настоящим ResPQ
+            // (0x05162463), сервер всё равно засчитывался как "жив",
+            // если ответ просто был "достаточно длинным". Это давало
+            // ложные срабатывания: сервер мог прислать любой мусор
+            // подходящей длины (например, чужой протокол на том же порту,
+            // HTTP-редирект, honeypot) и пройти проверку. Теперь "жив"
+            // засчитывается ТОЛЬКО при точном совпадении конструктора —
+            // то есть сервер реально ответил настоящим MTProto ResPQ.
             let alive = false;
             if (plain.length >= constructorOffset + 4) {
               const ctor = (plain[constructorOffset] | (plain[constructorOffset + 1] << 8) |
                 (plain[constructorOffset + 2] << 16) | (plain[constructorOffset + 3] << 24)) >>> 0;
-              alive = ctor === 0x05162463 || plain.length > bodyOffset + 20;
+              alive = ctor === 0x05162463;
             }
             return { alive, pingMs };
           }
@@ -516,7 +540,17 @@ async function checkOneServerFakeTlsProtocol(host, port, secretRaw) {
       if (firstRead.done || !firstRead.value || firstRead.value.length === 0 || firstRead.value[0] !== 0x16) {
         return { alive: false, pingMs: null, method: 'tls-only' };
       }
-      fallbackResult = { alive: true, pingMs: Date.now() - start, method: 'tls-only' };
+      // ИСПРАВЛЕНО: раньше здесь fallbackResult (то, что возвращается,
+      // если сработает СТОРОЖЕВОЙ ТАЙМАУТ) сразу помечался alive:true —
+      // то есть если TLS-рукопожатие прошло, а сам MTProto req_pq_multi
+      // не успел завершиться до таймаута, сервер всё равно засчитывался
+      // живым только по факту "открыл TLS". Это давало ложные
+      // срабатывания на серверах, которые маскируются под TLS (Fake-TLS
+      // рукопожатие настоящее), но реального MTProto за ним уже нет —
+      // ровно жалоба "не так много рабочих". Теперь по таймауту (даже
+      // после успешного TLS) сервер остаётся alive:false, method
+      // отражает, что дошли только до TLS, но не до протокола.
+      fallbackResult = { alive: false, pingMs: null, method: 'tls-only-timeout' };
 
       let buf = new Uint8Array(firstRead.value);
 
@@ -557,11 +591,16 @@ async function checkOneServerFakeTlsProtocol(host, port, secretRaw) {
             const pingMs = Date.now() - start;
             const bodyOffset = lenByte < 127 ? 1 : 4;
             const constructorOffset = bodyOffset + 8 + 8 + 4;
-            let alive = plain.length > bodyOffset + 20;
+            // ИСПРАВЛЕНО (тот же фикс, что в checkOneServerProtocol выше):
+            // убран нестрогий fallback "plain.length > bodyOffset + 20",
+            // который засчитывал сервер живым по одной лишь длине ответа,
+            // без проверки, что это реально ResPQ. Теперь требуется точное
+            // совпадение конструктора.
+            let alive = false;
             if (plain.length >= constructorOffset + 4) {
               const ctor = (plain[constructorOffset] | (plain[constructorOffset + 1] << 8) |
                 (plain[constructorOffset + 2] << 16) | (plain[constructorOffset + 3] << 24)) >>> 0;
-              alive = alive || ctor === 0x05162463;
+              alive = ctor === 0x05162463;
             }
             return { alive, pingMs, method: 'protocol' };
           }
@@ -615,16 +654,25 @@ async function checkOneServer(host, port, secretRaw) {
   }
 
   // Шаг 2: порт открыт — проверяем, работает ли на нём именно прокси.
+  // Считаем подряд идущие успехи: если сервер один раз ответил успешно,
+  // а на следующей попытке — нет, счётчик обнуляется (это не "мигание",
+  // это именно нестабильный сервер, такой не должен считаться рабочим).
   let lastResult = null;
+  let consecutiveSuccesses = 0;
   for (let attempt = 1; attempt <= CHECK_ATTEMPTS; attempt++) {
     const result = await checkOneServerAttempt(host, port, secretRaw);
     lastResult = result;
     if (result.alive) {
-      return { ...result, attempts: attempt, reachable: true, tcpPingMs: ping.tcpPingMs };
+      consecutiveSuccesses++;
+      if (consecutiveSuccesses >= CHECK_REQUIRE_ATTEMPTS) {
+        return { ...result, attempts: attempt, reachable: true, tcpPingMs: ping.tcpPingMs };
+      }
+    } else {
+      consecutiveSuccesses = 0;
     }
     if (attempt < CHECK_ATTEMPTS) await sleep(CHECK_RETRY_DELAY_MS);
   }
-  return { ...lastResult, attempts: CHECK_ATTEMPTS, reachable: true, tcpPingMs: ping.tcpPingMs };
+  return { ...lastResult, alive: false, attempts: CHECK_ATTEMPTS, reachable: true, tcpPingMs: ping.tcpPingMs };
 }
 
 // ---------- пул конкурентности + main ----------
@@ -647,7 +695,7 @@ async function mapWithConcurrency(items, limit, fn, results, deadlineTs, onSkip)
 function notCheckedResult(c) {
   return {
     ...c, alive: false, pingMs: null, method: 'not-checked', attempts: 0,
-    reachable: null, tcpPingMs: null, checkedAt: new Date().toISOString(),
+    reachable: null, tcpPingMs: null, aliveStreak: 0, checkedAt: new Date().toISOString(),
   };
 }
 
@@ -738,6 +786,23 @@ async function main() {
   const raw = await readFile('data/candidates.json', 'utf8');
   const candidates = JSON.parse(raw);
 
+  // ДОБАВЛЕНО: подгружаем ПРОШЛЫЙ data/checked.json (если есть), чтобы
+  // знать, сколько прогонов ПОДРЯД конкретный сервер был живым —
+  // aliveStreak. Ключ — host:port:secret (то же самое, что реально
+  // отличает один прокси от другого). Если файла ещё нет (самый первый
+  // прогон) — просто считаем, что истории нет, streak начнётся с нуля.
+  let prevStreakByKey = new Map();
+  try {
+    const prevRaw = await readFile('data/checked.json', 'utf8');
+    const prev = JSON.parse(prevRaw);
+    for (const p of prev) {
+      const key = `${p.host}:${p.port}:${p.secret}`;
+      prevStreakByKey.set(key, p.aliveStreak || 0);
+    }
+  } catch {
+    // предыдущего файла нет — это нормально на первом прогоне
+  }
+
   // Предзаполняем "не проверено" — если жёсткий таймер сработает раньше,
   // чем цикл естественным образом дойдёт до элемента, тут уже будет что
   // писать, а не null/undefined.
@@ -785,6 +850,8 @@ async function main() {
       const r = await checkOneServer(c.host, c.port, c.secret);
       done++;
       if (done % 100 === 0) console.log(`[check] обработано ${done}/${candidates.length}`);
+      const key = `${c.host}:${c.port}:${c.secret}`;
+      const prevStreak = prevStreakByKey.get(key) || 0;
       return {
         ...c,
         alive: r.alive,
@@ -793,6 +860,7 @@ async function main() {
         attempts: r.attempts ?? null,
         reachable: r.reachable ?? false,
         tcpPingMs: r.tcpPingMs ?? null,
+        aliveStreak: r.alive ? prevStreak + 1 : 0,
         checkedAt: new Date().toISOString(),
       };
     },
