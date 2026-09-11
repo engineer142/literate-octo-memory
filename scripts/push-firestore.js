@@ -243,8 +243,47 @@ async function main() {
     `[push-firestore] живых: ${alive.length}/${checked.length}, из них со streak>=${MIN_ALIVE_STREAK}: ${stable.length}`
   );
 
+  // ИСПРАВЛЕНО: фильтр по streak — правильная штука в долгосрочной
+  // перспективе, но в переходный период (сразу после включения этой
+  // проверки, или если в конкретном регионе просто мало кандидатов
+  // набрало нужную историю) он может выкосить регион почти подчистую —
+  // а "рядом со мной" на VPS в таком случае вынужден живьём перебирать
+  // то немногое, что осталось (отсюда и таймауты, и "ближайший за 3000+
+  // км", и фоллбэк на пустой регион). Поэтому считаем МИНИМАЛЬНО
+  // приемлемое число серверов НА РЕГИОН (MIN_USABLE_PER_REGION) — и если
+  // строгий фильтр опустил регион ниже этого порога, для ЭТОГО региона
+  // на этот раз просто берём всех живых без требования по streak
+  // (некоторые из них будут "новыми" без истории — не идеально, но лучше,
+  // чем пустой/крошечный регион).
+  const MIN_USABLE_PER_REGION = Number(process.env.MIN_USABLE_PER_REGION || 15);
+  const stableByRegion = new Map();
+  const aliveByRegion = new Map();
+  for (const c of stable) {
+    const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
+    if (!stableByRegion.has(region)) stableByRegion.set(region, []);
+    stableByRegion.get(region).push(c);
+  }
+  for (const c of alive) {
+    const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
+    if (!aliveByRegion.has(region)) aliveByRegion.set(region, []);
+    aliveByRegion.get(region).push(c);
+  }
+  let effectiveTotal = 0;
+  for (const region of COLLECT_REGIONS) {
+    const stableCount = (stableByRegion.get(region) || []).length;
+    const aliveCount = (aliveByRegion.get(region) || []).length;
+    if (stableCount < MIN_USABLE_PER_REGION && aliveCount > stableCount) {
+      console.log(
+        `[push-firestore] ⚠️ регион ${region}: со streak>=${MIN_ALIVE_STREAK} только ${stableCount} — ` +
+        `меньше минимума (${MIN_USABLE_PER_REGION}), для этого региона на этот раз беру всех живых (${aliveCount}) без фильтра по streak.`
+      );
+      stableByRegion.set(region, aliveByRegion.get(region));
+    }
+    effectiveTotal += stableByRegion.get(region)?.length || 0;
+  }
+
   const baseline = await loadPublishBaseline();
-  const { shouldPublish, reason } = checkAgainstBaseline(stable.length, baseline);
+  const { shouldPublish, reason } = checkAgainstBaseline(effectiveTotal, baseline);
   console.log(`[push-firestore] проверка на аномалию: ${reason}`);
   if (!shouldPublish) {
     console.warn(
@@ -255,9 +294,8 @@ async function main() {
   }
 
   const doc = { servers_ru: [], servers_eu: [], servers_us: [], servers_asia: [] };
-  for (const c of stable) {
-    const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
-    doc[`servers_${region}`].push(c);
+  for (const region of COLLECT_REGIONS) {
+    doc[`servers_${region}`] = stableByRegion.get(region) || [];
   }
   // Лучшие по пингу — вперёд, и обрезаем до MAX_SERVERS_PER_REGION на
   // регион. Раньше сюда шли ВСЕ подряд, без сортировки и лимита.
@@ -289,7 +327,7 @@ async function main() {
 
   console.log('[push-firestore] siteConfig/proxyAuto обновлён.');
 
-  const updatedBaseline = await updatePublishBaseline(stable.length, baseline);
+  const updatedBaseline = await updatePublishBaseline(effectiveTotal, baseline);
   console.log(
     `[push-firestore] база сравнения обновлена: среднее ~${Math.round(updatedBaseline.avg)}, прогонов в истории: ${updatedBaseline.samples}`
   );
