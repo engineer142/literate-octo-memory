@@ -344,16 +344,21 @@ async function main() {
   for (const region of COLLECT_REGIONS) {
     doc[`servers_${region}`] = stableByRegion.get(region) || [];
   }
-  // Лучшие по пингу — вперёд, и обрезаем до MAX_SERVERS_PER_REGION на
-  // регион. Раньше сюда шли ВСЕ подряд, без сортировки и лимита.
+  // ИЗМЕНЕНО (по просьбе): убрали обрезку до MAX_SERVERS_PER_REGION.
+  // Раньше это защищало от раздувания региона мусорными дублями, но
+  // теперь этим занимается dedup по secret выше (869 живых → 222
+  // уникальных) — реальное количество уже естественно ограничено числом
+  // разных серверов, а не искусственным потолком. Сортировка по пингу
+  // остаётся — лучшие всё равно идут первыми в списке, просто список
+  // больше не обрезается.
   for (const region of COLLECT_REGIONS) {
     const key = `servers_${region}`;
     doc[key].sort((a, b) => (a.pingMs ?? Infinity) - (b.pingMs ?? Infinity));
-    doc[key] = doc[key].slice(0, MAX_SERVERS_PER_REGION).map(toAutoServer);
+    doc[key] = doc[key].map(toAutoServer);
   }
 
   console.log(
-    `[push-firestore] в выдачу (после сортировки и лимита ${MAX_SERVERS_PER_REGION}/регион): ` +
+    `[push-firestore] в выдачу (после сортировки по пингу, без лимита на регион): ` +
     COLLECT_REGIONS.map((r) => `${r}=${doc[`servers_${r}`].length}`).join(', ')
   );
 
