@@ -59,6 +59,26 @@ const NEARBY_MAX_LIMIT = 20;
 // подборку по региону (тот же бакет ru/eu/us/asia), чем присылать
 // единственный прокси за тридевять земель молча выдавая его как "рядом".
 const NEARBY_FALLBACK_DISTANCE_KM = 4000;
+// Сколько кандидатов максимум реально живьём проверяем за один запрос
+// /servers/nearby(-by-coords) — с запасом над лимитом выдачи (limit),
+// чтобы было из чего выбирать, если ближайшие по карте окажутся мертвы.
+// Каждая проверка — реальное MTProto-рукопожатие, поэтому без разумного
+// потолка запрос рисковал бы перебирать сотни серверов за раз.
+const NEARBY_LIVE_CHECK_POOL = 24;
+// ИСПРАВЛЕНО (2026-09-11): живая проверка до NEARBY_LIVE_CHECK_POOL
+// кандидатов не имела общего дедлайна — если среди них попадалось
+// несколько мёртвых подряд (а авто-найденные сервера НЕ проверяются по
+// расписанию, см. комментарий у findNearestServers), суммарное время
+// проверки могло легко перевалить за ~30 секунд, которые Cloudflare даёт
+// на фоновую задачу (ctx.waitUntil) в ботах-клиентах (vk-worker-satellite,
+// notify-worker). Итог — воркер молча убивал фоновую задачу ДО отправки
+// ответа пользователю: бот "зависал" без единой ошибки в логах.
+// NEARBY_TIME_BUDGET_MS — общий бюджет времени на сам live-check (без
+// учёта GeoIP/Firestore, которые кэшируются и обычно быстры).
+// SINGLE_CHECK_TIMEOUT_MS — доп. страховка на одну отдельную проверку,
+// на случай если сам checkOneServer где-то завис дольше разумного.
+const NEARBY_TIME_BUDGET_MS = Number(process.env.NEARBY_TIME_BUDGET_MS || 15000);
+const SINGLE_CHECK_TIMEOUT_MS = Number(process.env.NEARBY_SINGLE_CHECK_TIMEOUT_MS || 3000);
 
 // =====================================================================
 // Firestore REST: разбор типизированных значений (без изменений из worker.js)
@@ -411,8 +431,67 @@ async function runBatches(items, worker, concurrency) {
   return results;
 }
 
-async function findServerById(id) {
+// Оборачивает промис жёстким таймаутом: если worker (например,
+// checkOneServer) не уложился в ms — считаем результат fallbackValue
+// (обычно "не жив") и идём дальше, не дожидаясь реального ответа/отбоя
+// TCP-соединения. Сам checkOneServer при этом не отменяется (нет
+// AbortController на уровне node:net) — просто перестаёт нас блокировать;
+// он доработает и тихо отбросит результат сам.
+function withTimeout(promise, ms, fallbackValue) {
+  return new Promise((resolve) => {
+    let done = false;
+    const timer = setTimeout(() => {
+      if (done) return;
+      done = true;
+      resolve(fallbackValue);
+    }, ms);
+    promise.then(
+      (v) => { if (done) return; done = true; clearTimeout(timer); resolve(v); },
+      () => { if (done) return; done = true; clearTimeout(timer); resolve(fallbackValue); }
+    );
+  });
+}
+
+// Как runBatches, но с общим дедлайном (абсолютная метка времени
+// Date.now()). Как только время вышло — новые элементы просто не берём в
+// работу (оставляем их результатом undefined, вызывающий код должен
+// трактовать undefined как "не проверено/не жив"), уже стартовавшие в
+// этот момент проверки доигрывают сами (см. withTimeout выше — они и так
+// не смогут заблокировать нас дольше SINGLE_CHECK_TIMEOUT_MS каждая).
+// Это гарантирует верхнюю границу общего времени работы:
+// deadline + SINGLE_CHECK_TIMEOUT_MS (максимум одной "доигрывающей" пачки),
+// а не concurrency * items.length * произвольный_таймаут, как было раньше.
+async function runBatchesWithDeadline(items, worker, concurrency, deadlineTs) {
+  const results = new Array(items.length);
+  let idx = 0;
+  async function runOne() {
+    while (idx < items.length) {
+      if (Date.now() >= deadlineTs) return;
+      const my = idx++;
+      results[my] = await worker(items[my], my);
+    }
+  }
+  const runners = [];
+  for (let i = 0; i < Math.min(concurrency, items.length); i++) runners.push(runOne());
+  await Promise.all(runners);
+  return results;
+}
+
+// Общий кэш пары [cfg, autoDoc] для findServerById — иначе Firestore читается
+// заново на КАЖДЫЙ отдельный id прокси в /connect и /ping-now вместо раза в
+// STATS_CACHE_SECONDS на всех вместе (см. историю фикса от 2026-09-03).
+async function getCombinedServerSource() {
+  const cacheKey = 'combined-server-source';
+  const cached = cacheGet(cacheKey);
+  if (cached) return cached;
   const [cfg, autoDoc] = await Promise.all([fetchProxyConfigDoc(), fetchProxyAutoDoc()]);
+  const result = { cfg, autoDoc };
+  cacheSet(cacheKey, result, STATS_CACHE_SECONDS);
+  return result;
+}
+
+async function findServerById(id) {
+  const { cfg, autoDoc } = await getCombinedServerSource();
   const manual = Array.isArray(cfg.servers) ? cfg.servers : [];
   const found = manual.find((s) => (s.id || ('name:' + s.name)) === id);
   if (found) return found;
@@ -561,6 +640,145 @@ app.get('/servers', async (req, res) => {
 //      NEARBY_FALLBACK_DISTANCE_KM — откатываемся на старую логику деления
 //      по региону (visitor.region / mapCountryToBucket), чтобы посетитель
 //      никогда не оставался без ответа.
+// Общее ядро подбора ближайших прокси — принимает уже готовые координаты
+// посетителя (или null, если их нет/не удалось определить) и региональный
+// фоллбэк-бакет. Используется и роутом по IP (координаты добывает GeoIP),
+// и роутом по координатам из бота (координаты уже точные — от
+// navigator.geolocation / Telegram-геолокации / VK geo-вложения, никакого
+// GeoIP не требуется, поэтому и точнее, и без внешнего запроса).
+// Кэш autoDoc для findNearestServers — та же логика, что и раньше в
+// getNearbyAutoServersWithCoords (2026-09-03): без этого fetchProxyAutoDoc()
+// читал бы Firestore заново на каждый ЗАПРОС (а теперь их два маршрута —
+// /servers/nearby по IP и /servers/nearby-by-coords по координатам от
+// ботов — оба идут через findNearestServers, значит без общего кэша тут
+// проблема встала бы даже острее, чем раньше).
+async function getCachedProxyAutoDoc() {
+  const cacheKey = 'nearby:auto-doc-shared';
+  const cached = cacheGet(cacheKey);
+  if (cached) return cached;
+  const autoDoc = await fetchProxyAutoDoc();
+  cacheSet(cacheKey, autoDoc, NEARBY_CACHE_SECONDS);
+  return autoDoc;
+}
+
+async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
+  const autoDoc = await getCachedProxyAutoDoc();
+
+  const withCoords = [];
+  for (const region of COLLECT_REGIONS) {
+    const list = autoDoc['servers_' + region] || [];
+    for (const s of list) {
+      if (typeof s.lat === 'number' && typeof s.lon === 'number') withCoords.push({ ...s, region });
+    }
+  }
+
+  // ДОБАВЛЕНО: почему тут понадобилась живая проверка, а не просто
+  // сортировка по расстоянию, как было раньше. Плановая проверка
+  // (scheduledTick/runCheckChunk выше) проверяет ТОЛЬКО вручную
+  // добавленные сервера (fetchServerList → siteConfig/proxy.servers) —
+  // авто-найденные (servers_ru/eu/us/asia, id вида "auto_...") ею вообще
+  // не затрагиваются, и результат в proxyStats для них никогда не
+  // появляется. Раньше это означало, что подбор "рядом" мог годами
+  // отдавать давно умерший сервер просто потому что он географически
+  // ближе всех — без единой проверки "а отвечает ли он вообще". Теперь
+  // перед выдачей реально стучимся в кандидатов (тем же checkOneServer,
+  // которым пользуется /ping-now) и оставляем только тех, кто ответил.
+  async function liveFilter(candidates) {
+    if (!candidates.length) return [];
+    const deadlineTs = Date.now() + NEARBY_TIME_BUDGET_MS;
+    const checked = await runBatchesWithDeadline(candidates, async (s) => {
+      const hp = parseHostPortSecret(s.link);
+      if (!hp) return { server: s, alive: false };
+      const result = await withTimeout(
+        checkOneServer(hp.host, hp.port, hp.secret),
+        SINGLE_CHECK_TIMEOUT_MS,
+        { alive: false, pingMs: null }
+      );
+      return { server: s, alive: !!result.alive, pingMs: result.pingMs != null ? result.pingMs : s.pingMs };
+    }, CONCURRENCY, deadlineTs);
+    // Элементы, до которых дедлайн не добрался, остаются undefined —
+    // отфильтровываем их как "не проверено" вместе с неживыми.
+    return checked.filter((c) => c && c.alive).map((c) => ({ ...c.server, pingMs: c.pingMs }));
+  }
+
+  // ДОБАВЛЕНО: раньше финальный порядок в выдаче был ЧИСТО по километражу.
+  // Теперь считаем комбинированную оценку — дистанция всё ещё главный
+  // фактор (это же "рядом со мной"), но пинг, история стабильности
+  // (aliveStreak — сколько прогонов подряд сервер был жив, см. check.js) и
+  // надёжность источника, откуда сервер вообще взят (sourceReliability —
+  // какая доля кандидатов оттуда обычно оказывается живой, тоже из
+  // check.js), тоже участвуют. Всё переводим в "километро-эквивалент",
+  // чтобы получилась одна цифра для сортировки: сервер немного дальше, но
+  // куда стабильнее и из надёжного источника, может обойти чуть более
+  // близкого, но недавно найденного/из шумного источника — а вот реально
+  // далёкий сервер за счёт одной лишь стабильности вперёд не пролезет,
+  // бонусы намеренно небольшие относительно реальных расстояний.
+  function nearbyScore(s) {
+    const distancePart = s.distanceKm ?? 99999;
+    const pingPart = (s.pingMs ?? 400) / 4; // typical пинг ~400мс ~ 100 "км" штрафа
+    const streakBonus = Math.min(s.aliveStreak || 0, 10) * 15; // до 150 "км" за стабильность
+    const reliability = s.sourceReliability != null ? s.sourceReliability : 0.5; // источник неизвестен — нейтрально
+    const reliabilityBonus = reliability * 100; // до 100 "км" за надёжный источник
+    return distancePart + pingPart - streakBonus - reliabilityBonus;
+  }
+
+  let nearest = [];
+  let usedFallback = false;
+
+  if (lat != null && lon != null && withCoords.length > 0) {
+    const withDistance = withCoords.map((s) => ({
+      ...s,
+      distanceKm: Math.round(haversineDistanceKm(lat, lon, s.lat, s.lon)),
+    }));
+    // Пул для живой проверки отбираем ЧИСТО по расстоянию — это и держит
+    // смысл "рядом", ограничивая, среди кого вообще выбираем.
+    withDistance.sort((a, b) => a.distanceKm - b.distanceKm);
+
+    // Живьём проверяем не только ровно limit ближайших, а пул с запасом
+    // (иначе если первые 5 по расстоянию окажутся мертвы — вернуть будет
+    // нечего). NEARBY_LIVE_CHECK_POOL ограничивает, сколько максимум
+    // кандидатов реально долбим за один запрос (не весь список сразу).
+    const pool = withDistance.slice(0, Math.min(withDistance.length, NEARBY_LIVE_CHECK_POOL));
+    const alivePool = await liveFilter(pool);
+    // liveFilter теряет часть полей (checkOneServer их не знает) — берём
+    // обратно из withDistance по id.
+    const infoById = new Map(withDistance.map((s) => [s.id, s]));
+    alivePool.forEach((s) => {
+      const info = infoById.get(s.id);
+      s.distanceKm = info ? info.distanceKm : null;
+      s.aliveStreak = info ? info.aliveStreak : 0;
+      s.sourceReliability = info ? info.sourceReliability : null;
+    });
+    // А вот финальный порядок ВНУТРИ уже гарантированно близкого и живого
+    // пула — по комбинированной оценке, а не только по метрам до дома.
+    alivePool.sort((a, b) => nearbyScore(a) - nearbyScore(b));
+    nearest = alivePool.slice(0, limit);
+
+    if (nearest.length === 0 || nearest[0].distanceKm > NEARBY_FALLBACK_DISTANCE_KM) {
+      usedFallback = true;
+    }
+  } else {
+    usedFallback = true;
+  }
+
+  if (usedFallback) {
+    const region = fallbackRegion || 'eu';
+    const regionList = autoDoc['servers_' + region] || [];
+    const pool = regionList.slice(0, Math.min(regionList.length, NEARBY_LIVE_CHECK_POOL));
+    const aliveRegion = await liveFilter(pool);
+    // ИСПРАВЛЕНО: раньше здесь, если в регионе ВООБЩЕ никто не отвечал
+    // живой проверкой, мы всё равно показывали пользователю СЫРОЙ,
+    // непроверенный regionList ("лучше хоть что-то, чем пустой список").
+    // На практике это означало отдавать заведомо мёртвые/неработающие
+    // сервера как будто рабочие — то есть врать. Теперь честно возвращаем
+    // пустой nearest — боты уже умеют показывать за это понятное "серверов
+    // сейчас нет поблизости" вместо тишины или подсовывания нерабочего.
+    nearest = aliveRegion.slice(0, limit).map((s) => ({ ...s, region, distanceKm: null }));
+  }
+
+  return { nearest, usedFallback };
+}
+
 app.get('/servers/nearby', async (req, res) => {
   const limit = Math.min(NEARBY_MAX_LIMIT, Math.max(1, parseInt(req.query.limit, 10) || NEARBY_DEFAULT_LIMIT));
   // req.ip, а не самодельный разбор заголовка — с app.set('trust proxy',
@@ -576,52 +794,58 @@ app.get('/servers/nearby', async (req, res) => {
 
   let body;
   try {
-    const [autoDoc, visitor] = await Promise.all([fetchProxyAutoDoc(), geolocateVisitorIp(visitorIp)]);
-
-    // Плоский список всех живых автопрокси с координатами (region здесь —
-    // это region прокси из GeoIP-стадии check.js, нужен для фоллбэка).
-    const withCoords = [];
-    for (const region of COLLECT_REGIONS) {
-      const list = autoDoc['servers_' + region] || [];
-      for (const s of list) {
-        if (typeof s.lat === 'number' && typeof s.lon === 'number') withCoords.push({ ...s, region });
-      }
-    }
-
-    let nearest = [];
-    let usedFallback = false;
-
-    if (visitor && visitor.lat != null && visitor.lon != null && withCoords.length > 0) {
-      const withDistance = withCoords.map((s) => ({
-        ...s,
-        distanceKm: Math.round(haversineDistanceKm(visitor.lat, visitor.lon, s.lat, s.lon)),
-      }));
-      withDistance.sort((a, b) => a.distanceKm - b.distanceKm);
-      nearest = withDistance.slice(0, limit);
-
-      // Ближайший всё равно на другом континенте — переключаемся на
-      // региональный фоллбэк вместо того, чтобы молча выдавать что попало
-      // под видом "ближайших".
-      if (nearest.length === 0 || nearest[0].distanceKm > NEARBY_FALLBACK_DISTANCE_KM) {
-        usedFallback = true;
-      }
-    } else {
-      usedFallback = true;
-    }
-
-    if (usedFallback) {
-      const region = (visitor && visitor.region) || 'eu';
-      const regionList = autoDoc['servers_' + region] || [];
-      // Тот же список, что и в основном /servers для этого региона — без
-      // distanceKm (у нас либо нет координат посетителя, либо нет
-      // координат у прокси в этом регионе, посчитать расстояние нечем).
-      nearest = regionList.slice(0, limit).map((s) => ({ ...s, region, distanceKm: null }));
-    }
+    const visitor = await geolocateVisitorIp(visitorIp);
+    const { nearest, usedFallback } = await findNearestServers({
+      lat: visitor ? visitor.lat : null,
+      lon: visitor ? visitor.lon : null,
+      fallbackRegion: visitor ? visitor.region : null,
+      limit,
+    });
 
     body = {
       visitor: visitor
         ? { ip: visitor.ip, countryCode: visitor.countryCode, region: visitor.region, lat: visitor.lat, lon: visitor.lon }
         : null,
+      fallback: usedFallback,
+      nearest,
+      generatedAt: new Date().toISOString(),
+    };
+  } catch (e) {
+    body = { error: String(e) };
+  }
+
+  cacheSet(cacheKey, body, NEARBY_CACHE_SECONDS);
+  res.set('Cache-Control', 'public, max-age=' + NEARBY_CACHE_SECONDS).json(body);
+});
+
+// ---------- GET /servers/nearby-by-coords?lat=..&lon=..&limit=.. ----------
+// Вариант для ботов (Telegram/VK) — координаты уже известны напрямую от
+// клиента (нативный запрос геолокации), поэтому GeoIP не нужен вообще:
+// точнее и без похода к ip-api.com/ipwho.is. Логика подбора и сортировки
+// та же самая (findNearestServers выше), просто без шага "угадать
+// координаты по IP".
+app.get('/servers/nearby-by-coords', async (req, res) => {
+  const limit = Math.min(NEARBY_MAX_LIMIT, Math.max(1, parseInt(req.query.limit, 10) || NEARBY_DEFAULT_LIMIT));
+  const lat = Number(req.query.lat);
+  const lon = Number(req.query.lon);
+  const fallbackRegion = req.query.region ? String(req.query.region) : null;
+
+  if (!Number.isFinite(lat) || !Number.isFinite(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180) {
+    return res.status(400).json({ error: 'bad_request: нужны корректные числовые lat и lon' });
+  }
+
+  // Округляем координаты в ключе кэша до ~1 км (3 знака после запятой) —
+  // иначе кэш никогда бы не срабатывал повторно из-за микроскопических
+  // отличий GPS между запросами одного и того же человека.
+  const cacheKey = 'nearby-coords:' + lat.toFixed(3) + ':' + lon.toFixed(3) + ':' + limit;
+  const cached = cacheGet(cacheKey);
+  if (cached) return res.set('Cache-Control', 'public, max-age=' + NEARBY_CACHE_SECONDS).json(cached);
+
+  let body;
+  try {
+    const { nearest, usedFallback } = await findNearestServers({ lat, lon, fallbackRegion, limit });
+    body = {
+      visitor: { lat, lon },
       fallback: usedFallback,
       nearest,
       generatedAt: new Date().toISOString(),
