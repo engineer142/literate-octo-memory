@@ -64,7 +64,7 @@ const NEARBY_FALLBACK_DISTANCE_KM = 4000;
 // чтобы было из чего выбирать, если ближайшие по карте окажутся мертвы.
 // Каждая проверка — реальное MTProto-рукопожатие, поэтому без разумного
 // потолка запрос рисковал бы перебирать сотни серверов за раз.
-const NEARBY_LIVE_CHECK_POOL = 24;
+const NEARBY_LIVE_CHECK_POOL = Number(process.env.NEARBY_LIVE_CHECK_POOL || 40);
 // ИСПРАВЛЕНО (2026-09-11): живая проверка до NEARBY_LIVE_CHECK_POOL
 // кандидатов не имела общего дедлайна — если среди них попадалось
 // несколько мёртвых подряд (а авто-найденные сервера НЕ проверяются по
@@ -757,12 +757,16 @@ async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
   let usedFallback = false;
 
   if (lat != null && lon != null && withCoords.length > 0) {
-    // ДОБАВЛЕНО: сначала пробуем ТОЛЬКО среди серверов из того же
-    // крупного региона, что и сам человек (см. nearestRegionByCoords выше)
-    // — это и есть "рядом" в осмысленном географическом смысле, а не
-    // ближайший из случайной мировой мешанины.
-    const userRegion = nearestRegionByCoords(lat, lon);
-    const sameRegionCoords = withCoords.filter((s) => s.region === userRegion);
+    // ИЗМЕНЕНО (по просьбе): раньше тут сначала пробовали ТОЛЬКО свой
+    // крупный регион (ru/eu/us/asia), и лишь при полной неудаче — весь
+    // мир вторым проходом. Для регионов с маленьким пулом (например ru —
+    // от силы 80-100 живых серверов против 700+ у eu) это означало
+    // тратить время на заведомо скудный список и урезанный выбор
+    // кандидатов. Теперь ищем СРАЗУ по всей базе (пул проверки живьём
+    // подняли до NEARBY_LIVE_CHECK_POOL, см. выше) — ближайшие по
+    // дистанции кандидаты естественным образом выигрывают в сортировке
+    // (см. nearbyScore ниже), а более далёкие регионы участвуют только
+    // если ближе никого живого не нашлось.
 
     async function rankAndCheck(candidatesWithCoords) {
       const withDistance = candidatesWithCoords.map((s) => ({
@@ -794,15 +798,7 @@ async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
       return alivePool.slice(0, limit);
     }
 
-    nearest = sameRegionCoords.length > 0 ? await rankAndCheck(sameRegionCoords) : [];
-
-    // Свой регион либо вообще без серверов с координатами, либо ни один
-    // не прошёл живую проверку — расширяем поиск на ВСЕ регионы разом
-    // (старое поведение), это лучше, чем сразу переходить к грубому
-    // "по региону без учёта расстояния" фоллбэку ниже.
-    if (nearest.length === 0 && withCoords.length > sameRegionCoords.length) {
-      nearest = await rankAndCheck(withCoords);
-    }
+    nearest = await rankAndCheck(withCoords);
 
     if (nearest.length === 0 || nearest[0].distanceKm > NEARBY_FALLBACK_DISTANCE_KM) {
       usedFallback = true;
