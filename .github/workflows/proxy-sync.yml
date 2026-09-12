@@ -61,6 +61,15 @@ jobs:
       - name: Push results to Firestore (siteConfig/proxyAuto)
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          # Подняли с 40 до 80: регион ru редко набирает больше 80-100
+          # живых серверов за прогон, поэтому это фактически публикует
+          # почти всех живых ru-кандидатов, а не только треть — при этом
+          # для eu/us по-прежнему остаётся сильная обрезка (40→80 из
+          # сотен живых), так что раздутия пула не происходит. Реальное
+          # число проверяемых "вживую" на один запрос "рядом со мной"
+          # всё равно ограничено NEARBY_LIVE_CHECK_POOL в server.js, а не
+          # этим лимитом — так что на скорость ответа это не влияет.
+          MAX_SERVERS_PER_REGION: '80'
         run: node scripts/push-firestore.js
 
       - name: Commit results
