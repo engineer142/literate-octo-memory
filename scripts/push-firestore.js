@@ -243,6 +243,37 @@ async function main() {
     `[push-firestore] живых: ${alive.length}/${checked.length}, из них со streak>=${MIN_ALIVE_STREAK}: ${stable.length}`
   );
 
+  // ДОБАВЛЕНО: один и тот же secret на нескольких РАЗНЫХ хостах — почти
+  // всегда признак мусорного источника (иранские антицензурные списки
+  // вида *.ir.ir.ir.meli-n12.info, *.goooalir.co.uk и т.п. — сотни
+  // поддоменов на один и тот же нестабильный/ротируемый бэкенд). У
+  // настоящего персонального MTProto-прокси secret уникален для одного
+  // сервера. Такие записи иногда проходят живую проверку случайно (в
+  // момент проверки бэкенд ответил), но к моменту клика пользователя это
+  // уже другой или мёртвый адрес — отсюда жалобы "не отвечают на пинг"
+  // при формально живых серверах.
+  // ВАЖНО: просто выбросить ВСЕ такие записи — слишком грубо (проверено
+  // на реальных данных: 869 живых → 176, регион ru падает с 83 до 13,
+  // ниже MIN_USABLE_PER_REGION). За одним secret всё равно стоит только
+  // один настоящий бэкенд — поэтому вместо полного выброса оставляем
+  // ОДНОГО лучшего представителя на каждый уникальный secret (по пингу),
+  // остальные хосты с тем же secret — это просто мусорные зеркала одного
+  // и того же адреса, толку от них ноль. На тех же данных: 869 → 222,
+  // ru: 83 → 22 — регион не вымирает, а мусор схлопывается.
+  const bySecret = new Map();
+  for (const c of stable) {
+    const key = c.secret || '';
+    const cur = bySecret.get(key);
+    if (!cur || (c.pingMs ?? Infinity) < (cur.pingMs ?? Infinity)) bySecret.set(key, c);
+  }
+  const deduped = Array.from(bySecret.values());
+  const droppedSharedSecret = stable.length - deduped.length;
+  if (droppedSharedSecret > 0) {
+    console.log(
+      `[push-firestore] схлопнуто дублей-секретов (общий secret на разных хостах, оставлен 1 лучший по пингу): ${droppedSharedSecret}`
+    );
+  }
+
   // ИСПРАВЛЕНО: фильтр по streak — правильная штука в долгосрочной
   // перспективе, но в переходный период (сразу после включения этой
   // проверки, или если в конкретном регионе просто мало кандидатов
@@ -258,12 +289,28 @@ async function main() {
   const MIN_USABLE_PER_REGION = Number(process.env.MIN_USABLE_PER_REGION || 15);
   const stableByRegion = new Map();
   const aliveByRegion = new Map();
-  for (const c of stable) {
+  for (const c of deduped) {
     const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
     if (!stableByRegion.has(region)) stableByRegion.set(region, []);
     stableByRegion.get(region).push(c);
   }
+  // Аварийный фоллбэк (регион слишком скудный даже без учёта дублей
+  // секретов) тоже строим из dedup-набора всех живых, а не из сырого
+  // 'alive' — иначе именно в этой ветке мусорные дубли-секреты и
+  // просачивались бы в первую очередь, в самый уязвимый момент (когда
+  // региону и так не хватает нормальных кандидатов).
+  // Аварийный фоллбэк тоже дедуплицируем той же стратегией (1 лучший на
+  // secret) — иначе именно в этой ветке мусорные дубли просачивались бы
+  // в первую очередь, в самый уязвимый момент (когда региону и так не
+  // хватает нормальных кандидатов).
+  const aliveBySecret = new Map();
   for (const c of alive) {
+    const key = c.secret || '';
+    const cur = aliveBySecret.get(key);
+    if (!cur || (c.pingMs ?? Infinity) < (cur.pingMs ?? Infinity)) aliveBySecret.set(key, c);
+  }
+  const dedupedAlive = Array.from(aliveBySecret.values());
+  for (const c of dedupedAlive) {
     const region = COLLECT_REGIONS.includes(c.region) ? c.region : 'eu';
     if (!aliveByRegion.has(region)) aliveByRegion.set(region, []);
     aliveByRegion.get(region).push(c);
