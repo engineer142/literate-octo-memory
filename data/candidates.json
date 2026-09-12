@@ -416,7 +416,7 @@
     "host": "proxy.jubaoku.com",
     "port": 8443,
     "secret": "2adab36179e7a39026adf74034615248",
-    "region": "asia",
+    "region": "eu",
     "source": null
   },
   {
@@ -479,7 +479,7 @@
     "host": "proxy.jubaoku.com",
     "port": 9443,
     "secret": "2adab36179e7a39026adf74034615248",
-    "region": "asia",
+    "region": "eu",
     "source": null
   },
   {
@@ -4690,13 +4690,6 @@
     "source": null
   },
   {
-    "host": "144.172.68.89",
-    "port": 443,
-    "secret": "94cedbf859e14d22d94bee22c14c0d2f",
-    "region": "eu",
-    "source": null
-  },
-  {
     "host": "91.234.147.5.aprawood.ir",
     "port": 2020,
     "secret": "00000000000000000000000000000000",
@@ -5768,13 +5761,6 @@
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/theAnixy/tg.txt"
   },
   {
-    "host": "just-money.co.uk",
-    "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/theAnixy/tg.txt"
-  },
-  {
     "host": "Hamrah.mci.ir.pugfhtrdyted.info",
     "port": 7443,
     "secret": "79e344818749bd7ac519130220c25d09",
@@ -6081,6 +6067,20 @@
     "secret": "104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
+  },
+  {
+    "host": "gorgmahal.barekatbashe.info",
+    "port": 443,
+    "secret": "FgMBAgABAAH8AwOG4kw63Q",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no2.txt"
+  },
+  {
+    "host": "160.116.2.51",
+    "port": 443,
+    "secret": "7qRQrhdB1T7g99JzgzCEaT90Mi5ydQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
   },
   {
     "host": "iro.varfootball2.co.uk",
@@ -8610,6 +8610,13 @@
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/main/proxy_eu.txt"
   },
   {
+    "host": "144.172.68.89",
+    "port": 443,
+    "secret": "94cedbf859e14d22d94bee22c14c0d2f",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/main/proxy_eu.txt"
+  },
+  {
     "host": "57.131.144.35",
     "port": 88,
     "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
@@ -9408,13 +9415,6 @@
     "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no2.txt"
   },
   {
-    "host": "gorgmahal.barekatbashe.info",
-    "port": 443,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no2.txt"
-  },
-  {
     "host": "rosevpn.virtuevisa.com",
     "port": 443,
     "secret": "4208e16b9fdd35816cc27866e5d01736",
@@ -9429,58 +9429,30 @@
     "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no3.txt"
   },
   {
+    "host": "co.uk.zenqor.ir.",
+    "port": 443,
+    "secret": "eecBAgABAAfwAwOG4kw63QRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAA",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no4.txt"
+  },
+  {
+    "host": "s44447n.ir.ir.ir.meli-n12.info",
+    "port": 8443,
+    "secret": "3RBEYoISSb16xRkTAiDCXQk",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no5.txt"
+  },
+  {
+    "host": "www.servertala.ir.",
+    "port": 8443,
+    "secret": "3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
+  },
+  {
     "host": "www.5-6-7-8.ir.",
     "port": 8443,
     "secret": "3RYDAQIAAQAB_AMDhuJMOt0AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no4.txt"
-  },
-  {
-    "host": "www.hosinjon.ir.",
-    "port": 8443,
-    "secret": "3RYDAQIAAQAB_AMDhuJMOt0AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no4.txt"
-  },
-  {
-    "host": "Gho.proproxy1.dpdns.org",
-    "port": 8443,
-    "secret": "eee5eab0c659ac051ab2a0fa675537f6eb7777772e7370656564746573742e6e6574",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no4.txt"
-  },
-  {
-    "host": "p3a2b9f1-4c8d-492a-b6e5-8d1f3c7a9b22-a1b2-c3d4.space",
-    "port": 80,
-    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
-  },
-  {
-    "host": "p4a7c1f8-3e9b-425d-a1c6-9f8e2b7a4d5c-3a2b-1c4d.space",
-    "port": 80,
-    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
-  },
-  {
-    "host": "fasle-zivaye.ir.paeez-amad.info.",
-    "port": 7443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
-  },
-  {
-    "host": "shenzar-sahel.dashtodaman.info.",
-    "port": 7799,
-    "secret": "3RBAAQMySZWwfAMDhuiG5_E",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
-  },
-  {
-    "host": "persian.gulf.ir.olsjddhf.info.",
-    "port": 7443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no6.txt"
   },
@@ -9492,18 +9464,25 @@
     "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no8.txt"
   },
   {
-    "host": "s44447n.ir.ir.ir.meli-n12.info",
-    "port": 8443,
-    "secret": "3RBEYoISSb16xRkTAiDCXQk",
+    "host": "fasle-zivaye.ir.paeez-amad.info.",
+    "port": 7443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no8.txt"
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no10.txt"
   },
   {
-    "host": "co.uk.zenqor.ir.",
-    "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAA",
+    "host": "shenzar-sahel.dashtodaman.info.",
+    "port": 7799,
+    "secret": "3RBAAQMySZWwfAMDhuiG5_E",
     "region": "eu",
-    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no8.txt"
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no10.txt"
+  },
+  {
+    "host": "p3a2b9f1-4c8d-492a-b6e5-8d1f3c7a9b22-a1b2-c3d4.space",
+    "port": 80,
+    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/TELEGRAM_PROXY_SUB/refs/heads/main/telegram_proxy_no10.txt"
   },
   {
     "host": "khazar.sea.ir.pugfhtrdyted.info.",
@@ -10703,1150 +10682,247 @@
     "source": "https://raw.githubusercontent.com/shablin/mtproto-proxy/refs/heads/main/data/valid_proxy.json"
   },
   {
-    "host": "62.60.179.157",
+    "host": "31.58.134.3",
     "port": 443,
-    "secret": "7hYDAQIAAQAH8AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29tbWVkaWEuc3RlYW1wb3dlcmVkLmNvbQ",
+    "secret": "dd1603010200010001fc030386e24c3add",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "37.27.38.205",
-    "port": 443,
-    "secret": "ee9d659fc2ae43e0b8323c082960233d7b7777772e636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "136.114.113.9",
-    "port": 443,
-    "secret": "dd3c7a20cedbc9c2aa0b8ef04935f1d193",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "37.49.224.200",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "82.40.62.135",
-    "port": 443,
-    "secret": "ee4faa64529079fcf02eb1172acc59bb7b706c61792e676f6f676c652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "11541.full.filmne1t.info",
+    "host": "12111.full.filmne1t.info",
     "port": 8080,
     "secret": "dd49a70de57a60174f18dfd7fe6ef6aaf5",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "Refral-Cover.kalakbazi-co.co.uk",
-    "port": 600,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20",
+    "host": "Sareto-hayhay.hamechimyar.ir.",
+    "port": 6773,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "91.84.103.231",
+    "host": "mtp.yard-tg-bot.ru",
     "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.85",
-    "port": 44344,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "86.104.35.150",
-    "port": 9443,
-    "secret": "52ec0447cedb04645ee651a2c6e72273",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "10.ir.ir.ir.ir.ir.zban-mas.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "193733336333367347363634929.ir.koch.newdf12.info",
-    "port": 8888,
-    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "leveldaemi.fiziotr.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "Share-Konin-Bara-Hame.mrmomusic-2.ir",
-    "port": 155,
-    "secret": "dd79e9fd64839572ec448e4caded38969a",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "proxyfsociety.strangled.net",
-    "port": 443,
-    "secret": "eeec5071a832c00b83ea970629d08ef2fe706574726f766963682e7275",
+    "secret": "eef658bb6d89b284874149c13e7d27d9da79616e6465782e7275",
     "region": "ru",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "233737377377.meli.zban-mas.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "host": "zilweb.gamesea.info.",
+    "port": 61016,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "www.nsnick.ir",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "host": "ey-khoda-ghasam-be-ehsgho.soren-mashin.ir.",
+    "port": 1080,
+    "secret": "79e344818749bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "188.40.191.135",
-    "port": 8443,
-    "secret": "E____xADzDAFqlAH7nAJ3",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.3.200.112",
-    "port": 2053,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20=",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "213.145.71.32",
-    "port": 443,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "new.sitemcinet.co.uk",
-    "port": 443,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "mtproto-ru-wl.wieldvpn.ru",
-    "port": 6677,
-    "secret": "c6b8b7a46e53df63ae4d0df87d94d9cb",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "sftp.cloudconsole.ru",
-    "port": 443,
-    "secret": "4403537ae82f6609494e5d51ffd041f1",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "167.86.98.8",
-    "port": 443,
-    "secret": "eed220b192bc0bd885be93e478f7b4926d636c6f7564666c6172652e636f6d",
+    "host": "static-resources-api.website",
+    "port": 80,
+    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
     "region": "us",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "87.120.108.48",
-    "port": 443,
-    "secret": "074e7d1d37cc043746fd0c823f20d21a",
+    "host": "14.102.10.48",
+    "port": 888,
+    "secret": "ee0c30628212cbbd7ac519130205525d1569612e737465616d706f77657265642e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "91.107.182.200",
+    "host": "85.133.194.43",
     "port": 8443,
-    "secret": "dd104462821249bd7ac519130",
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "meli.zban-df.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "323.61.1.calculationgarfieldmtproto.uk",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "40.ir.ir.ir.ir.ir.zban-mas.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "cdn.toconvel.digital",
+    "host": "40.160.233.170",
     "port": 443,
-    "secret": "ee7d964536432cb73c6328dcd7439131ff63646e2e746f636f6e76656c2e6469676974616c",
+    "secret": "bf790abbb6a05b10b8fd6f87140d35f8",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "3.120.81.26",
-    "port": 2053,
-    "secret": "eee9bee2ab277a1a4339a142695e233ac2706574726f766963682e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "ryzen-gold.shesh-station.ir",
+    "host": "lavandoviyraf.ru",
     "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "secret": "3c28e396a117f8ea16468e061ae48de4",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "1.1.1.1.tinkpad.ir",
-    "port": 2020,
-    "secret": "7kzsRIZVh6PZ5J7kpeAYmhR6dWxhLmly",
+    "host": "light.nolags.pw",
+    "port": 443,
+    "secret": "dd84b5a5dbe775244bd0b061c72f4e4c73",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "87.248.149.14",
+    "host": "85.133.194.17",
     "port": 8443,
-    "secret": "3XnjRIGHSb16xRkTAiDCXQk",
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "SIGNAL.irpower-b.ir",
+    "host": "143.110.179.199",
     "port": 443,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
+    "secret": "4f78efbe7db10d486caba4ea33862315",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "140.233.167.143",
+    "host": "87.248.129.225",
     "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "5.75.219.179",
-    "port": 823,
+    "host": "ntp.parsa-learning.ir.",
+    "port": 3443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.248.149.138",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "103.161.35.54",
+    "port": 155,
+    "secret": "ee5lrPbFdb1vizwd3HEHow",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "92.118.234.215",
+    "port": 443,
+    "secret": "dddb9b51b5ce9a2820ff62d348cb23f1b9",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "89.167.40.214",
+    "port": 443,
+    "secret": "7qIb9DftbzilsDxuZrA20wFnb29nbGVhcGlzLmNvbQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "91.238.92.72",
+    "port": 200,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "89.251.10.20",
+    "port": 443,
+    "secret": "ee151151151151151151151151151151156d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mini.extravpn.io",
+    "port": 443,
+    "secret": "ee1a539e9af731b7eff0a68fb3ac7c62d46d696e692e657874726176706e2e696f",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "83.228.225.8",
+    "port": 8888,
+    "secret": "145168ad18b926ce46e3d06031464956",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.3.200.88",
+    "port": 4455,
+    "secret": "ee16dead0200014152beef03c0ffee9add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "213.232.204.27",
+    "port": 443,
+    "secret": "ee78b79b63fea647558240b178cf5a99a87777772e636c6f7564666c6172652e636f6d696d616765732e6170706c652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "103.161.34.62",
+    "port": 443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "157.180.126.9",
+    "port": 8888,
+    "secret": "FgMBAgABAAH8AwOG4kw63Q",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "91.239.192.213",
+    "port": 15,
+    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "193733733636349729.ir.koch.newdf12.info",
+    "port": 8888,
     "secret": "1320PuNyHw_LQKT_Y7XNJw==",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "185.3.200.19",
-    "port": 1234,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "host": "full.siteliveim.co.uk.",
+    "port": 443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "free.feel-fly.info",
-    "port": 25565,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.109.247.192",
+    "host": "5.78.179.191",
     "port": 4455,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "46.62.216.51",
-    "port": 6003,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.149.155",
-    "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63QeecBAgABAAfwAwOG4kw63Q==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "136.243.99.167",
-    "port": 8443,
-    "secret": "eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "fasst.sitemcinet.co.uk",
-    "port": 443,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "7uma-i_74tjcjawlhty3vyvzmy5hbwf6b25h.tgseenrobo.ir.",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "187.65.38.22.mamadjoon.ir",
-    "port": 231,
-    "secret": "ee5lrPbFdb1vizwd3HEHow",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "62.84.126.12",
-    "port": 3443,
-    "secret": "679f7f50045349a76724af59906a1013",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "195.254.165.151",
-    "port": 9443,
-    "secret": "1603010200010001fc030386e24c3add",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "144.31.202.217",
-    "port": 443,
-    "secret": "ee766b2e72759ab2960c9e3f90e946fa",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.109.171.19",
-    "port": 6003,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "37.49.225.240",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "188.40.70.227",
-    "port": 443,
-    "secret": "104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "45.76.231.32",
-    "port": 443,
-    "secret": "d4fb97d637ce07988ad90444fc481dd6",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "ctfd-is-shit.top",
-    "port": 853,
-    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.20.138.115",
-    "port": 443,
-    "secret": "dd00112233445566778899aabbccddeeff",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "140.233.167.192",
-    "port": 443,
-    "secret": "EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.217.166.9",
-    "port": 16,
-    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.99.233.205",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "46.62.170.244",
-    "port": 98,
-    "secret": "7uCp-U-dcIiz5saiE9QZahxOemY0WUxtZGg0T3NCcDUwNUFBMDUwMDEwMjAzMDQwNTA2MDcwODA5Li11cGRhdGUxLmFuZHJvaWQuZ29vZ2xlLnN5bmMuaW1hZ2UudG5hYmlzaWJpemlwLmly",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "177277471.ir.fulle7.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "sibilkoloft.technote.ir",
-    "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "czr.eights.cloud",
-    "port": 443,
-    "secret": "ee9eb94476b50257ed1d92cf2504d81ab9637a722e6569676874732e636c6f7564",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "74.1.1.14",
-    "port": 8770,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "15.204.147.97",
-    "port": 4443,
-    "secret": "ddb2c7bb161962ee822f51a2ae9404d89b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "2.26.98.223",
-    "port": 443,
-    "secret": "ee3f354f86e59e2c166c83031772d92d6379612e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "45.77.74.218",
-    "port": 443,
-    "secret": "4bfd854ee995a28600e162da14a0f129",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "199.59.243.228",
-    "port": 443,
-    "secret": "3dpBFlW2hP6Hq_WOwiNeKBY",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "57.131.16.9",
-    "port": 443,
-    "secret": "dd00112233445566778899aabbccddeeff",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.115.161.216",
-    "port": 65535,
-    "secret": "EERigv______-AAA__gAAA==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "another.life.mambabot.net",
-    "port": 4515,
-    "secret": "ee9e9ad891ef691ab3a5b8051c1fdd1561616e6f746865722e6c6966652e6d616d6261626f742e6e6574",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.107.160.196",
-    "port": 443,
-    "secret": "dd79e7010200010007f0030386e24c3add",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.217.166.119",
-    "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "5.dfff.cloudflare.com.nokia.com.co.uk.do_yo.want_to.clash_with.this.www.microsoft.com.there_is_no.place_like.localhost.www.bing.com.count_with_me.cyou.net.digikala.com.www.enamad.ir.www.google.com.again_to_fight.everyone.i_am.the_internet.zban-df.info",
-    "port": 8888,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "77.110.101.63",
-    "port": 8080,
-    "secret": "dd66881e6e1e6d1ff6666666616d66aeae",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "ns1.road-digger.info",
-    "port": 61016,
-    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "77.246.107.227",
-    "port": 70,
-    "secret": "ee0000f00f0f775555fffffff5006e2e696D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "iran.mr-moo.co.uk.",
-    "port": 443,
-    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "Telegram.StrongProtocol.org",
-    "port": 3389,
-    "secret": "eeaaf6e651343e26828fac8427216302dc7777772e636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.73.125.41",
-    "port": 2053,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.99.146.248",
-    "port": 888,
-    "secret": "7gD_AA_wD_9VVf____VtZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "006.masiii.cloudflare.com.nokia.com.co.uk.do_yo.want_to.clash_with.this.www.microsoft.com.there_is_no.place_like.localhost.www.bing.com.count_with_me.cyou.net.digikala.com.www.enamad.ir.www.google.com.again_to_fight.everyone.i_am.zban-mas.info",
-    "port": 8888,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "151.244.85.77",
-    "port": 343,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.239.192.33",
-    "port": 7777,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1jZG4ueWVrdGFuZXQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "jak-paris.homborg-hamborg.dodos-codam.jojo19.ir",
-    "port": 443,
-    "secret": "7gD_AA___wD_9VVf______VtZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "82.152.162.12",
-    "port": 10002,
-    "secret": "ee548593a9c0688f4f7d9d57377897d964636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "http.khelijefars.co.uk",
-    "port": 22,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "speed-speed.co.uk.",
-    "port": 443,
-    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "iran-cafebazaar.servecounterstrike.com",
-    "port": 443,
-    "secret": "eecf0051cf882c7c4697e7851e13e5988b73332e616d617a6f6e6177732e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "zilweb.gamesea.info.",
-    "port": 61016,
-    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "caeca135e871f492.bytezs.ir",
-    "port": 443,
-    "secret": "7gcgcgcgcgcgcgcgcgcgcgd0cmFuc2xhdGUuZ29v",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "194.163.165.73",
-    "port": 443,
-    "secret": "ee5b0d176070681ea5d49184d258f65601636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "195.24.236.5",
-    "port": 2288,
-    "secret": "7umk8jsddowEqNfzkSDKW25iaXNjb3R0aS55ZWt0YW5ldC5jb20",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "194.26.66.122",
-    "port": 155,
-    "secret": "eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "173.249.42.146",
-    "port": 443,
-    "secret": "ee9c358bfbf24551ff7bb4a7f2c33bc298636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "tgseenrobo.ir",
-    "port": 443,
-    "secret": "7HQighJPBNMYVRNB6tdkVw==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "connect.0xl1r.cfd",
-    "port": 853,
-    "secret": "eea1f31ce5039ccb8331e906d5ab00a31777622e7275",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "gate.veltura.digital",
-    "port": 443,
-    "secret": "eef46f4b5eb70e4b9481d9e5b91f1386e6676174652e76656c747572612e6469676974616c",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "www.alibaba1409.org",
-    "port": 22,
-    "secret": "fgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNng",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "45.13.226.58",
-    "port": 200,
-    "secret": "7lNN1ywhHqWHO7aL86JJlSR3d3cuZ29vZ2xlLmNvbQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "157.180.124.237",
-    "port": 8888,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.98.74.114",
-    "port": 98,
-    "secret": "7qqhvqqqqqqKqqqrqqyqqoh3d3cuY2xvdWRmbGFyZS5jb20sZGl2YXJjZG4uY29tLHd3dy5zcGVlZHRlc3QubmV0LHNuYXBwLmly",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "89.251.10.2",
-    "port": 7443,
-    "secret": "ee151151151151151151151151151151156D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "belgium.antwerp.ir",
-    "port": 23,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "gate.soluqent.pro",
-    "port": 443,
-    "secret": "eed66f4a5efedfdb0b2a74cf0596b12d17676174652e736f6c7571656e742e70726f",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.70",
-    "port": 155,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69646f776e6c6f61642e77696e646f77737570646174652e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "100.Ir.ir.ir.ir.ir.zban-mas.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "141.11.26.24",
-    "port": 70,
-    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "network.flashgatevpn.ru",
-    "port": 443,
-    "secret": "eee8d5c4d8214b722017d8fd09de82e934636c69636b2e666c6173686761746576706e2e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.89",
-    "port": 155,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69646f776e6c6f61642e77696e646f77737570646174652e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "444.atousa4sam.co.uk",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "157.230.102.240",
-    "port": 443,
-    "secret": "7qPKllxoPh2y2IB4KiaYzz5rZXRhYWJvbmxpbmUuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "m4in-fr4mes-are-comp1ex-but-cut3.top",
-    "port": 853,
-    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.33",
-    "port": 200,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "alo.acharbashi.info",
-    "port": 4515,
-    "secret": "eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "194.26.66.17",
-    "port": 443,
-    "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "145.98.68.56",
-    "port": 1422,
-    "secret": "7gwwYoISy716xRkTAgVSXRVpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "another.life.mambabot.net",
-    "port": 4515,
-    "secret": "eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "195.2.93.230",
-    "port": 9741,
-    "secret": "dd10408b3940c0488cd126599de2269080",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.48",
-    "port": 2222,
-    "secret": "eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "r10.proxytg.space",
-    "port": 8443,
-    "secret": "ee65032756d1cfb78ebbd0ea8db83d43937231302e70726f787974672e7370616365",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "194.213.118.58",
-    "port": 1010,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "015770b0.koshkaproxy.shop",
-    "port": 443,
-    "secret": "ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "85.133.194.18",
-    "port": 8443,
-    "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "62.60.178.120",
-    "port": 443,
-    "secret": "1603010200010001fc030386e24c3add",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "117.55.203.132",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "https.www.vocalisting.co.uk",
-    "port": 443,
-    "secret": "7HQighJPBNMYVRNB6tdkVw==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "34.205.50.139",
-    "port": 8443,
-    "secret": "79e7010200010007f0030386e24c3add",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "212.34.134.175",
-    "port": 443,
-    "secret": "ee07df7df7df7dfffffdfffffffffffc07646f776e6c6f61642e77696e646f77737570646174652e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "193.38.55.115",
-    "port": 443,
-    "secret": "ee22ebe47f2fc01540000000000000084b783657b82ddb69626434326e2e69",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "3.232.56.74",
-    "port": 8443,
-    "secret": "ee79e7010200010007f0030386e24c3add",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "second.nolags.pw",
-    "port": 443,
-    "secret": "ddf4fa8f92de56cde758429546586eaac8",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "5.78.228.89",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "79.175.149.210",
-    "port": 443,
-    "secret": "dd6321048187495dfac59a030220c25d8e",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "178.105.113.91",
-    "port": 8080,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "95.217.28.246",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "994.meli.meli.zban-mas.info",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "144.31.135.73",
-    "port": 443,
-    "secret": "abb29dcec88e73610721bcf68c00b796",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "49.12.117.37",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "62.171.135.77",
-    "port": 443,
-    "secret": "eeca4579380da2228bf1e70bc43b666d8c636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "response.cinere.info",
-    "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "195.201.254.231",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "hetzner.dasy2k1.co.uk",
-    "port": 443,
-    "secret": "7jz8JYFw8M_mFZZ30DJgD9pjb25zb2xlLmhldHpuZXIuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "web.law-yer.co.uk.",
-    "port": 443,
-    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "t.hhelios.ru",
-    "port": 443,
-    "secret": "eebfe8fc1c84e404ccdfb33c0990ba5c4435706f73742d676174652e78352e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.10",
-    "port": 2222,
-    "secret": "79e70102001e7807f0104386124c0479",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.108.227.180",
-    "port": 443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "fast_sorati_conect.com.sbs.org.iransearching.ir",
-    "port": 443,
-    "secret": "ee53dd85ce1031ed6b7131896b28fc4540676f6f676c652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "95.216.177.221",
+    "host": "185.237.220.13",
     "port": 443,
     "secret": "FgMBAgABAAH8AxOG4kw63Q==",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "https.uptv443.shop.",
-    "port": 8443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "37.32.11.105",
-    "port": 897,
-    "secret": "eead6838012daa233a7f77cfefe07e9e13736e6170702e6972",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.84.117.59",
+    "host": "hl.routefastnet.online",
     "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
+    "secret": "eea9a5f5674069d982088b5ad27dca4584686c2e726f757465666173746e65742e6f6e6c696e65",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "74.1.1.51",
-    "port": 65535,
-    "secret": "dd79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "37.27.255.65",
-    "port": 443,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "148.251.201.90",
-    "port": 155,
-    "secret": "dd79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "167.235.249.231",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.109.193.216",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "0077791.ir.meli-n13.info",
-    "port": 8443,
-    "secret": "1074462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.3.200.174",
-    "port": 4455,
-    "secret": "ee1610200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "116.202.20.234",
-    "port": 8443,
-    "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.107.165.77",
-    "port": 88,
-    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "r11.proxytg.space",
-    "port": 8443,
-    "secret": "ee4e28f14af6d0e7d9dc65eecb94066c717231312e70726f787974672e7370616365",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "5.75.221.83",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.109.173.51",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "Komatso-Japan.www.google.com.ganool-com.info",
-    "port": 300,
-    "secret": "eeRigzNJvXrFGRMCIMJdEA==",
+    "host": "193.3.190.59",
+    "port": 85,
+    "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
@@ -11858,380 +10934,744 @@
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "91.239.192.78",
-    "port": 65535,
-    "secret": "7hBEYoL_______gAAP_4AABiaXNjb3R0aS55ZWt0YW5ldC5jb20=",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.84.113.223",
-    "port": 443,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "11-22-8.edshop.ir",
-    "port": 443,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "478818887672666782277.ir.fulldf.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "103.161.34.69",
-    "port": 520,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "18.130.177.157",
-    "port": 80,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "44.251.216.49",
-    "port": 80,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "66.163.127.176",
-    "port": 8443,
-    "secret": "ee20215347364b59b09c1ab722bcc1d0d36d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "140.233.187.80",
-    "port": 443,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276d656469612e737465616d706f77657265642e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "t.sibvpn.com",
-    "port": 443,
-    "secret": "7je0vaprgTJNB6pKyex6tDFkbC5zb2Z0OTguaXI",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.72",
-    "port": 200,
-    "secret": "eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "192.248.186.91",
-    "port": 443,
-    "secret": "0dde5afa4e3ba0c5c8843998076c7a47",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.134.57.114",
-    "port": 4455,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "172.65.117.172",
-    "port": 22,
-    "secret": "dd79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "echo.proxym.world",
-    "port": 443,
-    "secret": "ee03856fdd3a0b54784892677df90144a06563686f2e70726f78796d2e776f726c64",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "91.99.237.50",
-    "port": 8888,
-    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "82.152.162.11",
-    "port": 10002,
-    "secret": "ee548593a9c0688f4f7d9d57377897d964636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "136.243.146.237",
-    "port": 443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.23.19.249",
-    "port": 443,
-    "secret": "ee79612e7275eee34274c5156c64072b",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "64.176.214.195",
-    "port": 443,
-    "secret": "f939c56a7e78c1a3584c30b649471282",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "fast.proxytelega.store",
-    "port": 8443,
-    "secret": "ee3d75d4605342be40f01e37f606946e81666173742e70726f787974656c6567612e73746f7265",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "65.109.241.200",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "212.34.133.211",
-    "port": 443,
-    "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "185.222.28.5",
-    "port": 8443,
-    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "pro.nightnote.top",
-    "port": 80,
-    "secret": "8488d1739780b7735653b8074ef45d7c",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "telehomebaba.newphonetabriz.ir",
-    "port": 6968,
-    "secret": "bfa77f9bfe059f49db1a5743c0a8ef8b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "167.235.193.160",
-    "port": 8080,
-    "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "135.181.92.68",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "tgobhod.lol",
-    "port": 443,
-    "secret": "e2d098e948ff6c858b29f9e577d24838",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.248.132.77",
-    "port": 1010,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "95.216.217.236",
-    "port": 8080,
-    "secret": "ProxyQavi____ProxymelgACM4eFlnUldQOFpvTHVwZmNpaVI2ZkJFNDJMSXJxUW1yT2s4YzRCaVRaLi11cGRhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "mt.space-link.cloud",
-    "port": 443,
-    "secret": "eeee09513d515ee0c9ab950eb3698a1b0e6d742e73706163652d6c696e6b2e636c6f7564",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "static.prxtoday.store",
-    "port": 443,
-    "secret": "ee3740849efd941157c45810d974fd66097374617469632e707278746f6461792e73746f7265",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "79.137.196.223",
-    "port": 4443,
-    "secret": "eeee4026e99e99216664b0cb156da676d7707777772e636c6f7564666c6172652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "107.150.34.100",
-    "port": 443,
-    "secret": "7gnbgVptgqMf2nb4ciMMaddwa2didWlsZC5vcmc",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "87.229.56.10",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "jet.proxym.world",
-    "port": 443,
-    "secret": "ee894a8e1c70d3ec137af76968609e04666a65742e70726f78796d2e776f726c64",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "171.ir.fulle7.info",
-    "port": 8443,
-    "secret": "EERighJJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "134.112.57.138",
-    "port": 443,
-    "secret": "dba39aa79f4e6b4366c98aa315cedb93",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "proxy52.arixo.shop",
-    "port": 443,
-    "secret": "ee96cc33799a7b41201b468b35ddadeedd617669746f2e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "go.antitspu.com",
-    "port": 443,
-    "secret": "ee31d386ef7e695ee39f4f28ecfbd28a37676f2e616e7469747370752e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "167.233.49.234",
+    "host": "5.223.72.237",
     "port": 443,
     "secret": "ddd77db43ee3721f0fcb40a4ff63b5cd27",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "62.182.197.26",
+    "host": "93.77.180.187",
+    "port": 3443,
+    "secret": "5f1824bd89ddc75ec485710f2e8b81d6",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "84.23.53.16",
     "port": 443,
-    "secret": "ee63f4406b12426f2151314e76a8ff11bf7777772e676f6f676c652e636f6d",
+    "secret": "ddc0354b7193b79b12c42803e5ec5cd706",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "down.permiumdl.info",
+    "port": 42341,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "172.234.115.238",
+    "port": 443,
+    "secret": "ed9a2a2855155d4ff768a2a0bef9465a",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "195.254.165.51",
+    "port": 2222,
+    "secret": "eecBAgAeeAfwEEOGEkwEeQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "168.37-68-174.ir",
+    "port": 443,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "144.31.136.0",
+    "port": 59877,
+    "secret": "ddb62d12eb3a9c875d04c730aa81c87f8b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.241.206.186",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "ethereal.arixo.shop",
+    "port": 443,
+    "secret": "ee5f8b31d631d413f83f1f6e8da233f69c657468657265616c2e617269786f2e73686f70",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "5.ir.fulle7.info",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.248.132.035",
+    "port": 2222,
+    "secret": "79e70102001e7807f0104386124c0479",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "3.239.222.137",
+    "port": 8443,
+    "secret": "dd79e7010200010007f0030386e24c3add",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "207.180.195.37",
+    "port": 443,
+    "secret": "eedfa08dad56087f585c3948423aba9841636c6f7564666c6172652e636f6d",
     "region": "us",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "89.125.113.155",
+    "host": "proxy4.arixo.shop",
     "port": 443,
-    "secret": "ee67af7b545eb72c3c47fc2ccb74aa41c979616e6465782e7275",
+    "secret": "ee2d3817c6b2bf469fb5064e6cb4b19790617669746f2e7275",
     "region": "ru",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "2108492e.etherealvpn.uk",
+    "host": "62.60.178.120",
     "port": 443,
-    "secret": "eee2c4f26e0246dea5eb84f95c325ea46062343233353730312e657468657265616c76706e2e756b",
+    "secret": "1603010200010001fc030386e24c3add",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "195.201.146.78",
-    "port": 443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
+    "host": "91.107.165.77",
+    "port": 88,
+    "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "skill-issue.top",
-    "port": 853,
-    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
+    "host": "132.243.235.189",
+    "port": 443,
+    "secret": "ee580a561631a7217d4a0607bb2be8930e79616e6465782e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "92.114.24.8",
+    "port": 159,
+    "secret": "dd79e9fd64839572ec448e4caded38969a",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "185.224.215.250",
+    "host": "194.26.66.17",
     "port": 443,
-    "secret": "eea1b2c3d4e5f60123456789adadad432173332e616d617a6f6e6177732e636f6d",
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "45.76.78.122",
+    "port": 443,
+    "secret": "3aa09f1f95c80c28caf844de0c022067",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "195.254.165.33",
+    "port": 4444,
+    "secret": "eecBAgAeeAfwEEOGEkwEeQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "194.163.172.168",
+    "port": 443,
+    "secret": "eeb8798284526fa810d61ad46d79f9f785636c6f7564666c6172652e636f6d",
     "region": "us",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "194.213.118.191",
+    "host": "49.12.247.103",
+    "port": 823,
+    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.29.223.124",
+    "port": 443,
+    "secret": "7rJc31NLmTL5eReCJZJPndJ3d3cuZ29vZ2xILmNvbQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "rup.digi-srkshop.sbs",
+    "port": 47175,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "s12.dimasssss.space",
+    "port": 443,
+    "secret": "eebe3007e927acd147dde12bee8b1a7c93626f6f6b696e672e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "egabit.itemag.ir",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "fastforyou.mymnb.ir",
+    "port": 443,
+    "secret": "ee35d60cc852ec700e9b601d909292bd6a6d796e616d652e6d796d6e622e6972",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "184.174.98.16",
+    "port": 8888,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "api.my-miner.info.",
+    "port": 8443,
+    "secret": "7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.20.113.105",
+    "port": 443,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "tess.hotelghooo.ir",
+    "port": 443,
+    "secret": "ee000000000000000000000000000000007777772e4869646550726f78692e696f",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "proxyfsociety.mooo.com",
+    "port": 443,
+    "secret": "eeec5071a832c00b83ea970629d08ef2fe706574726f766963682e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "45.43.92.97",
+    "port": 443,
+    "secret": "eed451f808fd60ed2c45f11d38fdbc87c56363632e6e657669732d7072696d652e696e666f",
+    "region": "asia",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "dns.parsa-learning.ir.",
+    "port": 3443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "31.207.5.58",
+    "port": 443,
+    "secret": "ee997f8741c0919f7b1e8a2c47d9bc1b106d61782e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "tiota.fanlpmw.info",
     "port": 443,
     "secret": "FgMBAgABAAH8AwOG4kw63Q==",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "proxlet.site",
-    "port": 443,
-    "secret": "8d969eef6ecad3c29a3a629280e686cf",
+    "host": "who-are-you.top",
+    "port": 853,
+    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "83.147.216.163",
+    "host": "142-132-167-80.nip.io",
     "port": 443,
-    "secret": "eedded7190820caa75bc8d20cf9be339247777772e676f6f676c652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
-  },
-  {
-    "host": "edge.librava.click",
-    "port": 443,
-    "secret": "ee1fe214e57ff652407a36f838d7312aba656467652e6c6962726176612e636c69636b",
+    "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "178.105.232.49",
+    "host": "proxymtproto.telwbion.com.",
+    "port": 25565,
+    "secret": "fgScoaLSXQYtLCM8VHoNng",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "4477.meli.meli.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "157.180.61.201",
+    "port": 1080,
+    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "czr.eights.cloud",
+    "port": 443,
+    "secret": "ee9eb94476b50257ed1d92cf2504d81ab9637a722e6569676874732e636c6f7564",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "dedicated.engpoli.ir",
+    "port": 443,
+    "secret": "eeDDNEgYdJvXrFGRMCIMJQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.186.188",
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "api2.librava.click",
+    "host": "185.84.157.3",
     "port": 443,
-    "secret": "eefe7ba3f6b7394b86e9d451e0070f5ffa617069322e6c6962726176612e636c69636b",
+    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "31.130.151.16",
+    "port": 443,
+    "secret": "4931e9e6000537266a0de4dbb81f81fa",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "web-api.ecosseupsidedown.co.uk.",
+    "port": 443,
+    "secret": "7t3____FoRaLL_Proxy___93ZWIuYmFsZS5haQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "cdn.gamelande.info",
+    "port": 88,
+    "secret": "7nnnAQIAAQAH8AMDhuJMOt0=",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "91.217.166.80",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1tZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "49.13.36.105",
+    "port": 9861,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "server2.server2-5mk.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "184.174.98.159",
+    "port": 2040,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "91.99.141.174",
+    "port": 8888,
+    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.133.143",
+    "port": 443,
+    "secret": "8fced22f0dd7294e2be797040419b87d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "7.meli.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "212.111.89.137",
+    "port": 443,
+    "secret": "eeRigzNJvxrFGRMCIMJdE",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "91.239.192.57",
+    "port": 443,
+    "secret": "dddddddddddddddddddddddddddddddddd",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.248.134.11",
+    "port": 1443,
+    "secret": "ee104462821249bd7ac519130220c25d09616964696E6A792E6972",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "89.38.135.49",
+    "port": 443,
+    "secret": "ee7961686f6f2e636f6d2ee317073c3e",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "150.241.75.150",
+    "port": 443,
+    "secret": "ee79616e6465782e72757f81f31151d7",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.215.247.68",
+    "port": 4455,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "protocol.fast-mt.info",
+    "port": 25565,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "1aoki5165eejfjaoshidf165isdh51231351asdjfncpdsodhfo6516165dieod.netenads.ru",
+    "port": 8443,
+    "secret": "7mA4Xhky3LXWYwNtCNoi1wJ3d3cuZG93bmxvYWRoYS5jb20=",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.38.274.186.polparast.ir",
+    "port": 231,
+    "secret": "ee5lrPbFdb1vizwd3HEHowtY2RueWVrdGFuZXQuY29tZ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "free-finland.kimt.space",
+    "port": 443,
+    "secret": "ee33a6dcb429c2952d80e01bcbae16912f6164732e78352e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "connectserver.sshterminalsudobash.co.uk",
+    "port": 8443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "45.128.235.217",
+    "port": 443,
+    "secret": "21fd75da7502958780b51907a395968a",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "hetzner.com.muffinnoliershatelcomingsoon.co.uk.",
+    "port": 443,
+    "secret": "eeddffffffc5a1168b2ff3eba31cbfffff6865747a6e65722e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "31.59.168.93",
+    "port": 443,
+    "secret": "ee4a573f8185eb1bebcf8759e2525717dd70696b6162752e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "zinova.co.uk",
+    "port": 443,
+    "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "158.160.196.177",
+    "port": 4242,
+    "secret": "0922b49dc244f3ff665a7bdebfe50b66",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "195.254.165.10",
+    "port": 9443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "195.254.165.67",
+    "port": 4455,
+    "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.229.100.198",
+    "port": 8888,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "155.138.202.245",
+    "port": 443,
+    "secret": "a054efd379426ad3fd2ea05fd87ef0e5",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mt.corph.ru",
+    "port": 443,
+    "secret": "2ed7517b077ef414e24b106e0729335d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.133.143",
+    "port": 80,
+    "secret": "fbaa15d5abfbf8a2ac89e9f4ae906375",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "138.201.32.173",
+    "port": 443,
+    "secret": "dd638becf0fe989caa21b10797ad4d1c38",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "46.8.230.134",
+    "port": 4030,
+    "secret": "ddf007a0b945afdba09d6a180a52b211cb",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "72.56.70.7",
+    "port": 443,
+    "secret": "eec11798ab008831b474066c9e1ebf5c99617669746f2e7275",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "77.110.103.131",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.84.97",
+    "port": 443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "83.166.254.85",
+    "port": 443,
+    "secret": "dd6b3fb02424dbac55fef2da67c8c949",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "2.26.97.0",
+    "port": 8443,
+    "secret": "f5a96ceadd1bbedd719fbd7f1c9387dd",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "167.235.186.113",
+    "port": 98,
+    "secret": "7gAAAAAAAAAAAAAAAAAAAAB3ZWIuYmFsZS5pcg",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "84.252.131.153",
+    "port": 443,
+    "secret": "ee00819c04340f17fabac7f07b463f8b15617669746f2e7275",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mci.parsa-learning.ir.",
+    "port": 3443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "194.163.159.151",
+    "port": 443,
+    "secret": "ee30be06dacdb12302ab0934640b778d8d636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "webhook.vingardium.co.uk.",
+    "port": 443,
+    "secret": "7t3__FoRaLL_Proxy_93ZWIuYmFsZS5haQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "087.248.149.166",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "62.60.179.143",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "85.198.99.185",
+    "port": 8443,
+    "secret": "dd28df1727029aed45d15f3a44d31e7e20",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "46.62.221.3",
+    "port": 8080,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "ui.geodns.info.",
+    "port": 4455,
+    "secret": "7nnjRIGHSb16xRkTAiDCXQk=",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "7474.Ir.koch.newdf12.info",
+    "port": 8888,
+    "secret": "1320PuNyHw_LQKT_Y7XNJw==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "45.32.166.93",
+    "port": 443,
+    "secret": "aa24c97b66ef8dcc4b4e53b15fb74072",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "fpf027.meli.zban-mas.info",
+    "port": 8888,
+    "secret": "7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "proxy5.chunkycorp.shop",
+    "port": 443,
+    "secret": "ee6a0333c1db3f8eaba5c76731a44203b6617669746f2e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "3.219.247.94",
+    "port": 80,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mihanwebhost_com_freeprx3_ir.thelion.skin",
+    "port": 443,
+    "secret": "ee2a35af2474f7ae1b992564615f4e71a27777772e636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "178.105.137.152",
+    "port": 443,
+    "secret": "eeabf13064a3bf0851a02ad67114f842ce676f6f676c65617069732e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "64.188.65.136",
+    "port": 443,
+    "secret": "eec11798ab008831b474066c9e1ebf5c997777772e78352e7275",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.179.83.26",
+    "port": 443,
+    "secret": "ddc844fd5dfe798923b22352ae03c00338",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "r30.proxytg.space",
+    "port": 8443,
+    "secret": "eecaac1a91ae05f458f64d9dfd54f99ec57233302e70726f787974672e7370616365",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
@@ -12243,51 +11683,282 @@
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "72.62.150.190",
-    "port": 2053,
-    "secret": "7a16ad3840d31414dcb461b22fe5b200",
+    "host": "mir.n3o.ooo",
+    "port": 4444,
+    "secret": "00000044004004000000400040000000",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "proxy64.arixo.shop",
+    "host": "p4.new-ai.uk",
     "port": 443,
-    "secret": "eeae4da59570293a4b2c99f935e7120cbf617669746f2e7275",
+    "secret": "eea55f874d57980ec9b48ab1098b0ae48b70342e6e65772d61692e756b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mtp.love-pussy.online",
+    "port": 8980,
+    "secret": "eeb6506e69d11db32d81c215a14850a194617669746f2e7275",
     "region": "ru",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "84.201.161.56",
-    "port": 443,
-    "secret": "ee949b2f2741c1b1ebfa03e363547350167777772e6d6963726f736f66742e636f6d",
-    "region": "us",
+    "host": "91.107.255.20",
+    "port": 2053,
+    "secret": "dd35d7424b53edfa76f525c4a028ed4e7b",
+    "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "178.105.226.11",
+    "host": "84.32.189.74",
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "65.109.249.226",
+    "host": "8772773737.ir.fulle7.info",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "2A.telbet.lol",
+    "port": 25565,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "vfast.proxytg.space",
+    "port": 443,
+    "secret": "ee4b3ce8c172e8a23ff5f953069ef6c38a64726976652e676f6f676c652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "147.45.79.137",
+    "port": 443,
+    "secret": "eea90f801141cbf3154444b618e56f7976766b2e636f6d",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "195.254.165.143",
+    "port": 4455,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1jZG4ueWVrdGFuZXQuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "185.84.157.102",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.248.129.180",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "mt.space-link.cloud",
+    "port": 443,
+    "secret": "eeee09513d515ee0c9ab950eb3698a1b0e6d742e73706163652d6c696e6b2e636c6f7564",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "pinklove.top",
+    "port": 853,
+    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "portal.old-but-new.co.uk.",
+    "port": 443,
+    "secret": "7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "167.233.239.89",
+    "port": 1010,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "51.20.91.11",
+    "port": 15,
+    "secret": "dd1603010200010001fc030386e24c3add",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.248.132.76",
+    "port": 1010,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "46.62.132.241",
+    "port": 443,
+    "secret": "eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "i-love-cu.top",
+    "port": 853,
+    "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "92.246.87.242",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "proxy-sosavpn1.duckdns.org",
+    "port": 8443,
+    "secret": "f5a96ceadd1bbedd719fbd7f1c9387dd",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.229.56.20",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "2.27.20.156",
+    "port": 443,
+    "secret": "ee636c6f7564666c6172652e636f6db6",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "87.229.56.181",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "5.39.250.20",
+    "port": 443,
+    "secret": "6356ebb33a57b6deda8a1c3cf2aee557",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "31.70.68.130",
+    "port": 443,
+    "secret": "eea1b2c3d4e5f60123456789adadadadad73332e616d617a6f6e6177732e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "d6gjeds6bbk888hh0djjj00lan.ir.meli-n13.info",
+    "port": 8443,
+    "secret": "104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.87.178",
+    "port": 8080,
+    "secret": "dd49a70de57a60174f18dfd7fe6ef6aaf5",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "138.199.215.229",
+    "port": 7443,
+    "secret": "ee1603010200010001fc030386e24c3add646e2e79656b74616e65742e636f6d646c2e676f6f676c652e636f6d666172616B61762E636F6D160301020001000100000000000000000000000000000000",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "api.gorbushkin.click",
+    "port": 443,
+    "secret": "ee3eb6897f29da96f4e6afb784cd3d749e6170692e676f72627573686b696e2e636c69636b",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "r11.proxytg.space",
+    "port": 8443,
+    "secret": "ee4e28f14af6d0e7d9dc65eecb94066c717231312e70726f787974672e7370616365",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "abo-ali-sina.basalam.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "6161627.telbet.lol",
+    "port": 25565,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "194.120.230.106",
+    "port": 433,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "186.246.21.40",
+    "port": 443,
+    "secret": "eec11798ab008831b474066c9e1ebf5c74617669746f2e7275",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "144.31.221.15",
+    "port": 443,
+    "secret": "1d704dc7fbf37924bc72f016a8f91b0d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
+  },
+  {
+    "host": "65.109.250.114",
     "port": 4455,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "gate.klyuch1k.org",
-    "port": 443,
-    "secret": "eeae941a76ec4acf04faabaf8a24571080676174652e6b6c79756368316b2e6f7267",
+    "host": "87727733737.ir.fulle7.info",
+    "port": 8443,
+    "secret": "EERighJJvXrFGRMCIMJdCQ==",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
   {
-    "host": "tg62940547.koshkaproxy.shop",
-    "port": 443,
-    "secret": "ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70",
+    "host": "dowd.sportsmanship.steeplechaser.thy.urceolate.kapitoshka.info",
+    "port": 15417,
+    "secret": "d6db8ab62ff9b9f70f6ca15ccb98c222",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/refs/heads/main/protocols/mtproto.txt"
   },
@@ -14063,6 +13734,13 @@
     "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
   },
   {
+    "host": "144.31.135.73",
+    "port": 443,
+    "secret": "abb29dcec88e73610721bcf68c00b796",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
+  },
+  {
     "host": "193.41.5.249",
     "port": 8443,
     "secret": "ee66881e6e1e6d1ff6666666616d66aeae686f73746972616e2e636c6f7564",
@@ -14816,13 +14494,6 @@
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
     "region": "eu",
-    "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
-  },
-  {
-    "host": "147.45.79.137",
-    "port": 443,
-    "secret": "eea90f801141cbf3154444b618e56f7976766b2e636f6d",
-    "region": "ru",
     "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
   },
   {
@@ -15855,13 +15526,6 @@
     "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
   },
   {
-    "host": "87.229.56.20",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
-  },
-  {
     "host": "87.229.56.8",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
@@ -16713,13 +16377,6 @@
     "port": 2000,
     "secret": "ee384664c8fcd82a1d849924d5ee60fbee7869756e6f2e636e",
     "region": "asia",
-    "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
-  },
-  {
-    "host": "160.116.2.51",
-    "port": 443,
-    "secret": "7qRQrhdB1T7g99JzgzCEaT90Mi5ydQ",
-    "region": "eu",
     "source": "https://raw.githubusercontent.com/weltimistar777-crypto/MTProxy/refs/heads/main/proxy.txt"
   },
   {
@@ -18130,13 +17787,6 @@
     "source": "https://raw.githubusercontent.com/blog1703/tgonline/refs/heads/main/proxies.txt"
   },
   {
-    "host": "31.70.68.130",
-    "port": 443,
-    "secret": "eea1b2c3d4e5f60123456789adadadadad73332e616d617a6f6e6177732e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_us.txt"
-  },
-  {
     "host": "79.137.196.223",
     "port": 2053,
     "secret": "eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d",
@@ -18145,6 +17795,13 @@
   },
   {
     "host": "frontend-resources-endpoint-api.website",
+    "port": 80,
+    "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_us.txt"
+  },
+  {
+    "host": "p4a7c1f8-3e9b-425d-a1c6-9f8e2b7a4d5c-3a2b-1c4d.space",
     "port": 80,
     "secret": "eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d",
     "region": "us",
@@ -18189,13 +17846,6 @@
     "host": "tg.n3o.ooo",
     "port": 8443,
     "secret": "8a5492da2728b7c1220a697e9f357c93",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/whoahaow/rjsxrd/HEAD/source/config/tg_proxies.txt"
-  },
-  {
-    "host": "92.118.234.215",
-    "port": 443,
-    "secret": "dddb9b51b5ce9a2820ff62d348cb23f1b9",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/whoahaow/rjsxrd/HEAD/source/config/tg_proxies.txt"
   },
@@ -18411,13 +18061,6 @@
   },
   {
     "host": "83.166.253.198",
-    "port": 443,
-    "secret": "dd6b3fb02424dbac55fef2da67c8c949",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/whoahaow/rjsxrd/HEAD/source/config/tg_proxies.txt"
-  },
-  {
-    "host": "83.166.254.85",
     "port": 443,
     "secret": "dd6b3fb02424dbac55fef2da67c8c949",
     "region": "eu",
@@ -19495,13 +19138,6 @@
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
   {
-    "host": "91.239.192.57",
-    "port": 443,
-    "secret": "dddddddddddddddddddddddddddddddddd",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
-  },
-  {
     "host": "mmm.hotelghooo.ir",
     "port": 443,
     "secret": "ee000000000000000000000000000000007777772e4869646550726f78692e696f",
@@ -19512,13 +19148,6 @@
     "host": "65.109.217.21",
     "port": 443,
     "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
-  },
-  {
-    "host": "tess.hotelghooo.ir",
-    "port": 443,
-    "secret": "ee000000000000000000000000000000007777772e4869646550726f78692e696f",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
@@ -20510,6 +20139,13 @@
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
   {
+    "host": "74.1.1.14",
+    "port": 8770,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
+  },
+  {
     "host": "8.220.148.253",
     "port": 443,
     "secret": "eec0ecf9a017b9ca38a83672bc65a91912617a7572652e6d6963726f736f66742e636f6d",
@@ -20646,6 +20282,13 @@
     "host": "65.109.211.188",
     "port": 300,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
+  },
+  {
+    "host": "77.110.101.63",
+    "port": 8080,
+    "secret": "dd66881e6e1e6d1ff6666666616d66aeae",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
@@ -21262,6 +20905,13 @@
     "host": "144.124.226.42",
     "port": 443,
     "secret": "eeDDNEgYdJvXrFGRMCIMJQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
+  },
+  {
+    "host": "172.65.117.172",
+    "port": 22,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
@@ -21990,6 +21640,13 @@
     "host": "95.217.239.197",
     "port": 443,
     "secret": "eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
+  },
+  {
+    "host": "74.1.1.51",
+    "port": 65535,
+    "secret": "dd79e344818749bd7ac519130220c25d09",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/kort0881/telegram-proxy-collector/HEAD/proxy_list.txt"
   },
@@ -23709,6 +23366,13 @@
     "source": "https://raw.githubusercontent.com/rahgozar94725/MTProto-Checker/HEAD/public/data/snapshot.txt"
   },
   {
+    "host": "194.117.64.11",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
     "host": "194.117.64.8",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
@@ -23723,16 +23387,289 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "194.117.64.11",
+    "host": "65.109.146.207",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "s1.neo-trading.org",
+    "port": 443,
+    "secret": "ee17b59d905a546c7bf7355cf95c4ecfed79612e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "free.FCKRKNBOT.COM",
+    "port": 443,
+    "secret": "ddf48f621b110f302e468756840c29f916",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxydazhenaparkovke.site",
+    "port": 443,
+    "secret": "dde8aa2e8c1ad50570b7d6fe7e0ba3d677",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxytop.space",
+    "port": 443,
+    "secret": "7d793037a0760186574b0282f2f435e7",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "s2.neo-trading.org",
+    "port": 443,
+    "secret": "ee50a0c99bdb7370565b7d74d4d362e27f79612e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "65.109.212.63",
+    "port": 8443,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "152.232.171.151",
+    "port": 443,
+    "secret": "7gcO5p6Oc0jVMRbIA0y1cUVvay5ydQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "collider.web-yektanet-com.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.233",
+    "port": 65535,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "185.117.0.248",
+    "port": 443,
+    "secret": "eed451f808fd60ed2c45f11d38fdbc87c57961686f6f2e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.138",
+    "port": 4455,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.168",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "budet.cheburnet.tech",
+    "port": 443,
+    "secret": "c214bd302ec4c3e4a3750ecb79142019",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "45.90.13.34",
+    "port": 443,
+    "secret": "dda85f2776cc83dbff66b440fb03050cf7",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxy.komaruvpn.com",
+    "port": 8443,
+    "secret": "228994e9822a1e7326ca5c3be9f051e6",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "138.124.105.163",
+    "port": 5443,
+    "secret": "dd7e74d187e6f845aff3060b2a9ce8a6df",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.71",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "116.203.134.165",
+    "port": 443,
+    "secret": "ee636c6f7564666c6172652e636f6db6",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxydlyavseh.sbs",
+    "port": 443,
+    "secret": "2cf24dba5fb0a30e26e83b2ac5b9e29e",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "142.54.189.108",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.212",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "107.150.34.101",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "5.75.218.189",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "www.humaontop.space",
+    "port": 443,
+    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "107.150.34.100",
+    "port": 443,
+    "secret": "7gnbgVptgqMf2nb4ciMMaddwa2didWlsZC5vcmc",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "khoda.hafez.info",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "77.72.80.25",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJCdQ",
+    "host": "alo.acharbashi.info",
+    "port": 4515,
+    "secret": "eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "ader.dynoporo.com",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "reboot.tikla.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "65.109.34.234",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "sabr.ssboriat.co.uk",
+    "port": 531,
+    "secret": "FgMBAgABAAH8AwOG4kw63Q%3D%3D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "194.238.57.153",
+    "port": 443,
+    "secret": "ee2198b6ba0791e91cdbaf7c1fcb3ade9a706574726f766963682e7275",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "prx.today",
+    "port": 443,
+    "secret": "b3f0c7f6af7dc2dc2e9c80d0d80e8162",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "46.225.29.180",
+    "port": 443,
+    "secret": "ee636c6f7564666c6172652e636f6db6",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "185.209.42.69",
+    "port": 8443,
+    "secret": "20f39711247d6cd5983510336d9b827f",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "107.150.34.98",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "5.75.197.246",
+    "port": 443,
+    "secret": "ddc333a2a17e2be71f9cf1887f3b22dc7d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "65.109.209.230",
+    "port": 8443,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "91.239.192.154",
+    "port": 7443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "cdn.koukicohost1.co.uk",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
@@ -23744,7 +23681,28 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
+    "host": "paitakht.arasto.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
     "host": "142.54.189.109",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.253",
+    "port": 2053,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "142.54.189.110",
     "port": 443,
     "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
     "region": "eu",
@@ -23758,6 +23716,104 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
+    "host": "195.254.165.73",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "46.38.143.236",
+    "port": 48069,
+    "secret": "767cf6f14f461cdd166b54eddb53e1b0",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "104.167.199.41",
+    "port": 5,
+    "secret": "111111111111111110000w",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "77.72.80.80",
+    "port": 9443,
+    "secret": "79e344818749bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "tavakalta-alalah.info",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "prxygo.shop",
+    "port": 443,
+    "secret": "48181acd22b3edaebc8a447868a7dfcb",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "150.241.81.144",
+    "port": 443,
+    "secret": "eecfcda871eb0570ee59340a38d5881647736f75726365666f7267652e6e6574",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "95.85.249.142",
+    "port": 443,
+    "secret": "bf9f2d60e8d4ca1b376a71ea5400c7d2",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "138.201.204.218",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "107.150.34.99",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxyonline.online",
+    "port": 443,
+    "secret": "7b52009b64fd0a2a49e6d8a939753077",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "tee.mobemouy.com",
+    "port": 443,
+    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "91.239.192.153",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "mt.hq-vpn.com",
+    "port": 8443,
+    "secret": "dd77870ef8bdf3625b6eb083bc2f55877e",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
     "host": "mtp.vsemvpn.cc",
     "port": 443,
     "secret": "dd15992ff6e054e6b06faab3689633355c",
@@ -23765,7 +23821,91 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "tee.mobemouy.com",
+    "host": "77.72.80.86",
+    "port": 443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "116.203.0.182",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "49.13.35.164",
+    "port": 8443,
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "nitro.alotaxi.info",
+    "port": 4515,
+    "secret": "eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "proxium.rest",
+    "port": 443,
+    "secret": "a665a45920422f9d417e4867efdc4fb8",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "185.84.157.233",
+    "port": 9,
+    "secret": "FgMBAgABAAH8AxOG4kw63Q",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "77.72.80.82",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.213",
+    "port": 4455,
+    "secret": "ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.169",
+    "port": 2053,
+    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "185.237.95.231",
+    "port": 443,
+    "secret": "ee4571396297582727452bf660db01b789676f6f676c652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "142.54.189.107",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "107.150.34.100",
+    "port": 443,
+    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "yazdan.htop.info",
     "port": 443,
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "region": "eu",
@@ -23779,289 +23919,9 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "prx.today",
-    "port": 443,
-    "secret": "b3f0c7f6af7dc2dc2e9c80d0d80e8162",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.138",
-    "port": 4455,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "budet.cheburnet.tech",
-    "port": 443,
-    "secret": "c214bd302ec4c3e4a3750ecb79142019",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "mt.hq-vpn.com",
-    "port": 8443,
-    "secret": "dd77870ef8bdf3625b6eb083bc2f55877e",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "46.225.29.180",
-    "port": 443,
-    "secret": "ee636c6f7564666c6172652e636f6db6",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "s2.neo-trading.org",
-    "port": 443,
-    "secret": "ee50a0c99bdb7370565b7d74d4d362e27f79612e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "46.38.143.236",
-    "port": 48069,
-    "secret": "767cf6f14f461cdd166b54eddb53e1b0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "116.203.0.182",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "104.167.199.41",
-    "port": 5,
-    "secret": "111111111111111110000w",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "185.237.95.231",
-    "port": 443,
-    "secret": "ee4571396297582727452bf660db01b789676f6f676c652e636f6d",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "reboot.tikla.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.212",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxytop.space",
-    "port": 443,
-    "secret": "7d793037a0760186574b0282f2f435e7",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "77.72.80.86",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "185.84.157.102",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "142.54.189.107",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.168",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
     "host": "Ashkoda-Best.gabrial-batistuta.shop",
     "port": 443,
     "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "65.109.209.230",
-    "port": 8443,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "5.75.197.246",
-    "port": 443,
-    "secret": "ddc333a2a17e2be71f9cf1887f3b22dc7d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxy.komaruvpn.com",
-    "port": 8443,
-    "secret": "228994e9822a1e7326ca5c3be9f051e6",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "144.31.136.0",
-    "port": 59877,
-    "secret": "ddb62d12eb3a9c875d04c730aa81c87f8b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxydazhenaparkovke.site",
-    "port": 443,
-    "secret": "dde8aa2e8c1ad50570b7d6fe7e0ba3d677",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "142.54.189.108",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "65.109.209.41",
-    "port": 8443,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.71",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "77.72.80.80",
-    "port": 9443,
-    "secret": "79e344818749bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "91.239.192.153",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "prxygo.shop",
-    "port": 443,
-    "secret": "48181acd22b3edaebc8a447868a7dfcb",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "yazdan.htop.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "cdn.koukicohost1.co.uk",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.253",
-    "port": 2053,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "138.124.105.163",
-    "port": 5443,
-    "secret": "dd7e74d187e6f845aff3060b2a9ce8a6df",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "65.109.212.63",
-    "port": 8443,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "185.117.0.248",
-    "port": 443,
-    "secret": "eed451f808fd60ed2c45f11d38fdbc87c57961686f6f2e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "95.85.249.142",
-    "port": 443,
-    "secret": "bf9f2d60e8d4ca1b376a71ea5400c7d2",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "107.150.34.98",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.73",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxium.rest",
-    "port": 443,
-    "secret": "a665a45920422f9d417e4867efdc4fb8",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "ckopo.cheburnet.tech",
-    "port": 443,
-    "secret": "ee79612e72750ce362c1d1f216781718",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "91.239.192.154",
-    "port": 7443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
@@ -24080,44 +23940,37 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "65.109.146.207",
+    "host": "weblog.forwarding-co.site",
     "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt03XnnAQIAAQAH8AMDhuJMOt0",
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "185.209.42.69",
+    "host": "ckopo.cheburnet.tech",
+    "port": 443,
+    "secret": "ee79612e72750ce362c1d1f216781718",
+    "region": "ru",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "195.254.165.23",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
+  },
+  {
+    "host": "65.109.209.41",
     "port": 8443,
-    "secret": "20f39711247d6cd5983510336d9b827f",
+    "secret": "FgMBAgABAAH8AxOG4kw63Q==",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "91.107.255.20",
-    "port": 2053,
-    "secret": "dd35d7424b53edfa76f525c4a028ed4e7b",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxyonline.online",
-    "port": 443,
-    "secret": "7b52009b64fd0a2a49e6d8a939753077",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.213",
-    "port": 4455,
-    "secret": "ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "150.241.81.144",
-    "port": 443,
-    "secret": "eecfcda871eb0570ee59340a38d5881647736f75726365666f7267652e6e6574",
+    "host": "77.72.80.25",
+    "port": 9443,
+    "secret": "eeNEgYdJvXrFGRMCIMJCdQ",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
@@ -24129,219 +23982,9 @@
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
   {
-    "host": "195.254.165.23",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.169",
-    "port": 2053,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "proxydlyavseh.sbs",
-    "port": 443,
-    "secret": "2cf24dba5fb0a30e26e83b2ac5b9e29e",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "tavakalta-alalah.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "107.150.34.99",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "65.109.34.234",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "nitro.alotaxi.info",
-    "port": 4515,
-    "secret": "eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "194.238.57.153",
-    "port": 443,
-    "secret": "ee2198b6ba0791e91cdbaf7c1fcb3ade9a706574726f766963682e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "194.120.230.106",
-    "port": 433,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "77.72.80.82",
-    "port": 9443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "107.150.34.100",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "45.90.13.34",
-    "port": 443,
-    "secret": "dda85f2776cc83dbff66b440fb03050cf7",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "weblog.forwarding-co.site",
-    "port": 443,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "49.13.35.164",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "ader.dynoporo.com",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "138.201.204.218",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "khoda.hafez.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "107.150.34.101",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "free.FCKRKNBOT.COM",
-    "port": 443,
-    "secret": "ddf48f621b110f302e468756840c29f916",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "sabr.ssboriat.co.uk",
-    "port": 531,
-    "secret": "FgMBAgABAAH8AwOG4kw63Q%3D%3D",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "paitakht.arasto.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "152.232.171.151",
-    "port": 443,
-    "secret": "7gcO5p6Oc0jVMRbIA0y1cUVvay5ydQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "116.203.134.165",
-    "port": 443,
-    "secret": "ee636c6f7564666c6172652e636f6db6",
-    "region": "us",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "185.84.157.233",
-    "port": 9,
-    "secret": "FgMBAgABAAH8AxOG4kw63Q",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "5.75.218.189",
-    "port": 8443,
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "s1.neo-trading.org",
-    "port": 443,
-    "secret": "ee17b59d905a546c7bf7355cf95c4ecfed79612e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "www.humaontop.space",
-    "port": 443,
-    "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "195.254.165.233",
-    "port": 65535,
-    "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "142.54.189.110",
-    "port": 443,
-    "secret": "ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
     "host": "prxyhub.click",
     "port": 443,
     "secret": "9f27410725ab8ab84ed17daf14723236",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
-  },
-  {
-    "host": "collider.web-yektanet-com.info",
-    "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/FLAT447/v2ray-lists/HEAD/blacklist.txt"
   },
@@ -24598,6 +24241,13 @@
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/theAnixy/tg.txt"
   },
   {
+    "host": "just-money.co.uk",
+    "port": 443,
+    "secret": "7hYDAQIAAQAB_AMDhuJMOt1iaXNjb3R0aS55ZWt0YW5ldC5jb20",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/theAnixy/tg.txt"
+  },
+  {
     "host": "mtp.agenyz.com",
     "port": 443,
     "secret": "ee676f6f676c652e636f6d749d157e2d",
@@ -24636,13 +24286,6 @@
     "host": "tg.dynme.ovh",
     "port": 9443,
     "secret": "ee6d2805bb3050f7e76033c27dd3a55c9874672e64796e6d652e6f7668",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/V2Ray_Tz/tg.txt"
-  },
-  {
-    "host": "195.254.165.143",
-    "port": 4455,
-    "secret": "7hYDAQIAAQAB_AMDhuJMOt1jZG4ueWVrdGFuZXQuY29t",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/V2Ray_Tz/tg.txt"
   },
@@ -25305,6 +24948,13 @@
     "source": "https://raw.githubusercontent.com/hero81/TG_Channel-fffffx2/HEAD/proxies.json"
   },
   {
+    "host": "82.152.162.11",
+    "port": 10002,
+    "secret": "ee548593a9c0688f4f7d9d57377897d964636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/hero81/TG_Channel-fffffx2/HEAD/proxies.json"
+  },
+  {
     "host": "119.29.41.179",
     "port": 22265,
     "secret": "ee3d8d43797d42fbcaa2c7ad83de27a052617a7572652e6d6963726f736f66742e636f6d",
@@ -25336,6 +24986,13 @@
     "host": "120.233.42.27",
     "port": 20513,
     "secret": "ee971ce0978fafe5789a5cefc6fcd327e7617a7572652e6d6963726f736f66742e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/hero81/TG_Channel-fffffx2/HEAD/proxies.json"
+  },
+  {
+    "host": "82.152.162.12",
+    "port": 10002,
+    "secret": "ee548593a9c0688f4f7d9d57377897d964636c6f7564666c6172652e636f6d",
     "region": "us",
     "source": "https://raw.githubusercontent.com/hero81/TG_Channel-fffffx2/HEAD/proxies.json"
   },
@@ -25882,13 +25539,6 @@
     "host": "ak.yourline.online",
     "port": 443,
     "secret": "eed74b20f8b196edebcfdc6de8c8985d60616b2e796f75726c696e652e6f6e6c696e65",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/DepMSK37/proxy-list/HEAD/verified/proxy_all_verified.json"
-  },
-  {
-    "host": "hl.routefastnet.online",
-    "port": 443,
-    "secret": "eea9a5f5674069d982088b5ad27dca4584686c2e726f757465666173746e65742e6f6e6c696e65",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/DepMSK37/proxy-list/HEAD/verified/proxy_all_verified.json"
   },
@@ -27496,6 +27146,13 @@
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/filembad/tg.txt"
   },
   {
+    "host": "Gho.proproxy1.dpdns.org",
+    "port": 8443,
+    "secret": "eee5eab0c659ac051ab2a0fa675537f6eb7777772e7370656564746573742e6e6574",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/filembad/tg.txt"
+  },
+  {
     "host": "bartarin.sillakhor.info",
     "port": 443,
     "secret": "1603010200010001fc030386e24c3add",
@@ -27846,13 +27503,6 @@
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/ProxySkull/tg.txt"
   },
   {
-    "host": "www.servertala.ir.",
-    "port": 8443,
-    "secret": "3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/ProxySkull/tg.txt"
-  },
-  {
     "host": "www.sinlx.ir",
     "port": 8443,
     "secret": "3RBEYoISSb16xRkTAiDCXQk",
@@ -28182,13 +27832,6 @@
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
   {
-    "host": "free-finland.kimt.space",
-    "port": 443,
-    "secret": "ee33a6dcb429c2952d80e01bcbae16912f6164732e78352e7275",
-    "region": "ru",
-    "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
-  },
-  {
     "host": "portal.mtproxy.cc",
     "port": 443,
     "secret": "eeef7017f26c9ecb71ed8d760999294318786170692e6f7a6f6e2e7275",
@@ -28245,6 +27888,13 @@
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
   {
+    "host": "62.171.135.77",
+    "port": 443,
+    "secret": "eeca4579380da2228bf1e70bc43b666d8c636c6f7564666c6172652e636f6d",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
+  },
+  {
     "host": "173.249.36.34",
     "port": 443,
     "secret": "ee13012cfc85c1d5d1e970636d6fe5b542636c6f7564666c6172652e636f6d",
@@ -28269,6 +27919,13 @@
     "host": "anchor.lovely.lat",
     "port": 443,
     "secret": "eeaadd88aa9facd454936d0c42dc128e77616e63686f722e6c6f76656c792e6c6174",
+    "region": "us",
+    "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
+  },
+  {
+    "host": "37.27.38.205",
+    "port": 443,
+    "secret": "ee9d659fc2ae43e0b8323c082960233d7b7777772e636c6f7564666c6172652e636f6d",
     "region": "us",
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
@@ -28406,9 +28063,9 @@
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
   {
-    "host": "server2.server2-5mk.info",
+    "host": "speed-speed.co.uk.",
     "port": 443,
-    "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
+    "secret": "eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
@@ -28486,13 +28143,6 @@
     "host": "167.233.145.149",
     "port": 8443,
     "secret": "dd104462821249bd7ac519130220c25d09",
-    "region": "eu",
-    "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
-  },
-  {
-    "host": "zinova.co.uk",
-    "port": 443,
-    "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/B3B3097/REMAININGCONNECTIONS/HEAD/data/tg_proxies_found.json"
   },
@@ -29174,6 +28824,13 @@
     "secret": "7nnjRIGHSb16xRkTAiDCXQk%3D",
     "region": "eu",
     "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/airdrop2033/tg.txt"
+  },
+  {
+    "host": "193.38.55.115",
+    "port": 443,
+    "secret": "ee22ebe47f2fc01540000000000000084b783657b82ddb69626434326e2e69",
+    "region": "eu",
+    "source": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/HEAD/sub/Canfing_VPN/tg.txt"
   },
   {
     "host": "5.75.218.60",
