@@ -661,6 +661,37 @@ async function getCachedProxyAutoDoc() {
   return autoDoc;
 }
 
+// ДОБАВЛЕНО: раньше "рядом со мной" искало ближайший сервер СРЕДИ ВСЕХ
+// регионов сразу по чистому километражу. При разреженном пуле (в
+// конкретной части света реальных серверов почти нет) это иногда
+// находило "ближайший" за 3000+ км — формально не врёт (сервер жив), но
+// это уже не "рядом" ни в каком смысле, и результат случайно скачет от
+// точности GPS (сдвинулся на километр — в очереди на дистанционную
+// сортировку и живую проверку могли попасть уже другие кандидаты из того
+// же далёкого хаоса). Правильнее сначала определить, в каком БОЛЬШОМ
+// регионе (ru/eu/us/asia — тех же самых, что и у самих серверов) вообще
+// находится человек, и подбирать в первую очередь оттуда — это и
+// стабильнее, и осмысленнее географически.
+// Метод — ближайший по прямой к условному "центру" региона (крупный
+// хостинг-хаб для этого региона). Это грубое приближение (не настоящие
+// границы стран), но для деления на 4 крупных бакета вполне достаточно.
+const REGION_CENTROIDS = {
+  ru: { lat: 55.75, lon: 37.62 },   // Москва
+  eu: { lat: 50.11, lon: 8.68 },    // Франкфурт
+  us: { lat: 39.04, lon: -77.49 },  // Ашберн, Вирджиния (крупный хаб дата-центров)
+  asia: { lat: 1.35, lon: 103.82 } // Сингапур
+};
+function nearestRegionByCoords(lat, lon) {
+  let best = null;
+  let bestDist = Infinity;
+  for (const region of COLLECT_REGIONS) {
+    const c = REGION_CENTROIDS[region];
+    const d = haversineDistanceKm(lat, lon, c.lat, c.lon);
+    if (d < bestDist) { bestDist = d; best = region; }
+  }
+  return best;
+}
+
 async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
   const autoDoc = await getCachedProxyAutoDoc();
 
@@ -726,33 +757,52 @@ async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
   let usedFallback = false;
 
   if (lat != null && lon != null && withCoords.length > 0) {
-    const withDistance = withCoords.map((s) => ({
-      ...s,
-      distanceKm: Math.round(haversineDistanceKm(lat, lon, s.lat, s.lon)),
-    }));
-    // Пул для живой проверки отбираем ЧИСТО по расстоянию — это и держит
-    // смысл "рядом", ограничивая, среди кого вообще выбираем.
-    withDistance.sort((a, b) => a.distanceKm - b.distanceKm);
+    // ДОБАВЛЕНО: сначала пробуем ТОЛЬКО среди серверов из того же
+    // крупного региона, что и сам человек (см. nearestRegionByCoords выше)
+    // — это и есть "рядом" в осмысленном географическом смысле, а не
+    // ближайший из случайной мировой мешанины.
+    const userRegion = nearestRegionByCoords(lat, lon);
+    const sameRegionCoords = withCoords.filter((s) => s.region === userRegion);
 
-    // Живьём проверяем не только ровно limit ближайших, а пул с запасом
-    // (иначе если первые 5 по расстоянию окажутся мертвы — вернуть будет
-    // нечего). NEARBY_LIVE_CHECK_POOL ограничивает, сколько максимум
-    // кандидатов реально долбим за один запрос (не весь список сразу).
-    const pool = withDistance.slice(0, Math.min(withDistance.length, NEARBY_LIVE_CHECK_POOL));
-    const alivePool = await liveFilter(pool);
-    // liveFilter теряет часть полей (checkOneServer их не знает) — берём
-    // обратно из withDistance по id.
-    const infoById = new Map(withDistance.map((s) => [s.id, s]));
-    alivePool.forEach((s) => {
-      const info = infoById.get(s.id);
-      s.distanceKm = info ? info.distanceKm : null;
-      s.aliveStreak = info ? info.aliveStreak : 0;
-      s.sourceReliability = info ? info.sourceReliability : null;
-    });
-    // А вот финальный порядок ВНУТРИ уже гарантированно близкого и живого
-    // пула — по комбинированной оценке, а не только по метрам до дома.
-    alivePool.sort((a, b) => nearbyScore(a) - nearbyScore(b));
-    nearest = alivePool.slice(0, limit);
+    async function rankAndCheck(candidatesWithCoords) {
+      const withDistance = candidatesWithCoords.map((s) => ({
+        ...s,
+        distanceKm: Math.round(haversineDistanceKm(lat, lon, s.lat, s.lon)),
+      }));
+      // Пул для живой проверки отбираем ЧИСТО по расстоянию — это и держит
+      // смысл "рядом", ограничивая, среди кого вообще выбираем.
+      withDistance.sort((a, b) => a.distanceKm - b.distanceKm);
+
+      // Живьём проверяем не только ровно limit ближайших, а пул с запасом
+      // (иначе если первые 5 по расстоянию окажутся мертвы — вернуть будет
+      // нечего). NEARBY_LIVE_CHECK_POOL ограничивает, сколько максимум
+      // кандидатов реально долбим за один запрос (не весь список сразу).
+      const pool = withDistance.slice(0, Math.min(withDistance.length, NEARBY_LIVE_CHECK_POOL));
+      const alivePool = await liveFilter(pool);
+      // liveFilter теряет часть полей (checkOneServer их не знает) — берём
+      // обратно из withDistance по id.
+      const infoById = new Map(withDistance.map((s) => [s.id, s]));
+      alivePool.forEach((s) => {
+        const info = infoById.get(s.id);
+        s.distanceKm = info ? info.distanceKm : null;
+        s.aliveStreak = info ? info.aliveStreak : 0;
+        s.sourceReliability = info ? info.sourceReliability : null;
+      });
+      // А вот финальный порядок ВНУТРИ уже гарантированно близкого и живого
+      // пула — по комбинированной оценке, а не только по метрам до дома.
+      alivePool.sort((a, b) => nearbyScore(a) - nearbyScore(b));
+      return alivePool.slice(0, limit);
+    }
+
+    nearest = sameRegionCoords.length > 0 ? await rankAndCheck(sameRegionCoords) : [];
+
+    // Свой регион либо вообще без серверов с координатами, либо ни один
+    // не прошёл живую проверку — расширяем поиск на ВСЕ регионы разом
+    // (старое поведение), это лучше, чем сразу переходить к грубому
+    // "по региону без учёта расстояния" фоллбэку ниже.
+    if (nearest.length === 0 && withCoords.length > sameRegionCoords.length) {
+      nearest = await rankAndCheck(withCoords);
+    }
 
     if (nearest.length === 0 || nearest[0].distanceKm > NEARBY_FALLBACK_DISTANCE_KM) {
       usedFallback = true;
@@ -762,7 +812,7 @@ async function findNearestServers({ lat, lon, fallbackRegion, limit }) {
   }
 
   if (usedFallback) {
-    const region = fallbackRegion || 'eu';
+    const region = fallbackRegion || (lat != null && lon != null ? nearestRegionByCoords(lat, lon) : 'eu');
     const regionList = autoDoc['servers_' + region] || [];
     const pool = regionList.slice(0, Math.min(regionList.length, NEARBY_LIVE_CHECK_POOL));
     const aliveRegion = await liveFilter(pool);
